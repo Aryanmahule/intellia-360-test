@@ -1,0 +1,60 @@
+{
+  "gradeId": "grade2",
+  "heroSlide": {
+    "tag": "Today's Adventure",
+    "lessonId": "place-value-hundreds-tens-ones",
+    "title": "Place value: Hundreds, Tens, Ones",
+    "subtitle": "Build strong number sense by exploring place value in a fun way!",
+    "ctaText": "Start Learning →",
+    "ctaUrl": "/student/lesson/architecture",
+    "visualizerKey": "place-value",
+    "visualizerData": {
+      "hundreds": 1,
+      "tens": 3,
+      "ones": 5,
+      "number": 135
+    }
+  },
+  "actionCards": [
+    {
+      "id": "card_edunotes",
+      "title": "EduNotes",
+      "subtitle": "Learn, Practice, Win!",
+      "description": "Clear, concise, and student-friendly notes for specific math topics. Designed to simplify concepts and boost confidence.",
+      "icon": "📖",
+      "buttonColor": "purple",
+      "targetUrl": "/student/lesson/edunotes",
+      "enabled": true
+    },
+    {
+      "id": "card_architecture",
+      "title": "The Architecture of Numbers",
+      "subtitle": "Visual Concepts",
+      "description": "How to build hundreds, tens, and ones with interactive 3D blocks and place value breakdowns.",
+      "icon": "🧊",
+      "buttonColor": "blue",
+      "targetUrl": "/student/lesson/architecture",
+      "enabled": true
+    },
+    {
+      "id": "card_video",
+      "title": "Video Lessons",
+      "subtitle": "Watch & Learn",
+      "description": "Engaging video lessons that make math easy to understand and fun to learn.",
+      "icon": "▶",
+      "buttonColor": "orange",
+      "targetUrl": "/student/lesson/video",
+      "enabled": true
+    },
+    {
+      "id": "card_practice",
+      "title": "Practice Challenge",
+      "subtitle": "Interactive Exercises",
+      "description": "Fun exercises to test and improve your skills with instant scoring and gamified rewards.",
+      "icon": "🏆",
+      "buttonColor": "accent",
+      "targetUrl": "/student/quiz/practice-1",
+      "enabled": true
+    }
+  ]
+}

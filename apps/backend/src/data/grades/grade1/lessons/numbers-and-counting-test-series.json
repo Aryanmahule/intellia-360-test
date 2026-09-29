@@ -1,0 +1,39 @@
+{
+    "id": "numbers-and-counting-test-series",
+    "title": "Numbers and Counting Test Series",
+    "description": "Test your knowledge on numbers and counting.",
+    "chapterId": "chap_1",
+    "chapterTitle": "Numbers And Counting",
+    "grade": "grade1",
+    "estimatedMinutes": 30,
+    "completed": false,
+    "locked": false,
+    "heroVisualizer": "numbers-to-1000",
+    "heroVisualizerData": {
+        "start": 1,
+        "end": 100
+    },
+    "modules": {
+        "eduNotes": {
+            "enabled": false,
+            "url": ""
+        },
+        "architectureModule": {
+            "enabled": false,
+            "url": ""
+        },
+        "videoLesson": {
+            "enabled": false,
+            "url": ""
+        },
+        "practiceModule": {
+            "enabled": true,
+            "url": "/student/quiz/practice-1"
+        }
+    },
+    "previousLesson": {
+        "id": "ordinal-numbers",
+        "title": "Ordinal numbers (first, second, third)"
+    },
+    "nextLesson": null
+}

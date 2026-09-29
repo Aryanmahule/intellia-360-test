@@ -1,0 +1,37 @@
+{
+  "name": "intellia360",
+  "version": "1.0.0",
+  "description": "Intellia360 monorepo — AI-powered adaptive learning platform (Next.js + Prisma + MongoDB)",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup:env": "node scripts/setup-env.mjs",
+    "check:env": "node scripts/setup-env.mjs --check",
+    "dev": "node scripts/dev.mjs",
+    "dev:frontend": "npm run dev -w @intellia360/frontend --",
+    "dev:backend": "npm run dev -w @intellia360/backend --",
+    "build": "npm run build -w @intellia360/backend && npm run build -w @intellia360/frontend",
+    "build:frontend": "npm run build -w @intellia360/frontend --",
+    "build:backend": "npm run build -w @intellia360/backend --",
+    "start": "npm run start -w @intellia360/backend --",
+    "lint": "npm run lint -w @intellia360/backend && npm run lint -w @intellia360/frontend",
+    "typecheck": "npm run typecheck -w @intellia360/shared && tsc --noEmit -p apps/backend && tsc --noEmit -p apps/frontend",
+    "seed": "npm run seed -w @intellia360/backend --",
+    "prisma:generate": "npm run prisma:generate -w @intellia360/backend --",
+    "prisma:migrate": "npm run prisma:migrate -w @intellia360/backend --",
+    "prisma:push": "npm run prisma:push -w @intellia360/backend --",
+    "db:backup": "npm run db:backup -w @intellia360/backend --",
+    "db:restore": "npm run db:restore -w @intellia360/backend --",
+    "db:verify-backup": "npm run db:verify-backup -w @intellia360/backend --",
+    "db:restore-curriculum": "npm run db:restore-curriculum -w @intellia360/backend --",
+    "db:maintenance": "npm run db:maintenance -w @intellia360/backend --",
+    "db:indexes": "npm run db:indexes -w @intellia360/backend --"
+  }
+}

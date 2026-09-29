@@ -1,0 +1,30 @@
+[
+  {
+    "id": "explain",
+    "label": "Explain Concept",
+    "promptText": "Can you explain this lesson in simple terms?",
+    "icon": "💡",
+    "color": "yellow"
+  },
+  {
+    "id": "example",
+    "label": "Give an Example",
+    "promptText": "Can you give me a real-world example of this concept?",
+    "icon": "📝",
+    "color": "blue"
+  },
+  {
+    "id": "quiz",
+    "label": "Practice Question",
+    "promptText": "Give me a quick practice question to test my understanding!",
+    "icon": "🎯",
+    "color": "green"
+  },
+  {
+    "id": "hint",
+    "label": "Help & Hints",
+    "promptText": "I'm stuck on this topic. Can you give me a hint?",
+    "icon": "🙋‍♂️",
+    "color": "purple"
+  }
+]

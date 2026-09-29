@@ -1,0 +1,12 @@
+{
+  "id": "stu_101",
+  "name": "Alex Johnson",
+  "avatar": "/assets/avatars/user-student-boy.png",
+  "grade": "Grade 1 Math",
+  "level": 2,
+  "levelTitle": "Explorer",
+  "levelProgress": 65,
+  "streakDays": 12,
+  "xpPoints": 980,
+  "learningGems": 350
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "asgn_1",
+    "title": "Place Value & Regrouping Practice",
+    "targetClass": "Grade 2 Math - Sec A",
+    "assignedDate": "2026-07-28",
+    "dueDate": "2026-08-02",
+    "submissionsCount": 18,
+    "totalStudents": 22,
+    "status": "active"
+  },
+  {
+    "id": "asgn_2",
+    "title": "Comparing Numbers Challenge",
+    "targetClass": "Grade 2 Math - Sec B",
+    "assignedDate": "2026-07-29",
+    "dueDate": "2026-08-03",
+    "submissionsCount": 12,
+    "totalStudents": 20,
+    "status": "active"
+  }
+]

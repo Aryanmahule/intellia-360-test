@@ -1,0 +1,4 @@
+# Scripts and configs that run on the Linux EC2 host must keep LF endings,
+# whatever the committer's core.autocrlf setting.
+*.sh             text eol=lf
+deploy/**        text eol=lf

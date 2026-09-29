@@ -1,0 +1,42 @@
+{
+    "id": "number-patterns",
+    "title": "Number patterns",
+    "description": "Identify and complete number patterns.",
+    "chapterId": "chap_1",
+    "chapterTitle": "Numbers And Counting",
+    "grade": "grade1",
+    "estimatedMinutes": 15,
+    "completed": false,
+    "locked": false,
+    "heroVisualizer": "numbers-to-1000",
+    "heroVisualizerData": {
+        "start": 1,
+        "end": 20
+    },
+    "modules": {
+        "eduNotes": {
+            "enabled": true,
+            "url": "/student/lesson/edunotes"
+        },
+        "architectureModule": {
+            "enabled": true,
+            "url": "/student/lesson/architecture"
+        },
+        "videoLesson": {
+            "enabled": true,
+            "url": "/student/lesson/video"
+        },
+        "practiceModule": {
+            "enabled": true,
+            "url": "/student/quiz/practice-1"
+        }
+    },
+    "previousLesson": {
+        "id": "comparing-and-ordering-numbers",
+        "title": "Comparing and ordering numbers"
+    },
+    "nextLesson": {
+        "id": "ordinal-numbers",
+        "title": "Ordinal numbers (first, second, third)"
+    }
+}

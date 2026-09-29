@@ -1,0 +1,25 @@
+# docker-compose.yml — local MongoDB for development
+#
+# The app uses Prisma 6 with a MongoDB datasource. Spin this up if you do not
+# have a local or Atlas MongoDB instance available, then set DATABASE_URL in
+# .env.local as shown below.
+#
+# DATABASE_URL="mongodb://root:example@localhost:27017/intellia360?authSource=admin"
+
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: intellia360
+    ports:
+      - "27017:27017"
+    volumes:
+      - intellia360_mongodata:/data/db
+
+volumes:
+  intellia360_mongodata:

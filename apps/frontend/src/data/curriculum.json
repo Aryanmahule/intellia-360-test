@@ -1,0 +1,86 @@
+{
+  "activeTopic": {
+    "id": "top_101",
+    "title": "Place value: Hundreds, Tens, Ones",
+    "status": "completed",
+    "icon": "place-value-cube"
+  },
+  "standaloneTopics": [
+    {
+      "id": "top_102",
+      "title": "Comparing numbers (>, <, =)",
+      "status": "active",
+      "icon": "crown"
+    },
+    {
+      "id": "top_103",
+      "title": "Ordering numbers",
+      "status": "locked",
+      "icon": "star"
+    },
+    {
+      "id": "top_104",
+      "title": "Numbers to 200 test series",
+      "status": "active",
+      "questionsCount": 30,
+      "icon": "book"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chap_2",
+      "chapterNumber": 2,
+      "title": "Addition Within 100",
+      "topicsCount": 5,
+      "topics": [
+        {
+          "id": "top_201",
+          "title": "Addition without regrouping",
+          "status": "locked"
+        },
+        {
+          "id": "top_202",
+          "title": "Addition with regrouping",
+          "status": "locked"
+        },
+        {
+          "id": "top_203",
+          "title": "Mental math strategies",
+          "status": "locked"
+        },
+        {
+          "id": "top_204",
+          "title": "Adding three numbers",
+          "status": "locked"
+        },
+        {
+          "id": "top_205",
+          "title": "Addition within 100 test series",
+          "status": "locked",
+          "questionsCount": 30
+        }
+      ]
+    },
+    {
+      "id": "chap_3",
+      "chapterNumber": 3,
+      "title": "Subtraction Within 100",
+      "topicsCount": 4,
+      "topics": []
+    },
+    {
+      "id": "chap_4",
+      "chapterNumber": 4,
+      "title": "Numbers To 1,000",
+      "topicsCount": 5,
+      "topics": []
+    },
+    {
+      "id": "chap_5",
+      "chapterNumber": 5,
+      "title": "Addition And Subtraction Within 1,000",
+      "topicsCount": 4,
+      "topics": []
+    }
+  ]
+}

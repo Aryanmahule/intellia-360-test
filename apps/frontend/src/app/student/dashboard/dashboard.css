@@ -1,0 +1,353 @@
+/* Student Dashboard responsive layout helpers.
+   Keep this file beside dashboard/page.tsx. */
+
+/* =========================================================
+   DASHBOARD WIDTH / OVERFLOW
+   ========================================================= */
+
+.student-dashboard-page,
+.student-dashboard-page * {
+    min-width: 0;
+}
+
+.student-dashboard-page {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    overflow-x: clip;
+    box-sizing: border-box;
+}
+
+.student-dashboard-stats-grid,
+.student-dashboard-progress-grid,
+.student-dashboard-learning-hub,
+.student-dashboard-bottom-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.student-dashboard-stats-grid>*,
+.student-dashboard-progress-grid>*,
+.student-dashboard-learning-hub>*,
+.student-dashboard-bottom-grid>* {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   IMPORTANT:
+   DASHBOARD SCROLLS — SIDEBAR DOES NOT
+   The page shell/body stay fixed to viewport height.
+   Only .student-main-content gets vertical scrolling.
+   ========================================================= */
+
+.student-shell {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+}
+
+.student-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    height: calc(100vh - 72px) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Keep sidebar fixed while dashboard content scrolls. */
+.student-sidebar-container {
+    position: sticky !important;
+    top: 0 !important;
+    align-self: flex-start !important;
+
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+
+    height: calc(100vh - 72px) !important;
+    min-height: calc(100vh - 72px) !important;
+    max-height: calc(100vh - 72px) !important;
+
+    overflow: hidden !important;
+    z-index: 20 !important;
+}
+
+/* Only chapter/topic navigation can scroll inside sidebar. */
+.student-sidebar-scroll-area {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Grade card stays at bottom and is not part of scroll area. */
+.student-sidebar-footer {
+    flex: 0 0 auto !important;
+    position: relative !important;
+    z-index: 30 !important;
+    margin-top: 0 !important;
+}
+
+/* Main dashboard is the ONLY page scroller. */
+.student-main-content {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    height: calc(100vh - 72px) !important;
+    min-height: 0 !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    -webkit-overflow-scrolling: touch;
+
+    box-sizing: border-box;
+}
+
+/* Prevent child sections/cards from creating another horizontal overflow. */
+.student-main-content>*,
+.student-main-content section,
+.student-main-content main,
+.student-main-content article {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.student-main-content [class*="grid"],
+.student-main-content [class*="Grid"],
+.student-main-content [class*="row"],
+.student-main-content [class*="Row"],
+.student-main-content table {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Dashboard itself should not become a second scroll container. */
+.student-dashboard-page {
+    min-height: 0 !important;
+}
+
+/* =========================================================
+   DASHBOARD GRIDS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .student-dashboard-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .student-dashboard-progress-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .student-dashboard-learning-hub>div:nth-child(2) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .student-dashboard-bottom-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .student-dashboard-bottom-grid> :last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .student-body {
+        height: calc(100vh - 64px) !important;
+    }
+
+    .student-sidebar-container {
+        flex-basis: 72px !important;
+        width: 72px !important;
+        min-width: 72px !important;
+        max-width: 72px !important;
+
+        height: calc(100vh - 64px) !important;
+        min-height: calc(100vh - 64px) !important;
+        max-height: calc(100vh - 64px) !important;
+    }
+
+    .student-main-content {
+        height: calc(100vh - 64px) !important;
+        padding: 16px !important;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .student-dashboard-page {
+        max-width: 100%;
+        padding-inline: 12px !important;
+    }
+
+    .student-dashboard-stats-grid,
+    .student-dashboard-progress-grid,
+    .student-dashboard-bottom-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .student-dashboard-learning-hub>div:nth-child(2) {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .student-dashboard-bottom-grid> :last-child {
+        grid-column: auto;
+    }
+
+    .student-dashboard-progress-grid>div>div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    .student-dashboard-page img,
+    .student-dashboard-page svg,
+    .student-dashboard-page video,
+    .student-dashboard-page iframe {
+        max-width: 100%;
+    }
+
+    /* Sidebar remains a fixed icon rail. */
+    .student-sidebar-container {
+        flex-basis: 72px !important;
+        width: 72px !important;
+        min-width: 72px !important;
+        max-width: 72px !important;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .student-dashboard-page {
+        padding-inline: 10px !important;
+    }
+
+    .student-dashboard-stats-grid,
+    .student-dashboard-progress-grid,
+    .student-dashboard-learning-hub,
+    .student-dashboard-bottom-grid {
+        gap: 12px !important;
+    }
+
+    .student-dashboard-progress-grid>div,
+    .student-dashboard-bottom-grid>div,
+    .student-dashboard-learning-hub {
+        padding: 14px !important;
+    }
+
+    .student-dashboard-progress-grid>div>div:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-dashboard-page {
+        padding-inline: 8px !important;
+    }
+
+    .student-dashboard-learning-hub {
+        border-radius: 16px !important;
+    }
+
+    .student-body {
+        height: calc(100vh - 60px) !important;
+    }
+
+    .student-sidebar-container {
+        flex-basis: 58px !important;
+        width: 58px !important;
+        min-width: 58px !important;
+        max-width: 58px !important;
+
+        height: calc(100vh - 60px) !important;
+        min-height: calc(100vh - 60px) !important;
+        max-height: calc(100vh - 60px) !important;
+    }
+
+    .student-main-content {
+        height: calc(100vh - 60px) !important;
+    }
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.student-main-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 116, 139, 0.32) transparent;
+}
+
+.student-main-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.student-main-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.student-main-content::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.32);
+    border-radius: 999px;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .student-sidebar-container,
+    .student-main-content {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== CURRENT LESSON — VISIBLE TEXT ===== */
+
+.student-sidebar-topic.active {
+    color: #7c2d12 !important;
+    background: #fff3e8 !important;
+    border: 1px solid #fb923c !important;
+    box-shadow:
+        inset 3px 0 0 #f97316,
+        0 4px 10px rgba(249, 115, 22, 0.12) !important;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-title {
+    color: #7c2d12 !important;
+    font-weight: 800 !important;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-current {
+    color: #9a3412 !important;
+    background: #ffffff !important;
+    border: 1px solid #fdba74 !important;
+    font-weight: 900 !important;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-dot {
+    color: #ffffff !important;
+    background: #f97316 !important;
+    box-shadow: 0 0 0 2px #fed7aa !important;
+}

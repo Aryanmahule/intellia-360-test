@@ -1,0 +1,151 @@
+name: Frontend — build & deploy to S3 + CloudFront
+
+# Pull requests: install, type-check, build the static export and verify the
+# CloudFront router against it (no deploy).
+# Push to main:  the same, then upload ./out to S3, publish the router function
+#                and invalidate CloudFront.
+#
+# No AWS keys are stored in GitHub: the deploy job assumes an IAM role through
+# GitHub's OIDC token.
+#
+# Required repository configuration (Settings → Secrets and variables → Actions):
+#   secret   AWS_DEPLOY_ROLE_ARN                  IAM role trusted for this repo's OIDC token
+#   variable AWS_REGION                           e.g. ap-south-1 (the bucket's region)
+#   variable FRONTEND_S3_BUCKET                   e.g. intellia360-frontend-prod
+#   variable FRONTEND_CLOUDFRONT_DISTRIBUTION_ID  e.g. E1ABCDEF2GHIJK
+#   variable FRONTEND_ROUTER_FUNCTION_NAME        optional, e.g. intellia360-frontend-router
+#   variable NEXT_PUBLIC_API_URL                  e.g. https://api.yourdomain.com
+#   variable NEXT_PUBLIC_GOOGLE_CLIENT_ID         optional, Google OAuth client id
+# NEXT_PUBLIC_* values are public by design — they are compiled into the
+# JavaScript every visitor downloads — so they are variables, not secrets.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "apps/frontend/**"
+      - "packages/shared/**"
+      - "apps/backend/src/data/grades/*/curriculum.json"
+      - "deploy/cloudfront/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/frontend-deploy.yml"
+  push:
+    branches: [main]
+    paths:
+      - "apps/frontend/**"
+      - "packages/shared/**"
+      - "apps/backend/src/data/grades/*/curriculum.json"
+      - "deploy/cloudfront/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/frontend-deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Type-check
+        run: |
+          npm run typecheck -w @intellia360/shared
+          npm run sync-curriculum -w @intellia360/frontend
+          npx tsc --noEmit -p apps/frontend
+
+      - name: Build static export
+        run: npm run build:frontend
+        env:
+          NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID }}
+
+      - name: Verify CloudFront routing against the export
+        run: npm run check:routes -w @intellia360/frontend
+
+      - name: Keep the export for the deploy job
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-out
+          path: apps/frontend/out
+          retention-days: 7
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    concurrency:
+      group: deploy-frontend-production
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      BUCKET: ${{ vars.FRONTEND_S3_BUCKET }}
+      DISTRIBUTION_ID: ${{ vars.FRONTEND_CLOUDFRONT_DISTRIBUTION_ID }}
+      ROUTER_FUNCTION: ${{ vars.FRONTEND_ROUTER_FUNCTION_NAME }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: deploy/cloudfront
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: frontend-out
+          path: out
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Upload to S3
+        run: |
+          set -euo pipefail
+          # Content-hashed bundles: cache forever. Uploaded first so new pages
+          # never reference a chunk that is not there yet. Old chunks are kept
+          # for visitors still holding an older page.
+          aws s3 sync out/_next/static "s3://$BUCKET/_next/static" \
+            --cache-control "public,max-age=31536000,immutable" --no-progress
+
+          # Pages, router data and public assets: browsers revalidate, CloudFront
+          # keeps them until the invalidation below.
+          aws s3 sync out "s3://$BUCKET" --delete --exclude "_next/static/*" \
+            --cache-control "public,max-age=0,s-maxage=31536000,must-revalidate" --no-progress
+
+          # Module workers (pdf.js) must be served with a JavaScript MIME type.
+          aws s3 cp out "s3://$BUCKET" --recursive --exclude "*" --include "*.mjs" \
+            --content-type "text/javascript" \
+            --cache-control "public,max-age=0,s-maxage=31536000,must-revalidate" \
+            --metadata-directive REPLACE --no-progress
+
+      - name: Publish the CloudFront router function
+        if: env.ROUTER_FUNCTION != ''
+        run: |
+          set -euo pipefail
+          etag=$(aws cloudfront describe-function --name "$ROUTER_FUNCTION" --query ETag --output text)
+          aws cloudfront update-function --name "$ROUTER_FUNCTION" --if-match "$etag" \
+            --function-config "Comment=Intellia360 frontend URL router,Runtime=cloudfront-js-2.0" \
+            --function-code fileb://deploy/cloudfront/frontend-router.js --query ETag --output text > /tmp/etag
+          aws cloudfront publish-function --name "$ROUTER_FUNCTION" --if-match "$(cat /tmp/etag)" > /dev/null
+          echo "Published $ROUTER_FUNCTION"
+
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"

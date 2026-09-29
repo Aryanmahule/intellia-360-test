@@ -1,0 +1,73 @@
+{
+  "activeTopic": {
+    "id": "similarity-and-congruence",
+    "title": "Similarity and Congruence",
+    "status": "completed",
+    "icon": "star",
+    "vercelLink": "https://similarity-in-triangle.vercel.app/",
+    "estimatedTime": "18 mins",
+    "difficulty": "Advanced",
+    "xpReward": 73,
+    "gemsReward": 2,
+    "heroSlide": {
+      "tag": "Today's Adventure",
+      "lessonId": "similarity-and-congruence",
+      "title": "Similarity and Congruence",
+      "subtitle": "Learn all about Similarity and Congruence in this exciting lesson!",
+      "ctaText": "Start Learning →",
+      "ctaUrl": "https://similarity-in-triangle.vercel.app/",
+      "visualizerKey": "place-value",
+      "visualizerData": {
+        "number": 123
+      }
+    },
+    "actionCards": {
+      "architecture": "https://similarity-in-triangle.vercel.app/",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "edunotes": "/student/lesson/edunotes",
+      "practice": "/student/quiz/practice-1"
+    },
+    "aiContext": "The student is currently learning about Similarity and Congruence."
+  },
+  "standaloneTopics": [],
+  "chapters": [
+    {
+      "id": "chap_1",
+      "chapterNumber": 1,
+      "title": "Chapter 1",
+      "topicsCount": 1,
+      "topics": [
+        {
+          "id": "similarity-and-congruence",
+          "title": "Similarity and Congruence",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://similarity-in-triangle.vercel.app/",
+          "estimatedTime": "18 mins",
+          "difficulty": "Advanced",
+          "xpReward": 73,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "similarity-and-congruence",
+            "title": "Similarity and Congruence",
+            "subtitle": "Learn all about Similarity and Congruence in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://similarity-in-triangle.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://similarity-in-triangle.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Similarity and Congruence."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "teacher": {
+    "id": "tch_501",
+    "name": "Sarah Miller",
+    "avatar": "/assets/avatars/user-student-boy.png",
+    "email": "sarah.miller@intellia360.edu",
+    "schoolName": "Oakridge Elementary School",
+    "assignedClasses": [
+      "Grade 2 Math - Sec A",
+      "Grade 2 Math - Sec B",
+      "Grade 3 Math - Sec A"
+    ]
+  },
+  "metrics": {
+    "totalStudents": 42,
+    "averageClassScore": 88,
+    "completionRate": 92,
+    "atRiskCount": 3
+  },
+  "atRiskStudents": [
+    {
+      "id": "stu_201",
+      "name": "Daniel Vance",
+      "issue": "Struggling with regrouping in addition",
+      "score": "58%"
+    },
+    {
+      "id": "stu_202",
+      "name": "Maya Lin",
+      "issue": "Incomplete practice assignments (2 days inactive)",
+      "score": "62%"
+    }
+  ]
+}

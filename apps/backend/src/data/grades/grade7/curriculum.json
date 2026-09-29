@@ -1,0 +1,103 @@
+{
+  "activeTopic": {
+    "id": "data-handling-and-probabilites-statistics",
+    "title": "Data Handling and Probabilites Statistics",
+    "status": "active",
+    "icon": "star",
+    "vercelLink": "https://intellia-grade7-data-probability.vercel.app/",
+    "estimatedTime": "17 mins",
+    "difficulty": "Advanced",
+    "xpReward": 59,
+    "gemsReward": 3,
+    "heroSlide": {
+      "tag": "Today's Adventure",
+      "lessonId": "data-handling-and-probabilites-statistics",
+      "title": "Data Handling and Probabilites Statistics",
+      "subtitle": "Learn all about Data Handling and Probabilites Statistics in this exciting lesson!",
+      "ctaText": "Start Learning →",
+      "ctaUrl": "https://intellia-grade7-data-probability.vercel.app/",
+      "visualizerKey": "place-value",
+      "visualizerData": {
+        "number": 123
+      }
+    },
+    "actionCards": {
+      "architecture": "https://intellia-grade7-data-probability.vercel.app/",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "edunotes": "/student/lesson/edunotes",
+      "practice": "/student/quiz/practice-1"
+    },
+    "aiContext": "The student is currently learning about Data Handling and Probabilites Statistics."
+  },
+  "standaloneTopics": [],
+  "chapters": [
+    {
+      "id": "chap_1",
+      "chapterNumber": 1,
+      "title": "Chapter 1",
+      "topicsCount": 2,
+      "topics": [
+        {
+          "id": "data-handling-and-probabilites-statistics",
+          "title": "Data Handling and Probabilites Statistics",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://intellia-grade7-data-probability.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Advanced",
+          "xpReward": 59,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "data-handling-and-probabilites-statistics",
+            "title": "Data Handling and Probabilites Statistics",
+            "subtitle": "Learn all about Data Handling and Probabilites Statistics in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-grade7-data-probability.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-grade7-data-probability.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Data Handling and Probabilites Statistics."
+        },
+        {
+          "id": "geometry",
+          "title": "Geometry",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://geometry-quest-module.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Advanced",
+          "xpReward": 58,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "geometry",
+            "title": "Geometry",
+            "subtitle": "Learn all about Geometry in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://geometry-quest-module.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://geometry-quest-module.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Geometry."
+        }
+      ]
+    }
+  ]
+}

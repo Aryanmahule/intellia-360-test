@@ -1,0 +1,348 @@
+/* ============================================================
+   LESSON RESOURCES — topic-wise Videos & EduNotes
+   Scoped to .lesson-resource-*, .lesson-video-* and .edunotes-*
+   class names used only by the lesson screens.
+============================================================ */
+
+/* ---------- Resource switcher ---------- */
+
+.lesson-resource-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.lesson-resource-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1e293b;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #dbe3f4;
+    border-radius: 12px;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.lesson-resource-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, .12);
+}
+
+.lesson-resource-btn.is-active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    border-color: transparent;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, .28);
+}
+
+.lesson-resource-btn.is-disabled {
+    color: #94a3b8;
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ---------- Video page ---------- */
+
+.lesson-video-page {
+    min-height: 100vh;
+    padding: 24px;
+    background: #f5f7ff;
+}
+
+.lesson-video-shell {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.lesson-video-header {
+    padding: 26px 30px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, .08);
+}
+
+.lesson-video-header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #172554;
+}
+
+.lesson-video-header p {
+    margin: 0;
+    font-size: 15px;
+    color: #64748b;
+}
+
+.lesson-video-header strong {
+    color: #2563eb;
+}
+
+.lesson-video-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+    gap: 20px;
+    align-items: start;
+}
+
+.lesson-video-main,
+.lesson-video-side {
+    min-width: 0;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, .08);
+}
+
+.lesson-video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0f172a;
+    border-radius: 18px;
+}
+
+.lesson-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.lesson-video-caption {
+    margin: 14px 4px 4px;
+}
+
+.lesson-video-caption h2 {
+    margin: 0 0 4px;
+    font-size: 19px;
+    font-weight: 800;
+    color: #172554;
+}
+
+.lesson-video-caption p {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.lesson-video-side h3 {
+    margin: 4px 4px 12px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.lesson-video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-video-item {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    text-align: left;
+    color: #1e293b;
+    background: #f8faff;
+    border: 1px solid #e6ecfa;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.lesson-video-item:hover {
+    background: #eef3ff;
+}
+
+.lesson-video-item.is-active {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    box-shadow: inset 0 0 0 1px #c7d2fe;
+}
+
+.lesson-video-item-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    height: 28px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #1d4ed8;
+    background: #dbeafe;
+    border-radius: 9px;
+}
+
+.lesson-video-item-body strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.lesson-video-item-body small {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ---------- Shared empty / loading / error states ---------- */
+
+.lesson-video-state,
+.edunotes-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.lesson-video-state-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 36px 28px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, .08);
+}
+
+.lesson-video-state-icon,
+.edunotes-state-icon,
+.edunotes-loader {
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.edunotes-loader {
+    animation: edunotes-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes edunotes-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .45;
+    }
+}
+
+.lesson-video-state h2,
+.edunotes-state h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #172554;
+}
+
+.lesson-video-state p,
+.edunotes-state p {
+    margin: 0 auto;
+    max-width: 460px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+.edunotes-retry-button {
+    margin-top: 18px;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.edunotes-retry-button:hover {
+    filter: brightness(1.05);
+}
+
+.edunotes-page-wrapper {
+    min-height: 100vh;
+    padding: 24px;
+    background: #f5f7ff;
+}
+
+.edunotes-resource-bar {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 16px;
+}
+
+.edunotes-resource-bar .lesson-resource-nav {
+    margin-top: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+    .lesson-video-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .lesson-video-side {
+        order: 2;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .lesson-video-page,
+    .edunotes-page-wrapper {
+        padding: 16px 12px;
+    }
+
+    .lesson-video-header {
+        padding: 20px 18px;
+        border-radius: 18px;
+    }
+
+    .lesson-video-header h1 {
+        font-size: 23px;
+    }
+
+    .lesson-video-main,
+    .lesson-video-side {
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    .lesson-resource-btn {
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .lesson-video-state h2,
+    .edunotes-state h2 {
+        font-size: 20px;
+    }
+}

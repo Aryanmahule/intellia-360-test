@@ -1,0 +1,503 @@
+/* =========================================================
+   SITE CHROME — shared public header & footer additions
+   ---------------------------------------------------------
+   Imported by SiteHeader and SiteFooter right after home.css, so it
+   loads later and wins ties. Every rule is scoped to .site-chrome, the
+   wrapper both components render, so nothing here reaches page content.
+   home.css styles the header bar with its own !important rules, which is
+   why the overrides below need !important too.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Top-level items: one weight, one colour, one current-page
+   state for links and dropdown triggers alike
+   --------------------------------------------------------- */
+
+.site-chrome .desktop-nav > .header-nav-link,
+.site-chrome .desktop-nav .header-dropdown-trigger {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    min-height: 42px !important;
+    height: auto !important;
+    padding: 9px 12px !important;
+    border: 0 !important;
+    border-radius: 9px !important;
+    background: transparent !important;
+    color: #111827 !important;
+    font-size: 14px !important;
+    font-weight: 650 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.site-chrome .desktop-nav > .header-nav-link:hover,
+.site-chrome .desktop-nav .header-dropdown-trigger:hover,
+.site-chrome .desktop-nav .header-dropdown-trigger.dropdown-trigger-active {
+    background: #f5f9ff !important;
+    color: #2563eb !important;
+}
+
+.site-chrome .desktop-nav > .header-nav-link.active,
+.site-chrome .desktop-nav .header-dropdown-trigger.is-current {
+    color: #2563eb !important;
+}
+
+.site-chrome .desktop-nav > .header-nav-link::after,
+.site-chrome .desktop-nav .header-dropdown-trigger::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 4px !important;
+    height: 3px !important;
+    border-radius: 999px !important;
+    background: #2563eb !important;
+    opacity: 0 !important;
+    transition: opacity .2s ease !important;
+}
+
+.site-chrome .desktop-nav > .header-nav-link.active::after,
+.site-chrome .desktop-nav .header-dropdown-trigger.is-current::after {
+    opacity: 1 !important;
+}
+
+.site-chrome .desktop-nav > .header-nav-link:focus-visible,
+.site-chrome .desktop-nav .header-dropdown-trigger:focus-visible,
+.site-chrome .header-icon-btn:focus-visible,
+.site-chrome .header-cart-btn:focus-visible,
+.site-chrome .header-login-btn:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, .35) !important;
+    outline-offset: 2px !important;
+}
+
+/* "Explore all courses" inside the Math Program mega menu */
+.site-chrome .mega-column > a.mega-all-courses {
+    display: inline-flex !important;
+    width: auto !important;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    color: #2563eb !important;
+    font-size: 14px !important;
+    font-weight: 750 !important;
+    text-decoration: none !important;
+    transform: none !important;
+}
+
+.site-chrome .mega-column > a.mega-all-courses:hover {
+    text-decoration: underline !important;
+}
+
+/* ---------------------------------------------------------
+   Search & cart popovers
+   --------------------------------------------------------- */
+
+.site-chrome .header-popover-anchor {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-chrome .header-popover {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: -8px;
+    z-index: 10060;
+    width: min(360px, calc(100vw - 24px));
+    padding: 14px;
+    border: 1px solid #e3ebf5;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 22px 55px rgba(15, 23, 42, .16);
+    color: #111827;
+    text-align: left;
+    cursor: default;
+}
+
+.site-chrome .header-search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #d7e3f4;
+    border-radius: 12px;
+    background: #f8fbff;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+}
+
+.site-chrome .header-search-input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+.site-chrome .header-popover-label {
+    margin: 12px 4px 4px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.site-chrome .header-search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 320px;
+    margin: 8px 0 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.site-chrome .header-search-result {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #1f2937 !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-chrome .header-search-result:hover,
+.site-chrome .header-search-result:focus-visible {
+    outline: none;
+    background: #eef5ff;
+    color: #2563eb !important;
+}
+
+.site-chrome .header-popover-title {
+    margin: 0;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.site-chrome .header-popover-text {
+    margin: 8px 2px 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.site-chrome .header-popover-cta {
+    display: inline-flex;
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #1769ff;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.site-chrome .header-popover-cta:hover {
+    background: #1459d9;
+}
+
+/* ---------------------------------------------------------
+   Mobile menu
+   --------------------------------------------------------- */
+
+.site-chrome .header-menu-toggle {
+    display: none;
+    position: relative;
+    flex: 0 0 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #dbe5f2;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #111827;
+    cursor: pointer;
+}
+
+.site-chrome .header-menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.site-chrome .header-menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.site-chrome .header-menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-chrome .header-menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.site-chrome .header-menu-toggle:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, .35);
+    outline-offset: 2px;
+}
+
+.site-chrome .header-mobile-panel,
+.site-chrome .header-mobile-backdrop {
+    display: none;
+}
+
+.site-chrome .header-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.site-chrome .header-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #111827 !important;
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-chrome .header-mobile-link:hover {
+    background: #f5f9ff;
+}
+
+.site-chrome .header-mobile-link.active {
+    background: #eef5ff;
+    color: #2563eb !important;
+}
+
+.site-chrome .header-mobile-chevron {
+    color: #64748b;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.site-chrome .header-mobile-sublist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px 6px;
+    padding: 2px 6px 10px 14px;
+}
+
+.site-chrome .header-mobile-sublabel {
+    grid-column: 1 / -1;
+    margin: 10px 8px 2px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.site-chrome .header-mobile-sublink {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    color: #475569 !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-chrome .header-mobile-sublink.is-wide {
+    grid-column: 1 / -1;
+}
+
+.site-chrome .header-mobile-sublink:hover {
+    background: #f5f9ff;
+    color: #2563eb !important;
+}
+
+.site-chrome .header-mobile-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 16px;
+    border-top: 1px solid #eef2f7;
+}
+
+.site-chrome .header-mobile-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.site-chrome .header-mobile-cta a:only-child {
+    grid-column: 1 / -1;
+}
+
+.site-chrome .header-mobile-cta .is-primary {
+    background: #1769ff;
+    color: #ffffff !important;
+}
+
+.site-chrome .header-mobile-cta .is-secondary {
+    border: 1px solid #bcd8ff;
+    background: #ffffff;
+    color: #1769ff !important;
+}
+
+/* Below this width the five top-level items no longer fit beside the logo
+   and actions, so they move into the menu. */
+@media (max-width: 1080px) {
+    .site-chrome.home-page .desktop-nav {
+        display: none !important;
+    }
+
+    .site-chrome .header-menu-toggle {
+        display: inline-flex !important;
+    }
+
+    .site-chrome.home-page .header-inner {
+        justify-content: space-between !important;
+        gap: 16px !important;
+    }
+
+    .site-chrome.home-page .header-actions {
+        margin-left: auto !important;
+        gap: 8px !important;
+    }
+
+    .site-chrome .header-mobile-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background: rgba(15, 23, 42, .38);
+    }
+
+    .site-chrome .header-mobile-panel {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10002;
+        max-height: calc(100vh - 100px);
+        max-height: calc(100dvh - 100px);
+        padding: 10px 16px 22px;
+        overflow-y: auto;
+        border-top: 1px solid #e8eef7;
+        background: #ffffff;
+        box-shadow: 0 26px 50px rgba(15, 23, 42, .16);
+    }
+}
+
+.site-chrome .header-mobile-panel[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .site-chrome.home-page .header-inner {
+        width: calc(100% - 28px) !important;
+    }
+
+    .site-chrome .header-popover {
+        position: fixed;
+        top: 86px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-chrome .header-cart-anchor {
+        display: none !important;
+    }
+
+    .site-chrome.home-page .header-login-btn {
+        min-height: 40px !important;
+        padding: 0 16px !important;
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-chrome.home-page .header-login-btn {
+        display: none !important;
+    }
+}
+
+/* ---------------------------------------------------------
+   Footer legal links
+   --------------------------------------------------------- */
+
+.site-chrome .footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    margin-top: 8px;
+}
+
+.site-chrome .footer-legal-links a {
+    color: inherit;
+    font-size: 13px;
+    opacity: .85;
+    text-decoration: none;
+}
+
+.site-chrome .footer-legal-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-chrome .header-menu-toggle span,
+    .site-chrome .desktop-nav > .header-nav-link::after,
+    .site-chrome .desktop-nav .header-dropdown-trigger::after {
+        transition: none !important;
+    }
+}
+
+/* ============================================================
+   SCHOOL MENU TAGLINE IN FLOW
+   The "Let's Build Future-Ready Learners Together" line used to be
+   absolutely positioned over a fixed bottom band. When a column grew
+   (e.g. "Intellia 360 School Program" wrapping to two lines) it covered
+   the bottom of that column, clipping GET STARTED TODAY. As its own
+   full-width grid row it always sits below the three columns.
+   ============================================================ */
+
+.header-mega-menu.school-menu {
+  padding-bottom: 30px;
+}
+
+.school-menu .school-bottom-title {
+  position: static;
+  grid-column: 1 / -1;
+  min-height: 0;
+  padding-top: 4px;
+}

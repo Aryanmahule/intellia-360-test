@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* ── Language & environment ─────────────────────────────────────────── */
+    "target": "ES2021",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+
+    /* ── Module resolution ──────────────────────────────────────────────── */
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+
+    /* ── Type checking ─────────────────────────────────────────────────── */
+    "strict": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* ── Incremental build & plugins ────────────────────────────────────── */
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+
+    /* ── Path aliases ───────────────────────────────────────────────────── */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

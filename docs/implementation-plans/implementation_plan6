@@ -1,0 +1,59 @@
+# Milestone 6: The Architecture of Numbers
+
+This plan outlines the implementation of the complete "Architecture of Numbers" interactive learning module for Grade 2 Place Value.
+
+## User Review Required
+
+Please review the proposed stepped learning flow and component architecture.
+
+> [!IMPORTANT]
+> The module will be implemented as a step-by-step progression (like a wizard) where the student clicks "Continue" to move through the 7 sections. Is a stepped progression correct, or should it be a single long-scrolling page?
+
+## Proposed Changes
+
+We will build the module inside a dedicated component folder and dynamically load it in `src/app/student/lesson/[id]/page.tsx` when `id === 'architecture'`.
+
+### `src/app/student/lesson/[id]/page.tsx`
+- [MODIFY] Update to read `params.id`. If `id === 'architecture'`, render the new `<ArchitectureModule />`.
+
+### Data
+#### [NEW] `src/data/lesson-architecture.json`
+- Will contain all mock data: lesson text, interactive explore states, practice questions (Multiple Choice, Drag and Drop, etc.), and summary points.
+
+### Components: `src/components/student/lesson/architecture/`
+#### [NEW] `ArchitectureModule.tsx`
+- The main stateful container managing the `currentStep` (1 to 7) and rendering the corresponding section.
+
+#### [NEW] `Base10Visualizer.tsx`
+- Extract and enhance the SVG/CSS Base-10 blocks from the Hero Section to make them fully reusable, animatable, and interactive across all learning steps.
+
+#### [NEW] `IntroSection.tsx`
+- Displays topic overview, learning objectives, estimated duration, and a "Start Learning" button.
+
+#### [NEW] `LearnSection.tsx`
+- Explains Hundreds, Tens, Ones with the `Base10Visualizer` and highlights selected place values.
+
+#### [NEW] `ExploreSection.tsx`
+- Interactive playground. Students click Hundreds, Tens, or Ones, triggering animations and visual breakdowns of how numbers form.
+
+#### [NEW] `BuildNumberSection.tsx`
+- Input field or number stepper where the student enters a number (e.g., 135) and sees the live `Base10Visualizer` breakdown and equation (100 + 30 + 5).
+
+#### [NEW] `PracticeSection.tsx`
+- Evaluates the student with multiple activity types: Multiple Choice, Arrange Blocks, Match the Number. Includes instant feedback (correct/incorrect states).
+
+#### [NEW] `ChallengeSection.tsx`
+- Generates a random number and challenges the student to build it using the Base-10 interactive blocks. 
+
+#### [NEW] `SummarySection.tsx`
+- Recaps key concepts and provides a "Continue to Practice Challenge" button (linking to `/student/quiz/practice-1`).
+
+### Styles
+#### [MODIFY] `src/styles/layout.css`
+- Add specific interactive animations (e.g., shake on incorrect answer, bounce on correct) and layout grids for the new module steps.
+
+## Verification Plan
+1. **Interactive Testing**: Verify all 7 steps can be navigated sequentially.
+2. **Visualizer Logic**: Test that entering `999` renders 9 hundreds, 9 tens, 9 ones accurately without breaking the flex/grid layout.
+3. **Practice & Challenge State**: Ensure instant feedback accurately evaluates answers and random number generation stays within the 1-999 range.
+4. **Responsiveness**: Check the module layout on mobile sizes (especially the drag-and-drop or block arrangements).

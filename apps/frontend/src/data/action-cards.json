@@ -1,0 +1,38 @@
+[
+  {
+    "id": "card_edunotes",
+    "title": "EduNotes",
+    "subtitle": "Learn, Practice, Win!",
+    "description": "Clear, concise, and student-friendly notes for specific math topics. Designed to simplify concepts and boost confidence.",
+    "icon": "/assets/illustrations/edunotes-illustration.png",
+    "buttonColor": "purple",
+    "targetUrl": "/student/lesson/edunotes"
+  },
+  {
+    "id": "card_architecture",
+    "title": "The Architecture of Numbers",
+    "subtitle": "Visual Concepts",
+    "description": "How to build hundreds, tens, and ones with interactive 3D blocks and place value breakdowns.",
+    "icon": "/assets/illustrations/architecture-illustration.png",
+    "buttonColor": "blue",
+    "targetUrl": "/student/lesson/architecture"
+  },
+  {
+    "id": "card_video",
+    "title": "Video Lessons",
+    "subtitle": "Watch & Learn",
+    "description": "Engaging video lessons that make math easy to understand and fun to learn.",
+    "icon": "/assets/illustrations/video-illustration.png",
+    "buttonColor": "orange",
+    "targetUrl": "/student/lesson/video"
+  },
+  {
+    "id": "card_practice",
+    "title": "Practice Challenge",
+    "subtitle": "Interactive Exercises",
+    "description": "Fun exercises to test and improve your skills with instant scoring and gamified rewards.",
+    "icon": "/assets/illustrations/practice-illustration.png",
+    "buttonColor": "accent",
+    "targetUrl": "/student/quiz/practice-1"
+  }
+]

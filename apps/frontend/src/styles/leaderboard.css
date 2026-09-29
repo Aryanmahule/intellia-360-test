@@ -1,0 +1,1093 @@
+/* =========================================================
+   INTELLIA360 — GAMIFIED STUDENT LEADERBOARD
+   Existing class names preserved
+   ========================================================= */
+
+.student-leaderboard-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 8px 50px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.sl-header-card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding: 24px 28px;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(circle at 90% 10%, rgba(250, 204, 21, 0.18), transparent 25%),
+    radial-gradient(circle at 10% 100%, rgba(99, 102, 241, 0.15), transparent 30%),
+    #ffffff;
+
+  border: 2px solid rgba(99, 102, 241, 0.10);
+
+  box-shadow:
+    0 12px 35px rgba(31, 41, 91, 0.08);
+}
+
+.sl-header-card::before {
+  content: "✨";
+  position: absolute;
+  right: 24px;
+  top: 12px;
+  font-size: 22px;
+  animation: slFloat 3s ease-in-out infinite;
+}
+
+.sl-header-card::after {
+  content: "⭐";
+  position: absolute;
+  right: 90px;
+  bottom: 12px;
+  font-size: 14px;
+  opacity: 0.7;
+  animation: slFloat 2.5s ease-in-out infinite reverse;
+}
+
+.sl-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sl-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sl-page-title {
+  margin: 0;
+
+  font-size: 1.7rem;
+  font-weight: 900;
+
+  color: #202052;
+
+  letter-spacing: -0.03em;
+}
+
+.sl-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+
+  background:
+    linear-gradient(135deg, #fff7cc, #ffe9a3);
+
+  color: #a16207;
+
+  border: 1px solid #facc15;
+
+  box-shadow: 0 3px 8px rgba(250, 204, 21, 0.18);
+}
+
+.sl-page-subtitle {
+  margin: 0;
+
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  color: #74779a;
+}
+
+
+/* =========================================================
+   CURRENT STUDENT HERO
+   ========================================================= */
+
+.sl-user-highlight-card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding: 22px 26px;
+
+  color: #ffffff;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(circle at 85% 15%, rgba(250, 204, 21, 0.35), transparent 22%),
+    radial-gradient(circle at 5% 90%, rgba(34, 211, 238, 0.22), transparent 25%),
+    linear-gradient(135deg, #302e78, #4f46a5 55%, #2563eb);
+
+  border: 2px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 15px 35px rgba(49, 46, 129, 0.28);
+}
+
+.sl-user-highlight-card::before {
+  content: "🏆";
+  position: absolute;
+  right: 25px;
+  top: -12px;
+
+  font-size: 70px;
+  opacity: 0.10;
+
+  transform: rotate(12deg);
+}
+
+.sl-user-highlight-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sl-user-rank-box {
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(135deg, #facc15, #f59e0b);
+
+  color: #573700;
+
+  border: 3px solid rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 6px 18px rgba(250, 204, 21, 0.35);
+
+  transform: rotate(-3deg);
+}
+
+.sl-rank-label {
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 900;
+}
+
+.sl-rank-number {
+  font-size: 1.4rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.sl-user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sl-user-name-tag {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.sl-user-name {
+  margin: 0;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+.sl-you-badge {
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  background: #22c55e;
+  color: #ffffff;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+
+  box-shadow: 0 3px 8px rgba(34, 197, 94, 0.3);
+}
+
+.sl-user-grade-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.sl-user-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.sl-user-stat-item {
+  min-width: 82px;
+
+  padding: 9px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(8px);
+}
+
+.sl-stat-title {
+  font-size: 0.58rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+
+  opacity: 0.72;
+
+  font-weight: 800;
+}
+
+.sl-stat-val {
+  font-size: 1.05rem;
+  font-weight: 950;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FILTER / CONTROL BAR
+   ========================================================= */
+
+.sl-control-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+  flex-wrap: wrap;
+
+  padding: 10px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 2px solid #eef0ff;
+
+  box-shadow:
+    0 7px 22px rgba(31, 41, 91, 0.06);
+}
+
+.sl-tabs-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.sl-tab-btn {
+  padding: 9px 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 0.78rem;
+  font-weight: 850;
+
+  color: #74779a;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sl-tab-btn:hover:not(.disabled) {
+  color: #4338ca;
+
+  background: #f3f4ff;
+
+  transform: translateY(-1px);
+}
+
+.sl-tab-btn.active {
+  color: #ffffff;
+
+  background:
+    linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  box-shadow:
+    0 5px 12px rgba(99, 102, 241, 0.25);
+}
+
+.sl-tab-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sl-filter-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sl-grade-select {
+  padding: 9px 14px;
+
+  border-radius: 12px;
+
+  border: 2px solid #e8e9fb;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  color: #29265f;
+
+  background: #fafaff;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sl-grade-select:hover,
+.sl-grade-select:focus {
+  border-color: #818cf8;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================================================
+   LEADERBOARD PANEL
+   ========================================================= */
+
+.sl-table-panel {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 2px solid #eef0ff;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 30px rgba(31, 41, 91, 0.07);
+}
+
+.sl-table-header {
+  display: grid;
+
+  grid-template-columns: 80px 1fr 140px 120px 140px;
+
+  padding: 15px 22px;
+
+  background:
+    linear-gradient(135deg,
+      #f6f7ff,
+      #fafaff);
+
+  border-bottom: 2px solid #eef0ff;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  color: #777aa0;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+.sl-table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sl-row {
+  display: grid;
+
+  grid-template-columns: 80px 1fr 140px 120px 140px;
+
+  align-items: center;
+
+  padding: 15px 22px;
+
+  border-bottom: 1px solid #f0f1fa;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.sl-row:last-child {
+  border-bottom: none;
+}
+
+.sl-row:hover {
+  background: #fafaff;
+
+  transform: scale(1.005);
+}
+
+
+/* Current student */
+
+.sl-row.current-user {
+  position: relative;
+
+  background:
+    linear-gradient(90deg,
+      #eef2ff,
+      #ffffff);
+
+  border-left: 5px solid #6366f1;
+
+  box-shadow:
+    inset 0 0 25px rgba(99, 102, 241, 0.04);
+}
+
+.sl-row.current-user:hover {
+  background: #eef2ff;
+}
+
+
+/* =========================================================
+   RANK MEDALS
+   ========================================================= */
+
+.sl-col-rank {
+  display: flex;
+  align-items: center;
+}
+
+.sl-rank-medal {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+
+  border: 2px solid transparent;
+
+  transition: transform 0.2s ease;
+}
+
+.sl-row:hover .sl-rank-medal {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.sl-rank-medal.rank-1 {
+  background:
+    linear-gradient(135deg, #fff4a8, #facc15);
+
+  color: #8a5a00;
+
+  border-color: #fde68a;
+
+  box-shadow:
+    0 5px 14px rgba(250, 204, 21, 0.3);
+}
+
+.sl-rank-medal.rank-2 {
+  background:
+    linear-gradient(135deg, #f1f5f9, #cbd5e1);
+
+  color: #475569;
+
+  border-color: #e2e8f0;
+}
+
+.sl-rank-medal.rank-3 {
+  background:
+    linear-gradient(135deg, #fed7aa, #fb923c);
+
+  color: #9a3412;
+
+  border-color: #fdba74;
+}
+
+.sl-rank-medal.rank-other {
+  background: #f5f6ff;
+
+  color: #6b7280;
+
+  border-color: #e8e9f8;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   STUDENT INFO
+   ========================================================= */
+
+.sl-col-student {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.sl-avatar {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 15px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 4px 12px rgba(31, 41, 91, 0.12);
+}
+
+.sl-avatar-fallback {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(135deg,
+      #6366f1,
+      #8b5cf6);
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  box-shadow:
+    0 5px 12px rgba(99, 102, 241, 0.2);
+}
+
+.sl-student-names {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  flex-wrap: wrap;
+}
+
+.sl-student-name {
+  font-size: 0.9rem;
+
+  font-weight: 850;
+
+  color: #24214f;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.sl-you-tag {
+  padding: 3px 7px;
+
+  border-radius: 999px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-size: 0.58rem;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   GRADE
+   ========================================================= */
+
+.sl-col-grade {
+  display: inline-flex;
+
+  width: fit-content;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 0.72rem;
+
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   STREAK
+   ========================================================= */
+
+.sl-col-streak {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 0.84rem;
+
+  font-weight: 850;
+
+  color: #ea580c;
+}
+
+.sl-col-streak::first-letter {
+  font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   XP
+   ========================================================= */
+
+.sl-col-xp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 5px;
+
+  font-size: 0.92rem;
+
+  font-weight: 950;
+
+  color: #29265f;
+
+  text-align: right;
+}
+
+.sl-xp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(135deg,
+      #fff7cc,
+      #ffed9a);
+
+  color: #a16207;
+
+  border: 1px solid #fde68a;
+
+  font-size: 0.76rem;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 3px 8px rgba(250, 204, 21, 0.12);
+}
+
+
+/* =========================================================
+   STATES
+   ========================================================= */
+
+.sl-state-box {
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 24px;
+
+  text-align: center;
+
+  gap: 12px;
+}
+
+.sl-state-icon {
+  font-size: 3rem;
+
+  animation: slFloat 2s ease-in-out infinite;
+}
+
+.sl-state-title {
+  margin: 0;
+
+  font-size: 1.1rem;
+
+  font-weight: 900;
+
+  color: #29265f;
+}
+
+.sl-state-desc {
+  margin: 0;
+
+  max-width: 440px;
+
+  font-size: 0.83rem;
+
+  color: #777a99;
+
+  line-height: 1.55;
+}
+
+.sl-retry-btn {
+  margin-top: 7px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(135deg,
+      #6366f1,
+      #8b5cf6);
+
+  color: #ffffff;
+
+  font-size: 0.8rem;
+
+  font-weight: 850;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(99, 102, 241, 0.25);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.sl-retry-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 20px rgba(99, 102, 241, 0.32);
+}
+
+.sl-loading-spinner {
+  width: 38px;
+  height: 38px;
+
+  border: 4px solid #e8eaff;
+
+  border-top-color: #6366f1;
+
+  border-right-color: #8b5cf6;
+
+  border-radius: 50%;
+
+  animation: slSpin 0.75s linear infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes slSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 860px) {
+  .sl-table-header {
+    grid-template-columns: 60px 1fr 100px 110px;
+  }
+
+  .sl-table-header>div:nth-child(3) {
+    display: none;
+  }
+
+  .sl-row {
+    grid-template-columns: 60px 1fr 100px 110px;
+  }
+
+  .sl-col-grade {
+    display: none;
+  }
+
+  .sl-user-highlight-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .sl-user-stats-row {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+  .sl-user-stat-item {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .student-leaderboard-container {
+    padding: 8px 5px 35px;
+
+    gap: 14px;
+  }
+
+  .sl-header-card {
+    padding: 19px;
+
+    border-radius: 20px;
+  }
+
+  .sl-page-title {
+    font-size: 1.4rem;
+  }
+
+  .sl-user-highlight-card {
+    padding: 18px;
+
+    border-radius: 20px;
+  }
+
+  .sl-user-highlight-left {
+    width: 100%;
+  }
+
+  .sl-user-stats-row {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+  }
+
+  .sl-user-stat-item {
+    min-width: 0;
+
+    padding: 8px 5px;
+
+    text-align: center;
+  }
+
+  .sl-stat-val {
+    font-size: 0.95rem;
+  }
+
+  .sl-control-bar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .sl-tabs-group {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .sl-tabs-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sl-tab-btn {
+    flex-shrink: 0;
+  }
+
+  .sl-filter-right {
+    width: 100%;
+  }
+
+  .sl-grade-select {
+    width: 100%;
+  }
+
+  .sl-table-panel {
+    border-radius: 18px;
+  }
+
+  .sl-table-header {
+    grid-template-columns: 48px 1fr 85px;
+
+    padding: 12px 12px;
+
+    font-size: 0.62rem;
+  }
+
+  .sl-table-header>div:nth-child(4) {
+    display: none;
+  }
+
+  .sl-row {
+    grid-template-columns: 48px 1fr 85px;
+
+    padding: 12px;
+  }
+
+  .sl-col-streak {
+    display: none;
+  }
+
+  .sl-col-student {
+    gap: 9px;
+  }
+
+  .sl-avatar,
+  .sl-avatar-fallback {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 12px;
+  }
+
+  .sl-student-name {
+    font-size: 0.78rem;
+  }
+
+  .sl-col-xp {
+    font-size: 0.8rem;
+  }
+
+  .sl-xp-pill {
+    padding: 5px 8px;
+
+    font-size: 0.68rem;
+  }
+
+  .sl-rank-medal {
+    width: 32px;
+    height: 32px;
+
+    font-size: 0.95rem;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .sl-user-stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sl-user-stat-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .sl-page-title {
+    font-size: 1.25rem;
+  }
+
+  .sl-table-header {
+    grid-template-columns: 42px 1fr 75px;
+  }
+
+  .sl-row {
+    grid-template-columns: 42px 1fr 75px;
+  }
+}

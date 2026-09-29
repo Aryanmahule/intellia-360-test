@@ -1,0 +1,42 @@
+{
+    "id": "comparing-and-ordering-numbers",
+    "title": "Comparing and ordering numbers",
+    "description": "Learn to compare numbers using greater than, less than, and equal to.",
+    "chapterId": "chap_1",
+    "chapterTitle": "Numbers And Counting",
+    "grade": "grade1",
+    "estimatedMinutes": 20,
+    "completed": false,
+    "locked": false,
+    "heroVisualizer": "comparing-numbers",
+    "heroVisualizerData": {
+        "left": 45,
+        "right": 67
+    },
+    "modules": {
+        "eduNotes": {
+            "enabled": true,
+            "url": "/student/lesson/edunotes"
+        },
+        "architectureModule": {
+            "enabled": true,
+            "url": "/student/lesson/architecture"
+        },
+        "videoLesson": {
+            "enabled": true,
+            "url": "/student/lesson/video"
+        },
+        "practiceModule": {
+            "enabled": true,
+            "url": "/student/quiz/practice-1"
+        }
+    },
+    "previousLesson": {
+        "id": "place-value-tens-and-ones",
+        "title": "Place value (tens and ones)"
+    },
+    "nextLesson": {
+        "id": "number-patterns",
+        "title": "Number patterns"
+    }
+}

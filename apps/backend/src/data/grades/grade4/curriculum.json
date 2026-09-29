@@ -1,0 +1,1135 @@
+{
+  "activeTopic": {
+    "id": "line-graphs",
+    "title": "Line graphs",
+    "status": "active",
+    "icon": "star",
+    "vercelLink": "https://grade4-line-graphs.vercel.app/",
+    "estimatedTime": "16 mins",
+    "difficulty": "Intermediate",
+    "xpReward": 85,
+    "gemsReward": 3,
+    "heroSlide": {
+      "tag": "Today's Adventure",
+      "lessonId": "line-graphs",
+      "title": "Line graphs",
+      "subtitle": "Learn all about Line graphs in this exciting lesson!",
+      "ctaText": "Start Learning →",
+      "ctaUrl": "https://grade4-line-graphs.vercel.app/",
+      "visualizerKey": "place-value",
+      "visualizerData": {
+        "number": 123
+      }
+    },
+    "actionCards": {
+      "architecture": "https://grade4-line-graphs.vercel.app/",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "edunotes": "/student/lesson/edunotes",
+      "practice": "/student/quiz/practice-1"
+    },
+    "aiContext": "The student is currently learning about Line graphs."
+  },
+  "standaloneTopics": [],
+  "chapters": [
+    {
+      "id": "chap_1",
+      "chapterNumber": 1,
+      "title": "Chapter 1 : Whole Numbers (Up to 100,000)",
+      "topicsCount": 5,
+      "topics": [
+        {
+          "id": "read-and-write-numbers-up-to-100000",
+          "title": "Read and write numbers up to 100,000",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "read-and-write-upto-100000.vercel.app",
+          "estimatedTime": "20 mins",
+          "difficulty": "Beginner",
+          "xpReward": 70,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "read-and-write-numbers-up-to-100000",
+            "title": "Read and write numbers up to 100,000",
+            "subtitle": "Learn all about Read and write numbers up to 100,000 in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "read-and-write-upto-100000.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "read-and-write-upto-100000.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Read and write numbers up to 100,000."
+        },
+        {
+          "id": "place-value",
+          "title": "Place value (ten thousands, thousands, hundreds, tens, ones)",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "placevalue-quest.vercel.app",
+          "estimatedTime": "18 mins",
+          "difficulty": "Beginner",
+          "xpReward": 75,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "place-value",
+            "title": "Place value (ten thousands, thousands, hundreds, tens, ones)",
+            "subtitle": "Learn all about Place value in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "placevalue-quest.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "placevalue-quest.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Place value."
+        },
+        {
+          "id": "expanded-form-of-numbers",
+          "title": "Expanded form of numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://whole-numbers-expanded-form.vercel.app/",
+          "estimatedTime": "19 mins",
+          "difficulty": "Beginner",
+          "xpReward": 92,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "expanded-form-of-numbers",
+            "title": "Expanded form of numbers",
+            "subtitle": "Learn all about Expanded form of numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://whole-numbers-expanded-form.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://whole-numbers-expanded-form.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Expanded form of numbers."
+        },
+        {
+          "id": "comparing-and-ordering-numbers",
+          "title": "Comparing and ordering numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://comparing-ordering-grade4.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 70,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "comparing-and-ordering-numbers",
+            "title": "Comparing and ordering numbers",
+            "subtitle": "Learn all about Comparing and ordering numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://comparing-ordering-grade4.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://comparing-ordering-grade4.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Comparing and ordering numbers."
+        },
+        {
+          "id": "number-patterns-and-sequences",
+          "title": "Number patterns and sequences",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://patterns-and-sequence.vercel.app/",
+          "estimatedTime": "18 mins",
+          "difficulty": "Advanced",
+          "xpReward": 68,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "number-patterns-and-sequences",
+            "title": "Number patterns and sequences",
+            "subtitle": "Learn all about Number patterns and sequences in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://patterns-and-sequence.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://patterns-and-sequence.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Number patterns and sequences."
+        }
+      ]
+    },
+    {
+      "id": "chap_2",
+      "chapterNumber": 2,
+      "title": "Chapter 2 : Addition and Subtraction",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "add-and-subtract-numbers-up-to-5-digits",
+          "title": "Add and subtract numbers up to 5 digits",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-add-and-subtract-numbers.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Advanced",
+          "xpReward": 69,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "add-and-subtract-numbers-up-to-5-digits",
+            "title": "Add and subtract numbers up to 5 digits",
+            "subtitle": "Learn all about Add and subtract numbers up to 5 digits in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-add-and-subtract-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-add-and-subtract-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Add and subtract numbers up to 5 digits."
+        },
+        {
+          "id": "mental-math-strategies",
+          "title": "Mental math strategies",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-mental-maths.vercel.app/",
+          "estimatedTime": "10 mins",
+          "difficulty": "Advanced",
+          "xpReward": 66,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "mental-math-strategies",
+            "title": "Mental math strategies",
+            "subtitle": "Learn all about Mental math strategies in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-mental-maths.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-mental-maths.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Mental math strategies."
+        },
+        {
+          "id": "estimation-before-solving",
+          "title": "Estimation before solving",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://estimation-add-sub.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 75,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "estimation-before-solving",
+            "title": "Estimation before solving",
+            "subtitle": "Learn all about Estimation before solving in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://estimation-add-sub.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://estimation-add-sub.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Estimation before solving."
+        }
+      ]
+    },
+    {
+      "id": "chap_3",
+      "chapterNumber": 3,
+      "title": "Chapter 3 : Multiplication",
+      "topicsCount": 2,
+      "topics": [
+        {
+          "id": "multiplication-facts-up-to-9x9-tables",
+          "title": "Multiplication facts (up to 9×9 tables)",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://multiply-quest.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Advanced",
+          "xpReward": 52,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "multiplication-facts-up-to-9x9-tables",
+            "title": "Multiplication facts (up to 9×9 tables)",
+            "subtitle": "Learn all about Multiplication facts in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://multiply-quest.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://multiply-quest.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Multiplication facts."
+        },
+        {
+          "id": "multiplying-4-digit-x-1-digit-and-3-digit-x-2-digit",
+          "title": "Multiplying: 4-digit × 1-digit & 3-digit × 2-digit numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "digit-multiplication.vercel.app",
+          "estimatedTime": "23 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 64,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "multiplying-4-digit-x-1-digit-and-3-digit-x-2-digit",
+            "title": "Multiplying: 4-digit × 1-digit & 3-digit × 2-digit numbers",
+            "subtitle": "Learn all about Multiplying large numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "digit-multiplication.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "digit-multiplication.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Multiplying 4-digit by 1-digit and 3-digit by 2-digit numbers."
+        }
+      ]
+    },
+    {
+      "id": "chap_4",
+      "chapterNumber": 4,
+      "title": "Chapter 4 : Division",
+      "topicsCount": 2,
+      "topics": [
+        {
+          "id": "division-with-remainder",
+          "title": "Division with remainder",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade4-division-with-remainder.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 80,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "division-with-remainder",
+            "title": "Division with remainder",
+            "subtitle": "Learn all about Division with remainder in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade4-division-with-remainder.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade4-division-with-remainder.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Division with remainder."
+        },
+        {
+          "id": "dividing-4-digit-numbers-by-1-digit",
+          "title": "Dividing 4-digit numbers by 1-digit",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade4-division-4-digit.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Advanced",
+          "xpReward": 57,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "dividing-4-digit-numbers-by-1-digit",
+            "title": "Dividing 4-digit numbers by 1-digit",
+            "subtitle": "Learn all about Dividing 4-digit numbers by 1-digit in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade4-division-4-digit.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade4-division-4-digit.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Dividing 4-digit numbers by 1-digit."
+        }
+      ]
+    },
+    {
+      "id": "chap_5",
+      "chapterNumber": 5,
+      "title": "Chapter 5 : Factors and Multiples",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "factors-of-numbers",
+          "title": "Factors of numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://factors-of-numbers.vercel.app",
+          "estimatedTime": "23 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 61,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "factors-of-numbers",
+            "title": "Factors of numbers",
+            "subtitle": "Learn all about Factors of numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://factors-of-numbers.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://factors-of-numbers.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Factors of numbers."
+        },
+        {
+          "id": "multiples-of-numbers",
+          "title": "Multiples of numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://multiples-of-numbers.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Beginner",
+          "xpReward": 67,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "multiples-of-numbers",
+            "title": "Multiples of numbers",
+            "subtitle": "Learn all about Multiples of numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://multiples-of-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://multiples-of-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Multiples of numbers."
+        },
+        {
+          "id": "common-factors-and-common-multiples",
+          "title": "Common factors and common multiples",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://common-factors-and-multiples.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 79,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "common-factors-and-common-multiples",
+            "title": "Common factors and common multiples",
+            "subtitle": "Learn all about Common factors and common multiples in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://common-factors-and-multiples.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://common-factors-and-multiples.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Common factors and common multiples."
+        }
+      ]
+    },
+    {
+      "id": "chap_6",
+      "chapterNumber": 6,
+      "title": "Chapter 6 : Fractions",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "mixed-numbers-and-improper-fractions",
+          "title": "Mixed numbers and improper fractions",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://mixed-number-and-improper-fractions.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Beginner",
+          "xpReward": 85,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "mixed-numbers-and-improper-fractions",
+            "title": "Mixed numbers and improper fractions",
+            "subtitle": "Learn all about Mixed numbers and improper fractions in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://mixed-number-and-improper-fractions.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://mixed-number-and-improper-fractions.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Mixed numbers and improper fractions."
+        },
+        {
+          "id": "improper-fractions-to-mixed-numbers",
+          "title": "Improper fractions → Mixed numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://improper-frac-to-mixed-numbers.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 66,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "improper-fractions-to-mixed-numbers",
+            "title": "Improper fractions → Mixed numbers",
+            "subtitle": "Learn all about converting improper fractions to mixed numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://improper-frac-to-mixed-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://improper-frac-to-mixed-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about converting improper fractions to mixed numbers."
+        },
+        {
+          "id": "mixed-numbers-to-improper-fractions",
+          "title": "Mixed numbers → Improper fractions",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://mixed-number-and-improper-fractions.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Beginner",
+          "xpReward": 85,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "mixed-numbers-to-improper-fractions",
+            "title": "Mixed numbers → Improper fractions",
+            "subtitle": "Learn all about converting mixed numbers to improper fractions in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://mixed-number-and-improper-fractions.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://mixed-number-and-improper-fractions.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about converting mixed numbers to improper fractions."
+        }
+      ]
+    },
+    {
+      "id": "chap_7",
+      "chapterNumber": 7,
+      "title": "Chapter 7 : Decimals",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "decimals-up-to-2-decimal-places",
+          "title": "Decimals up to 2 decimal places",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://decimals-up-to-2-places.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 58,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "decimals-up-to-2-decimal-places",
+            "title": "Decimals up to 2 decimal places",
+            "subtitle": "Learn all about Decimals up to 2 decimal places in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://decimals-up-to-2-places.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://decimals-up-to-2-places.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Decimals up to 2 decimal places."
+        },
+        {
+          "id": "tenths-and-hundredths",
+          "title": "Tenths and hundredths",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://tens-and-hundredths-for-grade-4.vercel.app/",
+          "estimatedTime": "10 mins",
+          "difficulty": "Advanced",
+          "xpReward": 60,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "tenths-and-hundredths",
+            "title": "Tenths and hundredths",
+            "subtitle": "Learn all about Tenths and hundredths in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://tens-and-hundredths-for-grade-4.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://tens-and-hundredths-for-grade-4.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Tenths and hundredths."
+        },
+        {
+          "id": "convert-fractions-decimals",
+          "title": "Convert fractions ↔ decimals",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://decimals-up-to-2-places.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 70,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "convert-fractions-decimals",
+            "title": "Convert fractions ↔ decimals",
+            "subtitle": "Learn all about converting fractions and decimals in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://decimals-up-to-2-places.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://decimals-up-to-2-places.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about converting fractions and decimals."
+        }
+      ]
+    },
+    {
+      "id": "chap_8",
+      "chapterNumber": 8,
+      "title": "Chapter 8 : Measurement",
+      "topicsCount": 5,
+      "topics": [
+        {
+          "id": "time",
+          "title": "Time",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-time-grade-4.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Beginner",
+          "xpReward": 73,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "time",
+            "title": "Time",
+            "subtitle": "Learn all about Time in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-time-grade-4.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-time-grade-4.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Time."
+        },
+        {
+          "id": "money",
+          "title": "Money",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-money-grade-4.vercel.app/",
+          "estimatedTime": "10 mins",
+          "difficulty": "Beginner",
+          "xpReward": 53,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "money",
+            "title": "Money",
+            "subtitle": "Learn all about Money in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-money-grade-4.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-money-grade-4.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Money."
+        },
+        {
+          "id": "length-mass-volume",
+          "title": "Length, Mass, Volume",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://measurement-length-mass-volume.vercel.app/",
+          "estimatedTime": "21 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 69,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "length-mass-volume",
+            "title": "Length, Mass, Volume",
+            "subtitle": "Learn all about Length, Mass, Volume in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://measurement-length-mass-volume.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://measurement-length-mass-volume.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Length, Mass, Volume."
+        },
+        {
+          "id": "area-and-perimeter",
+          "title": "Area and Perimeter",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://area-perimeter-rouge.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Beginner",
+          "xpReward": 57,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "area-and-perimeter",
+            "title": "Area and Perimeter",
+            "subtitle": "Learn all about Area and Perimeter in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://area-perimeter-rouge.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://area-perimeter-rouge.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Area and Perimeter."
+        },
+        {
+          "id": "measurement-test-series",
+          "title": "Measurement Test Series",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://area-perimeter-rouge.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Advanced",
+          "xpReward": 100,
+          "gemsReward": 5,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "measurement-test-series",
+            "title": "Measurement Test Series",
+            "subtitle": "Test your skills in Measurement!",
+            "ctaText": "Start Test →",
+            "ctaUrl": "https://area-perimeter-rouge.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://area-perimeter-rouge.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is taking the Measurement Test Series."
+        }
+      ]
+    },
+    {
+      "id": "chap_9",
+      "chapterNumber": 9,
+      "title": "Chapter 9 : Geometry",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "lines",
+          "title": "Lines",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://line-quest.vercel.app",
+          "estimatedTime": "23 mins",
+          "difficulty": "Beginner",
+          "xpReward": 74,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "lines",
+            "title": "Lines",
+            "subtitle": "Learn all about Lines in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://line-quest.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://line-quest.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Lines."
+        },
+        {
+          "id": "angles",
+          "title": "Angles",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade4-angles.vercel.app/",
+          "estimatedTime": "20 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 93,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "angles",
+            "title": "Angles",
+            "subtitle": "Learn all about Angles in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade4-angles.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade4-angles.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Angles."
+        },
+        {
+          "id": "shapes",
+          "title": "Shapes",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://geometry-shapes-ashen.vercel.app/",
+          "estimatedTime": "20 mins",
+          "difficulty": "Beginner",
+          "xpReward": 55,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "shapes",
+            "title": "Shapes",
+            "subtitle": "Learn all about Shapes in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://geometry-shapes-ashen.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://geometry-shapes-ashen.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Shapes."
+        },
+        {
+          "id": "symmetry",
+          "title": "Symmetry",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://symmetry-plum.vercel.app/",
+          "estimatedTime": "24 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 70,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "symmetry",
+            "title": "Symmetry",
+            "subtitle": "Learn all about Symmetry in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://symmetry-plum.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://symmetry-plum.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Symmetry."
+        }
+      ]
+    },
+    {
+      "id": "chap_10",
+      "chapterNumber": 10,
+      "title": "Chapter 10 : Data Handling (Statistics)",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "tables-and-charts",
+          "title": "Tables and charts",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://data-detectives-tables-charts.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Beginner",
+          "xpReward": 78,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "tables-and-charts",
+            "title": "Tables and charts",
+            "subtitle": "Learn all about Tables and charts in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://data-detectives-tables-charts.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://data-detectives-tables-charts.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Tables and charts."
+        },
+        {
+          "id": "bar-graphs",
+          "title": "Bar graphs",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://data-quest-seven.vercel.app",
+          "estimatedTime": "19 mins",
+          "difficulty": "Beginner",
+          "xpReward": 87,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "bar-graphs",
+            "title": "Bar graphs",
+            "subtitle": "Learn all about Bar graphs in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://data-quest-seven.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://data-quest-seven.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Bar graphs."
+        },
+        {
+          "id": "line-graphs",
+          "title": "Line graphs",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://grade4-line-graphs.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 85,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "line-graphs",
+            "title": "Line graphs",
+            "subtitle": "Learn all about Line graphs in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade4-line-graphs.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade4-line-graphs.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Line graphs."
+        },
+        {
+          "id": "pie-charts",
+          "title": "Pie charts",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade4-pie-chart.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Advanced",
+          "xpReward": 90,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "pie-charts",
+            "title": "Pie charts",
+            "subtitle": "Learn all about Pie charts in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade4-pie-chart.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade4-pie-chart.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Pie charts."
+        }
+      ]
+    }
+  ]
+}

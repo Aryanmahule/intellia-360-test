@@ -1,0 +1,70 @@
+{
+    "gradeId": "grade1",
+    "heroSlide": {
+        "tag": "Today's Adventure",
+        "lessonId": "counting-up-to-100",
+        "title": "Counting numbers up to 100",
+        "subtitle": "Learn to count from 1 to 100 with fun activities and interactive visuals.",
+        "ctaText": "Start Learning →",
+        "ctaUrl": "/student/lesson/architecture",
+        "visualizerKey": "counting-numbers-up-to-100",
+        "visualizerData": {
+            "start": 1,
+            "end": 100
+        }
+    },
+    "actionCards": [
+        {
+            "id": "card_edunotes",
+            "title": "EduNotes",
+            "subtitle": "Learn, Practice, Win!",
+            "description": "Simple and engaging notes to help students understand counting concepts.",
+            "icon": "📖",
+            "buttonColor": "purple",
+            "targetUrl": "/student/lesson/edunotes",
+            "enabled": true,
+            "openInModal": true,
+            "viewerType": "iframe",
+            "allowFullscreen": true
+        },
+        {
+            "id": "card_architecture",
+            "title": "The Architecture of Numbers",
+            "subtitle": "Visual Concepts",
+            "description": "Understand counting using interactive visual representations.",
+            "icon": "🧊",
+            "buttonColor": "blue",
+            "targetUrl": "/student/lesson/architecture",
+            "enabled": true,
+            "openInModal": true,
+            "viewerType": "iframe",
+            "allowFullscreen": true
+        },
+        {
+            "id": "card_video",
+            "title": "Video Lessons",
+            "subtitle": "Watch & Learn",
+            "description": "Animated lessons that make counting easy and enjoyable.",
+            "icon": "▶",
+            "buttonColor": "orange",
+            "targetUrl": "/student/lesson/video",
+            "enabled": true,
+            "openInModal": true,
+            "viewerType": "iframe",
+            "allowFullscreen": true
+        },
+        {
+            "id": "card_practice",
+            "title": "Practice Challenge",
+            "subtitle": "Interactive Exercises",
+            "description": "Practice counting with fun quizzes and games.",
+            "icon": "🏆",
+            "buttonColor": "accent",
+            "targetUrl": "/student/quiz/practice-1",
+            "enabled": true,
+            "openInModal": true,
+            "viewerType": "iframe",
+            "allowFullscreen": true
+        }
+    ]
+}

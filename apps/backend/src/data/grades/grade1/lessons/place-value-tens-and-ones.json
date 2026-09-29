@@ -1,0 +1,42 @@
+{
+    "id": "place-value-tens-and-ones",
+    "title": "Place value (tens and ones)",
+    "description": "Understand tens and ones in two-digit numbers.",
+    "chapterId": "chap_1",
+    "chapterTitle": "Numbers And Counting",
+    "grade": "grade1",
+    "estimatedMinutes": 20,
+    "completed": false,
+    "locked": false,
+    "heroVisualizer": "place-value",
+    "heroVisualizerData": {
+        "tens": 4,
+        "ones": 2
+    },
+    "modules": {
+        "eduNotes": {
+            "enabled": true,
+            "url": "/student/lesson/edunotes"
+        },
+        "architectureModule": {
+            "enabled": true,
+            "url": "/student/lesson/architecture"
+        },
+        "videoLesson": {
+            "enabled": true,
+            "url": "/student/lesson/video"
+        },
+        "practiceModule": {
+            "enabled": true,
+            "url": "/student/quiz/practice-1"
+        }
+    },
+    "previousLesson": {
+        "id": "reading-writing-numbers",
+        "title": "Reading and writing numbers"
+    },
+    "nextLesson": {
+        "id": "comparing-and-ordering-numbers",
+        "title": "Comparing and ordering numbers"
+    }
+}

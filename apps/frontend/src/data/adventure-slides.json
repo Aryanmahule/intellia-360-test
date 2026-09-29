@@ -1,0 +1,53 @@
+[
+  {
+    "id": "adv_1",
+    "tag": "Today's Adventure",
+    "title": "Place value: Hundreds, Tens, Ones",
+    "subtitle": "Build strong number sense by exploring place value in a fun way!",
+    "ctaText": "Start Learning →",
+    "visualizerKey": "place-value",
+    "visualizerData": {
+      "hundreds": 1,
+      "tens": 2,
+      "ones": 4
+    }
+  },
+  {
+    "id": "adv_2",
+    "tag": "Today's Adventure",
+    "title": "Addition with Grouping",
+    "subtitle": "Learn how to add numbers by grouping tens and ones together!",
+    "ctaText": "Start Learning →",
+    "visualizerKey": "addition-grouping",
+    "visualizerData": {
+      "num1": 27,
+      "num2": 18,
+      "result": 45
+    }
+  },
+  {
+    "id": "adv_3",
+    "tag": "Today's Adventure",
+    "title": "Comparing Numbers",
+    "subtitle": "Compare numbers using >, <, and = in a fun and easy way!",
+    "ctaText": "Start Learning →",
+    "visualizerKey": "comparing-numbers",
+    "visualizerData": {
+      "leftNum": 246,
+      "rightNum": 378,
+      "operator": "<"
+    }
+  },
+  {
+    "id": "adv_4",
+    "tag": "Today's Adventure",
+    "title": "Numbers to 1,000",
+    "subtitle": "Learn to read, write, compare, order, and understand numbers up to 1,000!",
+    "ctaText": "Start Learning →",
+    "visualizerKey": "numbers-to-1000",
+    "visualizerData": {
+      "number": 786,
+      "spelledOut": "Seven hundred eighty-six"
+    }
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "id": "place-value-hundreds-tens-ones",
+  "title": "Place value: Hundreds, Tens, Ones",
+  "description": "Build strong number sense by exploring place value in a fun, interactive way using base-10 blocks.",
+  "chapterId": "chap_1",
+  "chapterTitle": "Numbers to 1,000",
+  "grade": "grade2",
+  "estimatedMinutes": 25,
+  "completed": true,
+  "locked": false,
+  "heroVisualizer": "place-value",
+  "heroVisualizerData": {
+    "hundreds": 1,
+    "tens": 3,
+    "ones": 5,
+    "number": 135
+  },
+  "modules": {
+    "eduNotes": {
+      "enabled": true,
+      "url": "/student/lesson/edunotes"
+    },
+    "architectureModule": {
+      "enabled": true,
+      "url": "/student/lesson/architecture"
+    },
+    "videoLesson": {
+      "enabled": true,
+      "url": "/student/lesson/video"
+    },
+    "practiceModule": {
+      "enabled": true,
+      "url": "/student/quiz/practice-1"
+    }
+  },
+  "previousLesson": null,
+  "nextLesson": {
+    "id": "comparing-numbers",
+    "title": "Comparing numbers (>, <, =)"
+  }
+}

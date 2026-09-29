@@ -1,0 +1,1323 @@
+{
+  "activeTopic": {
+    "id": "counting-numbers-up-to-200",
+    "title": "Counting numbers up to 200",
+    "status": "completed",
+    "icon": "star",
+    "vercelLink": "https://grade2-numbers-to-200.vercel.app/",
+    "estimatedTime": "15 mins",
+    "difficulty": "Beginner",
+    "xpReward": 59,
+    "gemsReward": 3,
+    "heroSlide": {
+      "tag": "Today's Adventure",
+      "lessonId": "counting-numbers-up-to-200",
+      "title": "Counting numbers up to 200",
+      "subtitle": "Learn all about Counting numbers up to 200 in this exciting lesson!",
+      "ctaText": "Start Learning →",
+      "ctaUrl": "https://grade2-numbers-to-200.vercel.app/",
+      "visualizerKey": "place-value",
+      "visualizerData": {
+        "number": 123
+      }
+    },
+    "actionCards": {
+      "architecture": "https://grade2-numbers-to-200.vercel.app/",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "edunotes": "/student/lesson/edunotes",
+      "practice": "/student/quiz/practice-1"
+    },
+    "aiContext": "The student is currently learning about Counting numbers up to 200."
+  },
+  "standaloneTopics": [],
+  "chapters": [
+    {
+      "id": "chap_1",
+      "chapterNumber": 1,
+      "title": "Chapter 1 : Numbers to 200",
+      "topicsCount": 5,
+      "topics": [
+        {
+          "id": "counting-numbers-up-to-200",
+          "title": "Counting numbers up to 200",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-numbers-to-200.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Beginner",
+          "xpReward": 59,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "counting-numbers-up-to-200",
+            "title": "Counting numbers up to 200",
+            "subtitle": "Learn all about Counting numbers up to 200 in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-numbers-to-200.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-numbers-to-200.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Counting numbers up to 200."
+        },
+        {
+          "id": "reading-and-writing-numbers",
+          "title": "Reading and writing numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-math-grade-2.vercel.app/",
+          "estimatedTime": "24 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 83,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "reading-and-writing-numbers",
+            "title": "Reading and writing numbers",
+            "subtitle": "Learn all about Reading and writing numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-math-grade-2.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-math-grade-2.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Reading and writing numbers."
+        },
+        {
+          "id": "place-value-hundreds-tens-ones",
+          "title": "Place value: Hundreds, Tens, Ones",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2ordering-number.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Advanced",
+          "xpReward": 50,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "place-value-hundreds-tens-ones",
+            "title": "Place value: Hundreds, Tens, Ones",
+            "subtitle": "Learn all about Place value: Hundreds, Tens, Ones in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2ordering-number.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2ordering-number.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Place value: Hundreds, Tens, Ones."
+        },
+        {
+          "id": "comparing-numbers",
+          "title": "Comparing numbers (>, <, =)",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-comparing-number.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Beginner",
+          "xpReward": 71,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "comparing-numbers",
+            "title": "Comparing numbers (>, <, =)",
+            "subtitle": "Learn all about Comparing numbers (>, <, =) in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-comparing-number.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-comparing-number.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Comparing numbers (>, <, =)."
+        },
+        {
+          "id": "ordering-numbers",
+          "title": "Ordering numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2ordering-number.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Advanced",
+          "xpReward": 87,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "ordering-numbers",
+            "title": "Ordering numbers",
+            "subtitle": "Learn all about Ordering numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2ordering-number.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2ordering-number.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Ordering numbers."
+        }
+      ]
+    },
+    {
+      "id": "chap_2",
+      "chapterNumber": 2,
+      "title": "Chapter 2 : Addition within 100",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "addition-without-regrouping",
+          "title": "Addition without regrouping",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-adding-three-numbers.vercel.app/",
+          "estimatedTime": "17 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 67,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "addition-without-regrouping",
+            "title": "Addition without regrouping",
+            "subtitle": "Learn all about Addition without regrouping in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-adding-three-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-adding-three-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Addition without regrouping."
+        },
+        {
+          "id": "addition-with-regrouping",
+          "title": "Addition with regrouping",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-sg-test-case-fjxg.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 98,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "addition-with-regrouping",
+            "title": "Addition with regrouping",
+            "subtitle": "Learn all about Addition with regrouping in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-sg-test-case-fjxg.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-sg-test-case-fjxg.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Addition with regrouping."
+        },
+        {
+          "id": "mental-math-strategies",
+          "title": "Mental math strategies",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-mental-math-grade-2.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 56,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "mental-math-strategies",
+            "title": "Mental math strategies",
+            "subtitle": "Learn all about Mental math strategies in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-mental-math-grade-2.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-mental-math-grade-2.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Mental math strategies."
+        },
+        {
+          "id": "adding-three-numbers",
+          "title": "Adding three numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-adding-three-numbers.vercel.app/",
+          "estimatedTime": "24 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 50,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "adding-three-numbers",
+            "title": "Adding three numbers",
+            "subtitle": "Learn all about Adding three numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-adding-three-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-adding-three-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Adding three numbers."
+        }
+      ]
+    },
+    {
+      "id": "chap_3",
+      "chapterNumber": 3,
+      "title": "Chapter 3 : Subtraction within 100",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "subtraction-without-regrouping",
+          "title": "Subtraction without regrouping",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-subtraction-without-regrou.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Beginner",
+          "xpReward": 64,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "subtraction-without-regrouping",
+            "title": "Subtraction without regrouping",
+            "subtitle": "Learn all about Subtraction without regrouping in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-subtraction-without-regrou.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-subtraction-without-regrou.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Subtraction without regrouping."
+        },
+        {
+          "id": "subtraction-with-regrouping",
+          "title": "Subtraction with regrouping",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-substraction.vercel.app/",
+          "estimatedTime": "18 mins",
+          "difficulty": "Beginner",
+          "xpReward": 92,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "subtraction-with-regrouping",
+            "title": "Subtraction with regrouping",
+            "subtitle": "Learn all about Subtraction with regrouping in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-substraction.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-substraction.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Subtraction with regrouping."
+        },
+        {
+          "id": "relationship-between-addition-and-subtraction",
+          "title": "Relationship between addition and subtraction",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Beginner",
+          "xpReward": 90,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "relationship-between-addition-and-subtraction",
+            "title": "Relationship between addition and subtraction",
+            "subtitle": "Learn all about Relationship between addition and subtraction in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Relationship between addition and subtraction."
+        }
+      ]
+    },
+    {
+      "id": "chap_4",
+      "chapterNumber": 4,
+      "title": "Chapter 4 : Numbers to 1,000",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "counting-to-1000",
+          "title": "Counting to 1,000",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://numbers-to-1000-blue.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 95,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "counting-to-1000",
+            "title": "Counting to 1,000",
+            "subtitle": "Learn all about Counting to 1,000 in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://numbers-to-1000-blue.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://numbers-to-1000-blue.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Counting to 1,000."
+        },
+        {
+          "id": "understanding-hundreds",
+          "title": "Understanding hundreds",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Advanced",
+          "xpReward": 56,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "understanding-hundreds",
+            "title": "Understanding hundreds",
+            "subtitle": "Learn all about Understanding hundreds in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-numbers-to-1000-understanding-hundreds-u46kl27s9.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Understanding hundreds."
+        },
+        {
+          "id": "place-value-representation",
+          "title": "Place value representation",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://numbers-to-1000.vercel.app/",
+          "estimatedTime": "24 mins",
+          "difficulty": "Beginner",
+          "xpReward": 63,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "place-value-representation",
+            "title": "Place value representation",
+            "subtitle": "Learn all about Place value representation in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://numbers-to-1000.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://numbers-to-1000.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Place value representation."
+        },
+        {
+          "id": "expanded-form-of-numbers",
+          "title": "Expanded form of numbers",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-expanded-forms-of-numbers.vercel.app/",
+          "estimatedTime": "19 mins",
+          "difficulty": "Beginner",
+          "xpReward": 62,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "expanded-form-of-numbers",
+            "title": "Expanded form of numbers",
+            "subtitle": "Learn all about Expanded form of numbers in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-expanded-forms-of-numbers.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-expanded-forms-of-numbers.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Expanded form of numbers."
+        }
+      ]
+    },
+    {
+      "id": "chap_5",
+      "chapterNumber": 5,
+      "title": "Chapter 5 : Addition and Subtraction within 1,000",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "column-addition",
+          "title": "Column addition",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-column-addition.vercel.app/",
+          "estimatedTime": "21 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 77,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "column-addition",
+            "title": "Column addition",
+            "subtitle": "Learn all about Column addition in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-column-addition.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-column-addition.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Column addition."
+        },
+        {
+          "id": "column-subtraction",
+          "title": "Column subtraction",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-colum-subtraction.vercel.app/ G2-Column subtraction",
+          "estimatedTime": "21 mins",
+          "difficulty": "Advanced",
+          "xpReward": 60,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "column-subtraction",
+            "title": "Column subtraction",
+            "subtitle": "Learn all about Column subtraction in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-colum-subtraction.vercel.app/ G2-Column subtraction",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-colum-subtraction.vercel.app/ G2-Column subtraction",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Column subtraction."
+        },
+        {
+          "id": "regrouping-with-hundreds",
+          "title": "Regrouping with hundreds",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://regrouping-with-hundreds.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Advanced",
+          "xpReward": 90,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "regrouping-with-hundreds",
+            "title": "Regrouping with hundreds",
+            "subtitle": "Learn all about Regrouping with hundreds in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://regrouping-with-hundreds.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://regrouping-with-hundreds.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Regrouping with hundreds."
+        }
+      ]
+    },
+    {
+      "id": "chap_6",
+      "chapterNumber": 6,
+      "title": "Chapter 6 : Measurement",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "length-cm-and-m",
+          "title": "Length: cm and m",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-column-addition.vercel.app/",
+          "estimatedTime": "19 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 99,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "length-cm-and-m",
+            "title": "Length: cm and m",
+            "subtitle": "Learn all about Length: cm and m in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-column-addition.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-column-addition.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Length: cm and m."
+        },
+        {
+          "id": "mass-g-and-kg",
+          "title": "Mass: g and kg",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://massquest.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 77,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "mass-g-and-kg",
+            "title": "Mass: g and kg",
+            "subtitle": "Learn all about Mass: g and kg in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://massquest.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://massquest.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Mass: g and kg."
+        },
+        {
+          "id": "volume-litres",
+          "title": "Volume: litres",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-volume-litres.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Beginner",
+          "xpReward": 79,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "volume-litres",
+            "title": "Volume: litres",
+            "subtitle": "Learn all about Volume: litres in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-volume-litres.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-volume-litres.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Volume: litres."
+        },
+        {
+          "id": "time-hours-and-minutes",
+          "title": "Time: hours and minutes",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-time-hour-and-minutes.vercel.app/",
+          "estimatedTime": "11 mins",
+          "difficulty": "Intermediate",
+          "xpReward": 91,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "time-hours-and-minutes",
+            "title": "Time: hours and minutes",
+            "subtitle": "Learn all about Time: hours and minutes in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-time-hour-and-minutes.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-time-hour-and-minutes.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Time: hours and minutes."
+        }
+      ]
+    },
+    {
+      "id": "chap_7",
+      "chapterNumber": 7,
+      "title": "Chapter 7 : Multiplication",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "multiplication-as-repeated-addition",
+          "title": "Multiplication as repeated addition",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://multiplication-repeated-addition.vercel.app/",
+          "estimatedTime": "23 mins",
+          "difficulty": "Beginner",
+          "xpReward": 69,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "multiplication-as-repeated-addition",
+            "title": "Multiplication as repeated addition",
+            "subtitle": "Learn all about Multiplication as repeated addition in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://multiplication-repeated-addition.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://multiplication-repeated-addition.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Multiplication as repeated addition."
+        },
+        {
+          "id": "equal-groups",
+          "title": "Equal groups",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://equal-groups.vercel.app",
+          "estimatedTime": "22 mins",
+          "difficulty": "Advanced",
+          "xpReward": 54,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "equal-groups",
+            "title": "Equal groups",
+            "subtitle": "Learn all about Equal groups in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://equal-groups.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://equal-groups.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Equal groups."
+        },
+        {
+          "id": "arrays",
+          "title": "Arrays",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://multiplication-arrays.vercel.app/",
+          "estimatedTime": "20 mins",
+          "difficulty": "Beginner",
+          "xpReward": 50,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "arrays",
+            "title": "Arrays",
+            "subtitle": "Learn all about Arrays in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://multiplication-arrays.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://multiplication-arrays.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Arrays."
+        },
+        {
+          "id": "multiplication-facts-of-4-5-and-10",
+          "title": "Multiplication facts of 4, 5, and 10",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-multiplication.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Advanced",
+          "xpReward": 74,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "multiplication-facts-of-4-5-and-10",
+            "title": "Multiplication facts of 4, 5, and 10",
+            "subtitle": "Learn all about Multiplication facts of 4, 5, and 10 in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-multiplication.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-multiplication.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Multiplication facts of 4, 5, and 10."
+        }
+      ]
+    },
+    {
+      "id": "chap_8",
+      "chapterNumber": 8,
+      "title": "Chapter 8 : Division",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "division-as-equal-sharing",
+          "title": "Division as equal sharing",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-division-equal-sharing.vercel.app/",
+          "estimatedTime": "11 mins",
+          "difficulty": "Advanced",
+          "xpReward": 73,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "division-as-equal-sharing",
+            "title": "Division as equal sharing",
+            "subtitle": "Learn all about Division as equal sharing in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-division-equal-sharing.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-division-equal-sharing.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Division as equal sharing."
+        },
+        {
+          "id": "division-as-grouping",
+          "title": "Division as grouping",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://division-as-grouping.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Advanced",
+          "xpReward": 84,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "division-as-grouping",
+            "title": "Division as grouping",
+            "subtitle": "Learn all about Division as grouping in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://division-as-grouping.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://division-as-grouping.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Division as grouping."
+        },
+        {
+          "id": "relationship-with-multiplication",
+          "title": "Relationship with multiplication",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://divison-quest.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Advanced",
+          "xpReward": 85,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "relationship-with-multiplication",
+            "title": "Relationship with multiplication",
+            "subtitle": "Learn all about Relationship with multiplication in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://divison-quest.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://divison-quest.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Relationship with multiplication."
+        }
+      ]
+    },
+    {
+      "id": "chap_9",
+      "chapterNumber": 9,
+      "title": "Chapter 9 : Geometry",
+      "topicsCount": 4,
+      "topics": [
+        {
+          "id": "2d-shapes-square-rectangle-triangle-circle",
+          "title": "2D shapes: square, rectangle, triangle, circle",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-2-d-shapes.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Advanced",
+          "xpReward": 68,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "2d-shapes-square-rectangle-triangle-circle",
+            "title": "2D shapes: square, rectangle, triangle, circle",
+            "subtitle": "Learn all about 2D shapes: square, rectangle, triangle, circle in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-2-d-shapes.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-2-d-shapes.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about 2D shapes: square, rectangle, triangle, circle."
+        },
+        {
+          "id": "3d-shapes-cube-cuboid-cone-sphere",
+          "title": "3D shapes: cube, cuboid, cone, sphere",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://intellia-3-d-shapes.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Advanced",
+          "xpReward": 91,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "3d-shapes-cube-cuboid-cone-sphere",
+            "title": "3D shapes: cube, cuboid, cone, sphere",
+            "subtitle": "Learn all about 3D shapes: cube, cuboid, cone, sphere in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://intellia-3-d-shapes.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://intellia-3-d-shapes.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about 3D shapes: cube, cuboid, cone, sphere."
+        },
+        {
+          "id": "identifying-shapes-in-daily-life",
+          "title": "Identifying shapes in daily life",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://identifying-shapes-grade-2.vercel.app/",
+          "estimatedTime": "22 mins",
+          "difficulty": "Advanced",
+          "xpReward": 97,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "identifying-shapes-in-daily-life",
+            "title": "Identifying shapes in daily life",
+            "subtitle": "Learn all about Identifying shapes in daily life in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://identifying-shapes-grade-2.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://identifying-shapes-grade-2.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Identifying shapes in daily life."
+        },
+        {
+          "id": "introduction-to-symmetry",
+          "title": "Introduction to symmetry",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://grade2-introduction-to-symmetry.vercel.app/",
+          "estimatedTime": "13 mins",
+          "difficulty": "Advanced",
+          "xpReward": 83,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "introduction-to-symmetry",
+            "title": "Introduction to symmetry",
+            "subtitle": "Learn all about Introduction to symmetry in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-introduction-to-symmetry.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-introduction-to-symmetry.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Introduction to symmetry."
+        }
+      ]
+    },
+    {
+      "id": "chap_10",
+      "chapterNumber": 10,
+      "title": "Chapter 10 : Money",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "recognizing-coins-and-notes",
+          "title": "Recognizing coins and notes",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://grade2-recognizing-coins-and-notes.vercel.app/",
+          "estimatedTime": "15 mins",
+          "difficulty": "Advanced",
+          "xpReward": 65,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "recognizing-coins-and-notes",
+            "title": "Recognizing coins and notes",
+            "subtitle": "Learn all about Recognizing coins and notes in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-recognizing-coins-and-notes.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-recognizing-coins-and-notes.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Recognizing coins and notes."
+        },
+        {
+          "id": "counting-money",
+          "title": "Counting money",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://grade2-counting-money.vercel.app/",
+          "estimatedTime": "24 mins",
+          "difficulty": "Advanced",
+          "xpReward": 97,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "counting-money",
+            "title": "Counting money",
+            "subtitle": "Learn all about Counting money in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://grade2-counting-money.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://grade2-counting-money.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Counting money."
+        },
+        {
+          "id": "making-simple-purchases",
+          "title": "Making simple purchases",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://making-simple-purchase.vercel.app/",
+          "estimatedTime": "16 mins",
+          "difficulty": "Beginner",
+          "xpReward": 74,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "making-simple-purchases",
+            "title": "Making simple purchases",
+            "subtitle": "Learn all about Making simple purchases in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://making-simple-purchase.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://making-simple-purchase.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Making simple purchases."
+        }
+      ]
+    },
+    {
+      "id": "chap_11",
+      "chapterNumber": 11,
+      "title": "Chapter 11 : Data Handling",
+      "topicsCount": 3,
+      "topics": [
+        {
+          "id": "reading-pictographs",
+          "title": "Reading pictographs",
+          "status": "completed",
+          "icon": "star",
+          "vercelLink": "https://pictographs-five.vercel.app",
+          "estimatedTime": "12 mins",
+          "difficulty": "Beginner",
+          "xpReward": 50,
+          "gemsReward": 3,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "reading-pictographs",
+            "title": "Reading pictographs",
+            "subtitle": "Learn all about Reading pictographs in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://pictographs-five.vercel.app",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://pictographs-five.vercel.app",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Reading pictographs."
+        },
+        {
+          "id": "understanding-bar-charts",
+          "title": "Understanding bar charts",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://bar-charts-beta.vercel.app/",
+          "estimatedTime": "11 mins",
+          "difficulty": "Advanced",
+          "xpReward": 76,
+          "gemsReward": 1,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "understanding-bar-charts",
+            "title": "Understanding bar charts",
+            "subtitle": "Learn all about Understanding bar charts in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://bar-charts-beta.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://bar-charts-beta.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Understanding bar charts."
+        },
+        {
+          "id": "collecting-and-organizing-data",
+          "title": "Collecting and organizing data",
+          "status": "active",
+          "icon": "star",
+          "vercelLink": "https://dataquest-sg.vercel.app/",
+          "estimatedTime": "14 mins",
+          "difficulty": "Advanced",
+          "xpReward": 73,
+          "gemsReward": 2,
+          "heroSlide": {
+            "tag": "Today's Adventure",
+            "lessonId": "collecting-and-organizing-data",
+            "title": "Collecting and organizing data",
+            "subtitle": "Learn all about Collecting and organizing data in this exciting lesson!",
+            "ctaText": "Start Learning →",
+            "ctaUrl": "https://dataquest-sg.vercel.app/",
+            "visualizerKey": "place-value",
+            "visualizerData": {
+              "number": 123
+            }
+          },
+          "actionCards": {
+            "architecture": "https://dataquest-sg.vercel.app/",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "edunotes": "/student/lesson/edunotes",
+            "practice": "/student/quiz/practice-1"
+          },
+          "aiContext": "The student is currently learning about Collecting and organizing data."
+        }
+      ]
+    }
+  ]
+}

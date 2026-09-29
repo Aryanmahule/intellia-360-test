@@ -1,0 +1,39 @@
+{
+  "id": "counting-up-to-100",
+  "title": "Counting numbers up to 100",
+  "description": "Learn to count numbers from 1 to 100 through engaging activities.",
+  "chapterId": "chap_1",
+  "chapterTitle": "Numbers And Counting",
+  "grade": "grade1",
+  "estimatedMinutes": 20,
+  "completed": false,
+  "locked": false,
+  "heroVisualizer": "numbers-to-1000",
+  "heroVisualizerData": {
+    "start": 1,
+    "end": 100
+  },
+  "modules": {
+    "architectureModule": {
+      "enabled": true,
+      "url": "https://number-counting-gamma.vercel.app/"
+    },
+    "videoLesson": {
+      "enabled": true,
+      "url": "https://www.youtube.com/watch?v=6hyYVLv8hzY"
+    },
+    "practiceModule": {
+      "enabled": true,
+      "url": "/student/quiz/practice-1"
+    },
+    "eduNotes": {
+      "enabled": true,
+      "url": "/student/lesson/edunotes"
+    }
+  },
+  "previousLesson": null,
+  "nextLesson": {
+    "id": "reading-writing-numbers",
+    "title": "Reading and writing numbers"
+  }
+}

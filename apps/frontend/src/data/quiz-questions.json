@@ -1,0 +1,58 @@
+[
+  {
+    "id": "q_1",
+    "questionText": "What is the place value of 7 in the number 786?",
+    "options": [
+      {
+        "id": "opt_a",
+        "text": "Ones",
+        "isCorrect": false
+      },
+      {
+        "id": "opt_b",
+        "text": "Tens",
+        "isCorrect": false
+      },
+      {
+        "id": "opt_c",
+        "text": "Hundreds",
+        "isCorrect": true
+      },
+      {
+        "id": "opt_d",
+        "text": "Thousands",
+        "isCorrect": false
+      }
+    ],
+    "explanation": "In 786, the digit 7 is in the Hundreds column, meaning 7 hundreds (700).",
+    "aiHintText": "Think about the three digits: the leftmost digit in a 3-digit number stands for Hundreds!"
+  },
+  {
+    "id": "q_2",
+    "questionText": "What is 27 + 18 using regrouping?",
+    "options": [
+      {
+        "id": "opt_a",
+        "text": "35",
+        "isCorrect": false
+      },
+      {
+        "id": "opt_b",
+        "text": "45",
+        "isCorrect": true
+      },
+      {
+        "id": "opt_c",
+        "text": "415",
+        "isCorrect": false
+      },
+      {
+        "id": "opt_d",
+        "text": "55",
+        "isCorrect": false
+      }
+    ],
+    "explanation": "Add ones first: 7 + 8 = 15 (5 ones, carry 1 ten). Then add tens: 2 + 1 + 1 = 4 tens. Total = 45.",
+    "aiHintText": "Add 7 and 8 first. Since 7 + 8 = 15, carry 1 ten over to the tens column!"
+  }
+]

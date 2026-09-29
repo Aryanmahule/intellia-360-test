@@ -1,0 +1,587 @@
+// Prisma schema for Intellia360 — MongoDB
+// Aligned with origin/main schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+
+enum Role {
+  ADMIN
+  STUDENT
+  PARENT
+  TEACHER
+  SCHOOL
+  EDITOR
+}
+
+enum AssignmentStatus {
+  ACTIVE
+  DRAFT
+  COMPLETED
+}
+
+enum SchoolStatus {
+  ACTIVE
+  PENDING
+  INACTIVE
+}
+
+enum CourseStatus {
+  PUBLISHED
+  DRAFT
+}
+
+enum PaymentStatus {
+  COMPLETED
+  PENDING
+  REFUNDED
+}
+
+// ─── User ─────────────────────────────────────────────────────────────────────
+
+model User {
+  id            String   @id @default(uuid()) @map("_id")
+  email         String   @unique
+  name          String
+  password      String
+  role          Role     @default(STUDENT)
+  requestedRole Role?                          // intent set at registration; reviewed by admin
+  emailVerified Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  // Soft delete. Non-null means the account is deactivated: auth must reject it
+  // and list queries must exclude it. A hard delete would cascade away the
+  // learner's entire progress, quiz and badge history with no way back.
+  deletedAt     DateTime?
+
+  studentProfile      StudentProfile?
+  teacherProfile      TeacherProfile?
+  completedLessons    CompletedLesson[]
+  completedActivities CompletedActivity[]
+  unlockedBadges      UnlockedBadge[]
+  missionProgress     MissionProgress[]
+  quizAttempts        QuizAttempt[]
+  submissions         AssignmentSubmission[]
+  resetTokens         PasswordResetToken[]
+  verifyTokens        EmailVerificationToken[]
+  dailyQuizAttempts   DailyQuizAttempt[]
+  notifications       Notification[]
+  auditLogs           AuditLog[]
+
+  @@index([role])
+  // Admin user list: filter by role + exclude deleted, ordered by createdAt.
+  @@index([deletedAt, role, createdAt])
+  @@index([createdAt])
+  @@map("users")
+}
+
+// ─── Profiles ─────────────────────────────────────────────────────────────────
+
+model StudentProfile {
+  id             String      @id @default(uuid()) @map("_id")
+  userId         String      @unique
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar         String?
+  school         String?
+  grade          String      @default("grade1")
+  xpPoints       Int         @default(0)
+  learningGems   Int         @default(0)
+  streakDays     Int         @default(1)
+  lastActiveDate DateTime?
+  classId        String?
+  class          ClassGroup? @relation(fields: [classId], references: [id])
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@index([classId])
+  // Leaderboard sort. Without this MongoDB does an in-memory sort of every
+  // profile and aborts once the 32MB sort limit is reached.
+  @@index([xpPoints(sort: Desc), learningGems(sort: Desc)])
+  @@index([grade, xpPoints(sort: Desc)])
+  // Active-learner counts on the admin dashboard.
+  @@index([lastActiveDate])
+  // Per-school student rollups.
+  @@index([school])
+  @@map("student_profiles")
+}
+
+model TeacherProfile {
+  id         String       @id @default(uuid()) @map("_id")
+  userId     String       @unique
+  user       User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar     String?
+  schoolName String?
+  subject    String?
+  classes    ClassGroup[]
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  // Per-school teacher rollups (computeSchoolCounts groupBy).
+  @@index([schoolName])
+  @@map("teacher_profiles")
+}
+
+// ─── Classes ──────────────────────────────────────────────────────────────────
+
+model ClassGroup {
+  id          String           @id @default(uuid()) @map("_id")
+  className   String
+  grade       String
+  teacherId   String
+  teacher     TeacherProfile   @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  students    StudentProfile[]
+  assignments Assignment[]
+  createdAt   DateTime         @default(now())
+
+  @@index([teacherId])
+  @@map("class_groups")
+}
+
+// ─── Student Progress ─────────────────────────────────────────────────────────
+
+model CompletedLesson {
+  id          String   @id @default(uuid()) @map("_id")
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId    String
+  grade       String
+  completedAt DateTime @default(now())
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+  // Dashboard buckets lessons by completion date and rolls them up by grade.
+  @@index([completedAt])
+  @@index([grade])
+  @@map("completed_lessons")
+}
+
+model CompletedActivity {
+  id           String   @id @default(uuid()) @map("_id")
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId     String
+  activityType String
+  xpAwarded    Int      @default(0)
+  gemsAwarded  Int      @default(0)
+  completedAt  DateTime @default(now())
+
+  @@unique([userId, lessonId, activityType])
+  @@index([userId])
+  @@map("completed_activities")
+}
+
+model UnlockedBadge {
+  id         String   @id @default(uuid()) @map("_id")
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badgeId    String
+  unlockedAt DateTime @default(now())
+
+  @@unique([userId, badgeId])
+  @@index([userId])
+  @@map("unlocked_badges")
+}
+
+model MissionProgress {
+  id          String    @id @default(uuid()) @map("_id")
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  missionId   String
+  progress    Int       @default(0)
+  isCompleted Boolean   @default(false)
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([userId, missionId])
+  @@index([userId])
+  @@map("mission_progress")
+}
+
+model QuizAttempt {
+  id           String   @id @default(uuid()) @map("_id")
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId     String
+  quizId       String
+  scorePercent Int
+  submittedAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([lessonId])
+  // Accuracy/assessment aggregates are windowed on submittedAt.
+  @@index([submittedAt])
+  @@map("quiz_attempts")
+}
+
+// ─── Assignments ──────────────────────────────────────────────────────────────
+
+model Assignment {
+  id           String                 @id @default(uuid()) @map("_id")
+  title        String
+  classId      String
+  class        ClassGroup             @relation(fields: [classId], references: [id], onDelete: Cascade)
+  lessonId     String?
+  assignedDate DateTime               @default(now())
+  dueDate      DateTime
+  status       AssignmentStatus       @default(ACTIVE)
+  submissions  AssignmentSubmission[]
+
+  // Detail the teacher enters on creation and the student console renders.
+  // All optional: rows written before these existed simply have no key, and
+  // MongoDB stores nothing for them.
+  description    String?
+  type           String?              // Homework | Worksheet | Quiz | Practice | Project
+  points         Int?
+  totalQuestions Int?
+
+  @@index([classId])
+  // The student console lists "my class's assignments, soonest due first".
+  @@index([classId, dueDate])
+  @@map("assignments")
+}
+
+model AssignmentSubmission {
+  id           String     @id @default(uuid()) @map("_id")
+  assignmentId String
+  assignment   Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  studentId    String
+  student      User       @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  submittedAt  DateTime?
+  scorePercent Int?
+
+  @@unique([assignmentId, studentId])
+  // "My submissions" lookups start from the student, not the assignment.
+  @@index([studentId])
+  @@map("assignment_submissions")
+}
+
+// ─── Notifications ────────────────────────────────────────────────────────────
+
+model Notification {
+  id          String   @id @default(uuid()) @map("_id")
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        String   // "achievement" | "lesson" | "quiz" | "streak" | "xp" | "announcement"
+  tabCategory String   // "achievements" | "learning" | "announcements"
+  icon        String
+  iconBg      String
+  title       String
+  description String
+  categoryTag String
+  actionUrl   String?
+  actionText  String?
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+  @@index([userId, isRead])
+  // The feed is always "this user, newest first".
+  @@index([userId, createdAt(sort: Desc)])
+  @@map("notifications")
+}
+
+// ─── Daily Quiz ───────────────────────────────────────────────────────────────
+// One attempt per user per UTC day. Stores per-question answers and rewards.
+
+model DailyQuizAttempt {
+  id            String   @id @default(uuid()) @map("_id")
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dateKey       String                        // "YYYY-MM-DD" UTC — unique per user per day
+  grade         String
+  questions     Json                          // snapshot of questions served that day
+  answers       Json                          // { questionId: selectedOptionId }[]
+  score         Int                           // 0-5 (number correct)
+  xpAwarded     Int      @default(0)
+  gemsAwarded   Int      @default(0)
+  streakDay     Int                           // streakDays value at time of completion
+  completedAt   DateTime @default(now())
+
+  @@unique([userId, dateKey])
+  @@index([userId])
+  @@index([dateKey])
+  @@map("daily_quiz_attempts")
+}
+
+// ─── Rate Limit Record ────────────────────────────────────────────────────────
+// Tracks recent request counts per (key, action) to enforce server-side
+// rate limits that survive across serverless function instances (no in-memory).
+//
+// key    = SHA-256(ip) or SHA-256(email) — never store raw PII in this table.
+// action = e.g. "login", "resend_verification", "forgot_password"
+
+model RateLimitRecord {
+  id        String   @id @default(uuid()) @map("_id")
+  key       String                          // hashed identifier
+  action    String                          // action name
+  count     Int      @default(1)
+  windowStart DateTime                      // start of the current window
+  updatedAt DateTime @updatedAt
+
+  @@unique([key, action])
+  @@index([key])
+  @@index([windowStart])
+  @@map("rate_limit_records")
+}
+
+// ─── Email Verification Token ─────────────────────────────────────────────────
+// tokenHash stores SHA-256(raw_token) — the raw token is sent by email only.
+// On verify we hash the submitted token and compare, never storing it plaintext.
+
+model EmailVerificationToken {
+  id        String   @id @default(uuid()) @map("_id")
+  tokenHash String   @unique          // SHA-256 of the raw token
+  userId    String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  // Used by the maintenance sweep that purges spent/expired tokens.
+  @@index([expiresAt])
+  @@map("email_verification_tokens")
+}
+
+// ─── Password Reset Token (Next.js auth layer) ────────────────────────────────
+// tokenHash stores SHA-256(raw_token) — same pattern as email verification.
+
+model PasswordResetToken {
+  id        String   @id @default(uuid()) @map("_id")
+  tokenHash String   @unique          // SHA-256 of the raw token
+  userId    String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  // Used by the maintenance sweep that purges spent/expired tokens.
+  @@index([expiresAt])
+  @@map("password_reset_tokens")
+}
+
+// ─── Admin: Schools ───────────────────────────────────────────────────────────
+
+model School {
+  id             String       @id @default(uuid()) @map("_id")
+  name           String
+  code           String       @unique
+  location       String?
+  adminName      String?
+  adminEmail     String?
+  plan           String       @default("Basic")
+  status         SchoolStatus @default(PENDING)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  // Archive instead of delete: student_profiles.school / teacher_profiles.schoolName
+  // reference this row by name, so removing it silently orphans those rollups.
+  archivedAt     DateTime?
+
+  @@index([archivedAt, createdAt])
+  @@index([status])
+  @@map("schools")
+}
+
+// ─── Admin: Courses ───────────────────────────────────────────────────────────
+
+model Course {
+  id               String       @id @default(uuid()) @map("_id")
+  title            String
+  subject          String?
+  grade            String
+  description      String?
+  rating           Float        @default(0)
+  status           CourseStatus @default(DRAFT)
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+  // Archive instead of delete — completed_lessons rows are keyed to this grade
+  // and the dashboard's completion maths reads back through it.
+  archivedAt       DateTime?
+
+  // Admin catalogue list: newest first, archived excluded.
+  @@index([archivedAt, createdAt])
+  @@index([grade])
+  @@index([status])
+  @@map("courses")
+}
+
+// ─── Admin: Content Library (metadata + external resource link) ──────────────
+
+model ContentResource {
+  id          String   @id @default(uuid()) @map("_id")
+  title       String
+  description String?
+  category    String   // "edunotes" | "visual-models" | "videos" | "ai-prompts"
+  url         String?  // external resource link (no binary storage provider configured)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime? @updatedAt
+  archivedAt  DateTime?
+
+  @@index([category])
+  @@index([archivedAt, createdAt])
+  @@map("content_resources")
+}
+
+// ─── Admin: Payments ──────────────────────────────────────────────────────────
+
+model Payment {
+  id            String        @id @default(uuid()) @map("_id")
+  transactionId String        @unique
+  payerName     String
+  schoolOrUser  String?
+  amount        Int           // in rupees
+  method        String        @default("Manual")
+  status        PaymentStatus @default(PENDING)
+  date          DateTime      @default(now())
+  createdAt     DateTime      @default(now())
+
+  // Revenue aggregate filters on status and windows on date.
+  @@index([status, date])
+  @@index([date])
+  @@map("payments")
+}
+
+// ─── Admin: Platform Settings (singleton) ─────────────────────────────────────
+
+model AdminSettings {
+  id                     String   @id @default("global") @map("_id")
+  platformName           String   @default("")
+  supportEmail           String   @default("")
+  academicYear           String   @default("")
+  primaryColor           String   @default("#f97316")
+  logoDisplay            String   @default("badge-text")
+  emailSchoolRegistration Boolean @default(false)
+  emailWeeklySummary     Boolean  @default(false)
+  emailRenewalAlert      Boolean  @default(false)
+  twoFactor              String   @default("mandatory")
+  sessionTimeoutMinutes  Int      @default(30)
+  aiModel                String   @default("fast")
+  dailyQueries           Int      @default(0)
+  updatedAt              DateTime @updatedAt
+
+  @@map("admin_settings")
+}
+
+// ─── Audit Log ────────────────────────────────────────────────────────────────
+// Append-only record of every privileged mutation (admin/editor actions and
+// destructive student actions). Nothing in the app updates or deletes these
+// rows; the retention sweep is the only writer that ever removes them.
+//
+// `actorId` is a plain String rather than a relation field so an entry survives
+// the removal of the actor's account — an audit trail that disappears with the
+// account it indicts is not an audit trail.
+
+model AuditLog {
+  id         String   @id @default(uuid()) @map("_id")
+  actorId    String?                        // null for system/unauthenticated events
+  actor      User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  actorEmail String?                        // denormalised so the trail survives deletion
+  actorRole  String?
+  action     String                         // "user.delete", "course.update", ...
+  entityType String                         // "User" | "Course" | "School" | ...
+  entityId   String?
+  summary    String                         // human-readable one-liner for the admin UI
+  // Before/after snapshots of the changed fields only — never whole documents,
+  // and never password hashes or token hashes.
+  before     Json?
+  after      Json?
+  ip         String?                        // SHA-256 hashed, never the raw address
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([entityType, entityId])
+  @@index([actorId, createdAt])
+  @@index([action, createdAt])
+  @@map("audit_logs")
+}
+
+// ─── Curriculum Document ──────────────────────────────────────────────────────
+// Durable mirror of the filesystem-backed curriculum store under
+// src/data/grades. The editor writes JSON files there, but that directory is
+// part of the deployment artifact: on any immutable/serverless host those
+// writes vanish at the next deploy, and they are never captured by a database
+// backup. Every editor write is therefore mirrored into this collection, which
+// becomes the recoverable source of truth.
+//
+// `path` is the store-relative path ("grade1/lessons/counting-up-to-100.json")
+// and is unique — one row per file, with `version` bumped on each save so an
+// accidental overwrite can be rolled back from CurriculumRevision.
+
+model CurriculumDocument {
+  id        String   @id @default(uuid()) @map("_id")
+  path      String   @unique
+  gradeId   String
+  kind      String                          // "curriculum" | "dashboard" | "lesson"
+  lessonId  String?                         // set when kind = "lesson"
+  content   Json
+  version   Int      @default(1)
+  checksum  String                          // SHA-256 of the serialised content
+  deletedAt DateTime?                       // tombstone; the file was removed
+  updatedBy String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  revisions CurriculumRevision[]
+
+  @@index([gradeId, kind])
+  @@index([deletedAt, gradeId])
+  @@index([updatedAt])
+  @@map("curriculum_documents")
+}
+
+// Immutable prior versions of a CurriculumDocument — the undo history that lets
+// a bad editor save be rolled back without a full database restore.
+
+model CurriculumRevision {
+  id         String             @id @default(uuid()) @map("_id")
+  documentId String
+  document   CurriculumDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  version    Int
+  content    Json
+  checksum   String
+  updatedBy  String?
+  createdAt  DateTime           @default(now())
+
+  @@unique([documentId, version])
+  @@index([documentId, createdAt])
+  @@map("curriculum_revisions")
+}
+
+// ─── Backup Run ───────────────────────────────────────────────────────────────
+// One row per backup attempt, written by scripts/backup.mjs. This is the record
+// that makes "did last night's backup actually succeed?" answerable without
+// shelling into the backup host, and it powers the staleness check in the admin
+// dashboard's system-health panel.
+
+model BackupRun {
+  id             String    @id @default(uuid()) @map("_id")
+  startedAt      DateTime  @default(now())
+  finishedAt     DateTime?
+  status         String    @default("RUNNING")  // RUNNING | SUCCESS | FAILED
+  trigger        String    @default("scheduled") // scheduled | manual
+  destination    String                          // "local" | "s3" | "local+s3"
+  // Verification results — a backup nobody has read back is not a backup.
+  collections    Json?                           // { collection: documentCount }
+  documentCount  Int       @default(0)
+  sizeBytes      Int       @default(0)
+  checksum       String?                         // SHA-256 of the archive
+  verified       Boolean   @default(false)
+  artifactPath   String?
+  error          String?
+
+  @@index([startedAt])
+  @@index([status, startedAt])
+  @@map("backup_runs")
+}

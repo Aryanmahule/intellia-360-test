@@ -1,0 +1,1608 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+.bookApp {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(circle at 20% 20%,
+      rgba(99, 102, 241, 0.12),
+      transparent 35%),
+    radial-gradient(circle at 80% 30%,
+      rgba(168, 85, 247, 0.10),
+      transparent 35%),
+    #f8f9ff;
+
+  color: #172554;
+
+  overflow: hidden;
+}
+
+.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  background: #f8f9ff;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.toolbar {
+  height: 94px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  border-bottom:
+    1px solid rgba(99, 102, 241, 0.12);
+
+  box-shadow:
+    0 8px 30px rgba(30, 41, 59, 0.08);
+
+  backdrop-filter:
+    blur(18px);
+
+  z-index: 500;
+}
+
+.toolbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(135deg,
+      #4f46e5,
+      #7c3aed);
+
+  color: white;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 12px 25px rgba(79, 70, 229, 0.28);
+}
+
+.toolbarBrand h1 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  color: #172554;
+}
+
+.toolbarBrand p {
+  margin: 3px 0 0;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.topPageCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.topPageCounter span:first-child {
+  min-width: 52px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(135deg,
+      #4338ca,
+      #6366f1);
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+.topPageCounter b {
+  color: #94a3b8;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolButton,
+.zoomButton {
+  height: 52px;
+  min-width: 52px;
+
+  border:
+    1px solid rgba(99, 102, 241, 0.15);
+
+  border-radius: 15px;
+
+  background: white;
+
+  color: #172554;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 18px rgba(30, 41, 59, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.zoomButton {
+  min-width: 82px;
+  font-size: 17px;
+}
+
+.toolButton:hover,
+.zoomButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(79, 70, 229, 0.15);
+
+  background: #f5f3ff;
+}
+
+.activeTool {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.stage {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px 90px;
+
+  overflow: auto;
+
+  perspective: 2600px;
+
+  background:
+    radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.95),
+      rgba(238, 242, 255, 0.88));
+}
+
+.pdfDocument {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookScene {
+  position: relative;
+
+  width: min(1060px,
+      82vw);
+
+  min-width: 700px;
+
+  aspect-ratio: 1.58;
+
+  transform-origin: center;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.book {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  perspective: 2600px;
+
+  filter:
+    drop-shadow(0 25px 35px rgba(15, 23, 42, 0.22));
+}
+
+.bookShadow {
+  position: absolute;
+
+  left: 5%;
+  right: 5%;
+
+  bottom: -28px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(15, 23, 42, 0.28);
+
+  filter: blur(25px);
+
+  z-index: -10;
+}
+
+
+/* =========================================================
+   OPEN BOOK
+========================================================= */
+
+.openBook {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #fffdf7;
+
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.16);
+}
+
+.bookPage {
+  position: relative;
+
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(90deg,
+      #fffdf8,
+      #fffaf0);
+
+  transform-style: preserve-3d;
+}
+
+.leftPage {
+  border-radius:
+    18px 0 0 18px;
+
+  box-shadow:
+    inset -18px 0 28px rgba(30, 41, 59, 0.10);
+}
+
+.rightPage {
+  border-radius:
+    0 18px 18px 0;
+
+  box-shadow:
+    inset 18px 0 28px rgba(30, 41, 59, 0.08);
+}
+
+
+/* =========================================================
+   PDF PAGE
+========================================================= */
+
+.pdfPageWrapper {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #fffdf8;
+}
+
+.pdfPage {
+  position: relative;
+
+  display: block;
+
+  max-width: none !important;
+
+  box-shadow:
+    0 3px 14px rgba(15, 23, 42, 0.10);
+}
+
+.pdfPage canvas {
+  display: block;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: none !important;
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+========================================================= */
+
+.pageNumber {
+  position: absolute;
+
+  right: 18px;
+  bottom: 12px;
+
+  min-width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.10);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   CENTER SPINE
+========================================================= */
+
+.centerSpine {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 14px;
+  height: 100%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 80;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(90deg,
+      rgba(67, 45, 20, 0.18),
+      rgba(255, 255, 255, 0.75),
+      rgba(67, 45, 20, 0.22));
+
+  box-shadow:
+    0 0 16px rgba(30, 20, 10, 0.25);
+}
+
+
+/* =========================================================
+   FRONT / BACK COVER
+========================================================= */
+
+.fullCoverPage {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #172554;
+
+  transform-style: preserve-3d;
+
+  z-index: 20;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+.coverOpenButton {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform:
+    translateX(-50%);
+
+  padding:
+    13px 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(135deg,
+      #4f46e5,
+      #7c3aed);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.25);
+
+  z-index: 40;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.coverOpenButton:hover {
+  transform:
+    translateX(-50%) translateY(-3px);
+}
+
+
+/* =========================================================
+   REAL NEXT PAGE TURN
+
+   Page turns from CENTER → LEFT
+========================================================= */
+
+.turningPageNext {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+
+  z-index: 300;
+
+  transform-style: preserve-3d;
+
+  transform-origin:
+    left center;
+
+  animation:
+    turnPageNext 900ms cubic-bezier(0.25,
+      0.65,
+      0.15,
+      1) forwards;
+
+  will-change:
+    transform;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   REAL PREVIOUS PAGE TURN
+
+   Page turns CENTER → RIGHT
+========================================================= */
+
+.turningPagePrev {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  height: 100%;
+
+  z-index: 300;
+
+  transform-style: preserve-3d;
+
+  transform-origin:
+    right center;
+
+  animation:
+    turnPagePrev 900ms cubic-bezier(0.25,
+      0.65,
+      0.15,
+      1) forwards;
+
+  will-change:
+    transform;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TURNING PAGE FACES
+========================================================= */
+
+.turningFront,
+.turningBack {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background:
+    #fffdf8;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+
+  transform-style:
+    preserve-3d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.18);
+}
+
+.turningBack {
+  transform:
+    rotateY(180deg);
+}
+
+.turningFront .pdfPageWrapper,
+.turningBack .pdfPageWrapper {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   PAGE CURL / LIGHT
+========================================================= */
+
+.pageCurl,
+.pageCurlPrev {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 28px;
+
+  pointer-events: none;
+
+  z-index: 50;
+
+  opacity: 0.85;
+
+  filter: blur(1px);
+}
+
+.pageCurl {
+  left: 0;
+
+  background:
+    linear-gradient(90deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(255, 255, 255, 0.60),
+      transparent);
+}
+
+.pageCurlPrev {
+  right: 0;
+
+  background:
+    linear-gradient(270deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(255, 255, 255, 0.60),
+      transparent);
+}
+
+
+/* =========================================================
+   NEXT PAGE ANIMATION
+========================================================= */
+
+@keyframes turnPageNext {
+  0% {
+    transform:
+      rotateY(0deg) rotateX(0deg);
+
+    filter:
+      brightness(1);
+
+    box-shadow:
+      -3px 0 5px rgba(15, 23, 42, 0.05);
+  }
+
+  15% {
+    transform:
+      rotateY(-28deg) rotateX(1deg);
+
+    filter:
+      brightness(0.98);
+
+    box-shadow:
+      -8px 5px 16px rgba(15, 23, 42, 0.12);
+  }
+
+  35% {
+    transform:
+      rotateY(-68deg) rotateX(2deg);
+
+    filter:
+      brightness(0.93);
+
+    box-shadow:
+      -18px 10px 28px rgba(15, 23, 42, 0.20);
+  }
+
+  50% {
+    transform:
+      rotateY(-92deg) rotateX(3deg);
+
+    filter:
+      brightness(0.88);
+
+    box-shadow:
+      -25px 12px 35px rgba(15, 23, 42, 0.25);
+  }
+
+  65% {
+    transform:
+      rotateY(-120deg) rotateX(2deg);
+
+    filter:
+      brightness(0.93);
+
+    box-shadow:
+      -18px 10px 28px rgba(15, 23, 42, 0.18);
+  }
+
+  82% {
+    transform:
+      rotateY(-155deg) rotateX(1deg);
+
+    filter:
+      brightness(0.98);
+
+    box-shadow:
+      -8px 5px 16px rgba(15, 23, 42, 0.10);
+  }
+
+  100% {
+    transform:
+      rotateY(-180deg) rotateX(0deg);
+
+    filter:
+      brightness(1);
+
+    box-shadow:
+      0 0 0 rgba(15, 23, 42, 0);
+  }
+}
+
+
+/* =========================================================
+   PREVIOUS PAGE ANIMATION
+========================================================= */
+
+@keyframes turnPagePrev {
+  0% {
+    transform:
+      rotateY(0deg) rotateX(0deg);
+
+    filter:
+      brightness(1);
+
+    box-shadow:
+      3px 0 5px rgba(15, 23, 42, 0.05);
+  }
+
+  15% {
+    transform:
+      rotateY(28deg) rotateX(1deg);
+
+    filter:
+      brightness(0.98);
+
+    box-shadow:
+      8px 5px 16px rgba(15, 23, 42, 0.12);
+  }
+
+  35% {
+    transform:
+      rotateY(68deg) rotateX(2deg);
+
+    filter:
+      brightness(0.93);
+
+    box-shadow:
+      18px 10px 28px rgba(15, 23, 42, 0.20);
+  }
+
+  50% {
+    transform:
+      rotateY(92deg) rotateX(3deg);
+
+    filter:
+      brightness(0.88);
+
+    box-shadow:
+      25px 12px 35px rgba(15, 23, 42, 0.25);
+  }
+
+  65% {
+    transform:
+      rotateY(120deg) rotateX(2deg);
+
+    filter:
+      brightness(0.93);
+
+    box-shadow:
+      18px 10px 28px rgba(15, 23, 42, 0.18);
+  }
+
+  82% {
+    transform:
+      rotateY(155deg) rotateX(1deg);
+
+    filter:
+      brightness(0.98);
+
+    box-shadow:
+      8px 5px 16px rgba(15, 23, 42, 0.10);
+  }
+
+  100% {
+    transform:
+      rotateY(180deg) rotateX(0deg);
+
+    filter:
+      brightness(1);
+
+    box-shadow:
+      0 0 0 rgba(15, 23, 42, 0);
+  }
+}
+
+
+/* =========================================================
+   FRONT COVER FLIP
+========================================================= */
+
+.coverTurnNext {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 400;
+
+  transform-origin:
+    left center;
+
+  transform-style:
+    preserve-3d;
+
+  animation:
+    coverOpen 900ms cubic-bezier(0.25,
+      0.65,
+      0.15,
+      1) forwards;
+
+  pointer-events: none;
+}
+
+.coverTurnPrev {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 400;
+
+  transform-origin:
+    right center;
+
+  transform-style:
+    preserve-3d;
+
+  animation:
+    coverClose 900ms cubic-bezier(0.25,
+      0.65,
+      0.15,
+      1) forwards;
+
+  pointer-events: none;
+}
+
+.coverTurnFace,
+.coverTurnBack {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+
+  transform-style:
+    preserve-3d;
+}
+
+.coverTurnBack {
+  transform:
+    rotateY(180deg);
+}
+
+.paperBack {
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(90deg,
+      #e7dcc7,
+      #fffdf7,
+      #e8dcc7);
+}
+
+
+/* =========================================================
+   FRONT COVER OPEN
+========================================================= */
+
+@keyframes coverOpen {
+  0% {
+    transform:
+      rotateY(0deg);
+
+    box-shadow:
+      0 10px 20px rgba(15, 23, 42, 0.10);
+  }
+
+  20% {
+    transform:
+      rotateY(-30deg);
+
+    box-shadow:
+      -10px 10px 25px rgba(15, 23, 42, 0.16);
+  }
+
+  45% {
+    transform:
+      rotateY(-82deg);
+
+    box-shadow:
+      -25px 12px 35px rgba(15, 23, 42, 0.24);
+  }
+
+  50% {
+    transform:
+      rotateY(-95deg);
+
+    box-shadow:
+      -28px 14px 40px rgba(15, 23, 42, 0.28);
+  }
+
+  75% {
+    transform:
+      rotateY(-145deg);
+  }
+
+  100% {
+    transform:
+      rotateY(-180deg);
+
+    box-shadow:
+      0 0 0 rgba(15, 23, 42, 0);
+  }
+}
+
+
+/* =========================================================
+   COVER CLOSE
+========================================================= */
+
+@keyframes coverClose {
+  0% {
+    transform:
+      rotateY(0deg);
+  }
+
+  20% {
+    transform:
+      rotateY(30deg);
+  }
+
+  45% {
+    transform:
+      rotateY(82deg);
+
+    box-shadow:
+      25px 12px 35px rgba(15, 23, 42, 0.24);
+  }
+
+  50% {
+    transform:
+      rotateY(95deg);
+
+    box-shadow:
+      28px 14px 40px rgba(15, 23, 42, 0.28);
+  }
+
+  75% {
+    transform:
+      rotateY(145deg);
+  }
+
+  100% {
+    transform:
+      rotateY(180deg);
+
+    box-shadow:
+      0 0 0 rgba(15, 23, 42, 0);
+  }
+}
+
+
+/* =========================================================
+   BACK COVER ENTER
+========================================================= */
+
+.turningBackCoverNext {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 400;
+
+  transform-origin:
+    right center;
+
+  transform-style:
+    preserve-3d;
+
+  animation:
+    backCoverEnter 900ms cubic-bezier(0.25,
+      0.65,
+      0.15,
+      1) forwards;
+
+  pointer-events: none;
+}
+
+.turningBackCoverFace {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.25);
+}
+
+@keyframes backCoverEnter {
+  0% {
+    transform:
+      rotateY(180deg);
+
+    opacity: 0.85;
+  }
+
+  25% {
+    transform:
+      rotateY(145deg);
+  }
+
+  50% {
+    transform:
+      rotateY(90deg);
+
+    opacity: 1;
+  }
+
+  75% {
+    transform:
+      rotateY(35deg);
+  }
+
+  100% {
+    transform:
+      rotateY(0deg);
+
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.sideArrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  color: #172554;
+
+  font-size: 45px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 450;
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.16);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.sideArrow:hover:not(:disabled) {
+  transform:
+    translateY(-50%) scale(1.08);
+
+  background: #eef2ff;
+}
+
+.sideArrow:disabled {
+  opacity: 0.28;
+
+  cursor: not-allowed;
+}
+
+.leftArrow {
+  left: 22px;
+}
+
+.rightArrow {
+  right: 22px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  height: 108px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 14px 30px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border-top:
+    1px solid rgba(99, 102, 241, 0.12);
+
+  box-shadow:
+    0 -8px 25px rgba(30, 41, 59, 0.06);
+
+  z-index: 500;
+}
+
+.footerButton {
+  min-width: 135px;
+  height: 58px;
+
+  padding:
+    0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border:
+    1px solid rgba(99, 102, 241, 0.15);
+
+  border-radius: 15px;
+
+  background: white;
+
+  color: #172554;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.07);
+}
+
+.footerButton:hover:not(:disabled) {
+  background: #f5f3ff;
+}
+
+.footerButton:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+.nextButton {
+  background:
+    linear-gradient(135deg,
+      #eef2ff,
+      #f5f3ff);
+}
+
+.progressArea {
+  flex: 1;
+
+  max-width: 500px;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.progressArea strong {
+  font-size: 15px;
+}
+
+.progressArea span {
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+.progressTrack {
+  position: relative;
+
+  width: 100%;
+  height: 10px;
+
+  border-radius: 999px;
+
+  background:
+    #e0e7ff;
+}
+
+.progressFill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(90deg,
+      #3b82f6,
+      #6366f1,
+      #c026d3);
+
+  transition:
+    width 0.35s ease;
+}
+
+.progressStar {
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  font-size: 20px;
+
+  transition:
+    left 0.35s ease;
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.sparkle {
+  position: absolute;
+
+  z-index: 5;
+
+  color: #f59e0b;
+
+  font-size: 28px;
+
+  animation:
+    floatStar 2.5s ease-in-out infinite;
+}
+
+.sparkleOne {
+  left: 9%;
+  top: 12%;
+}
+
+.sparkleTwo {
+  right: 11%;
+  top: 20%;
+
+  animation-delay:
+    0.8s;
+}
+
+@keyframes floatStar {
+
+  0%,
+  100% {
+    transform:
+      translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-10px) rotate(8deg);
+  }
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.loadingState,
+.errorState {
+  min-width: 400px;
+
+  padding: 60px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+.loadingBook {
+  font-size: 60px;
+
+  animation:
+    bookPulse 1.3s ease-in-out infinite;
+}
+
+@keyframes bookPulse {
+
+  0%,
+  100% {
+    transform:
+      rotate(-5deg) scale(1);
+  }
+
+  50% {
+    transform:
+      rotate(5deg) scale(1.08);
+  }
+}
+
+.errorState>div {
+  font-size: 50px;
+}
+
+.errorState button {
+  margin-top: 15px;
+
+  padding:
+    11px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #4f46e5;
+
+  color: white;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.blankPage {
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(90deg,
+      #fffdf8,
+      #f8f1e5);
+}
+
+
+/* =========================================================
+   HIDDEN LESSON ID
+========================================================= */
+
+.hiddenLessonId {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .toolbar {
+    height: 75px;
+
+    padding:
+      0 15px;
+  }
+
+  .toolbarBrand p {
+    display: none;
+  }
+
+  .logo {
+    width: 46px;
+    height: 46px;
+
+    font-size: 23px;
+  }
+
+  .toolbarBrand h1 {
+    font-size: 18px;
+  }
+
+  .topPageCounter {
+    font-size: 15px;
+  }
+
+  .topPageCounter span:first-child {
+    min-width: 40px;
+    height: 40px;
+  }
+
+  .toolButton,
+  .zoomButton {
+    height: 42px;
+    min-width: 42px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+  }
+
+  .zoomButton {
+    min-width: 65px;
+  }
+
+  .stage {
+    padding:
+      20px 55px;
+  }
+
+  .bookScene {
+    min-width: 620px;
+  }
+
+  .sideArrow {
+    width: 46px;
+    height: 46px;
+
+    font-size: 34px;
+  }
+
+  .leftArrow {
+    left: 7px;
+  }
+
+  .rightArrow {
+    right: 7px;
+  }
+
+  .footer {
+    height: 88px;
+
+    padding:
+      10px 12px;
+
+    gap: 7px;
+  }
+
+  .footerButton {
+    min-width: 85px;
+    height: 48px;
+
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .toolbarActions .toolButton:first-child {
+    display: none;
+  }
+
+  .stage {
+    padding:
+      15px 35px;
+  }
+
+  .bookScene {
+    min-width: 540px;
+  }
+
+  .footerButton span {
+    display: none;
+  }
+
+  .footerButton {
+    min-width: 52px;
+  }
+
+  .progressArea {
+    min-width: 150px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .turningPageNext,
+  .turningPagePrev,
+  .coverTurnNext,
+  .coverTurnPrev,
+  .turningBackCoverNext {
+    animation-duration:
+      0.01ms !important;
+  }
+}

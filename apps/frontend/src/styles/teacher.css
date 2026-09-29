@@ -1,0 +1,123 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Teacher Console theme
+   ---------------------------------------------------------------------------
+   Design tokens + component classes for the /teacher/* section.
+
+   Imported from globals.css (right after `@import "tailwindcss"`) so the
+   `@theme` block registers with Tailwind and generates the `bg-violet`,
+   `text-ink`, `font-display`, … utilities the teacher pages use.
+
+   Everything that is NOT a token is scoped under `.teacher-shell` so the rest
+   of the app keeps its own typography, background and motion behaviour.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Font stacks are fed by next/font variables declared in app/teacher/layout.tsx
+     (Fraunces + JetBrains Mono) and app/layout.tsx (Inter). */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --color-ink:         #0A2540;
+  --color-ink-soft:    #1B3C5E;
+  --color-canvas:      #F4F7FB;
+  --color-paper:       #ffffff;
+  --color-line:        #E2E8F0;
+
+  --color-violet:      #216ACE;
+  --color-violet-deep: #13468b;
+  --color-violet-tint: #E8F2FF;
+
+  --color-amber:       #F89F2D;
+  --color-amber-tint:  #fff4e5;
+
+  --color-jade:        #12b76a;
+  --color-jade-tint:   #e3faf0;
+
+  --color-coral:       #f04438;
+  --color-coral-tint:  #fdeaea;
+
+  --color-sky:         #0ea5ea;
+  --color-sky-tint:    #e6f6ff;
+}
+
+/* ── Shell ────────────────────────────────────────────────────────────────── */
+.teacher-shell {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+.teacher-shell ::selection {
+  background: var(--color-violet);
+  color: #fff;
+}
+
+/* ── Card lift ────────────────────────────────────────────────────────────── */
+.teacher-shell .hover-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.teacher-shell .hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -5px rgba(10, 37, 64, 0.08), 0 4px 12px -2px rgba(33, 106, 206, 0.06);
+  border-color: rgba(33, 106, 206, 0.15);
+}
+
+/* ── Ledger / gradebook rule-line texture — the signature motif ───────────── */
+.teacher-shell .ledger-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    color-mix(in srgb, var(--color-line) 70%, transparent) 28px
+  );
+}
+.teacher-shell .ledger-lines-violet {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    color-mix(in srgb, white 14%, transparent) 28px
+  );
+}
+
+/* ── Rubber-stamp badge, rotated like a teacher's grading stamp ───────────── */
+.teacher-shell .stamp {
+  transform: rotate(-6deg);
+}
+
+/* ── Thin scrollbars inside scroll panes ──────────────────────────────────── */
+.teacher-shell .scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.teacher-shell .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+.teacher-shell .scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── Live / typing indicator ──────────────────────────────────────────────── */
+@keyframes teacher-pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+.teacher-shell .pulse-dot {
+  animation: teacher-pulse-dot 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teacher-shell,
+  .teacher-shell *,
+  .teacher-shell *::before,
+  .teacher-shell *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

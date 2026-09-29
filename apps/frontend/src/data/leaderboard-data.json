@@ -1,0 +1,48 @@
+[
+  {
+    "rank": 1,
+    "id": "stu_102",
+    "name": "Sophia Chen",
+    "avatar": "/assets/avatars/characters/panda.png",
+    "grade": "Grade 2",
+    "xp": 1420,
+    "gems": 580
+  },
+  {
+    "rank": 2,
+    "id": "stu_101",
+    "name": "Alex Johnson (You)",
+    "avatar": "/assets/avatars/user-student-boy.png",
+    "grade": "Grade 2",
+    "xp": 980,
+    "gems": 350,
+    "isCurrentUser": true
+  },
+  {
+    "rank": 3,
+    "id": "stu_103",
+    "name": "Liam Patel",
+    "avatar": "/assets/avatars/characters/fox.png",
+    "grade": "Grade 2",
+    "xp": 890,
+    "gems": 290
+  },
+  {
+    "rank": 4,
+    "id": "stu_104",
+    "name": "Emma Williams",
+    "avatar": "/assets/avatars/characters/bear.png",
+    "grade": "Grade 2",
+    "xp": 840,
+    "gems": 260
+  },
+  {
+    "rank": 5,
+    "id": "stu_105",
+    "name": "Noah Kim",
+    "avatar": "/assets/avatars/characters/penguin.png",
+    "grade": "Grade 2",
+    "xp": 780,
+    "gems": 210
+  }
+]

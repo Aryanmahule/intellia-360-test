@@ -1,0 +1,42 @@
+{
+    "id": "reading-writing-numbers",
+    "title": "Reading and writing numbers",
+    "description": "Practice reading and writing numbers clearly.",
+    "chapterId": "chap_1",
+    "chapterTitle": "Numbers And Counting",
+    "grade": "grade1",
+    "estimatedMinutes": 15,
+    "completed": false,
+    "locked": false,
+    "heroVisualizer": "numbers-to-1000",
+    "heroVisualizerData": {
+        "start": 1,
+        "end": 100
+    },
+    "modules": {
+        "eduNotes": {
+            "enabled": true,
+            "url": "/student/lesson/edunotes"
+        },
+        "architectureModule": {
+            "enabled": true,
+            "url": "/student/lesson/architecture"
+        },
+        "videoLesson": {
+            "enabled": true,
+            "url": "/student/lesson/video"
+        },
+        "practiceModule": {
+            "enabled": true,
+            "url": "/student/quiz/practice-1"
+        }
+    },
+    "previousLesson": {
+        "id": "counting-up-to-100",
+        "title": "Counting numbers up to 100"
+    },
+    "nextLesson": {
+        "id": "place-value-tens-and-ones",
+        "title": "Place value (tens and ones)"
+    }
+}

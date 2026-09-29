@@ -1,0 +1,752 @@
+[
+  {
+    "id": "dq_g1_001",
+    "grade": "grade1",
+    "topic": "counting",
+    "difficulty": "easy",
+    "questionText": "What number comes right after 29?",
+    "options": [
+      { "id": "a", "text": "28", "isCorrect": false },
+      { "id": "b", "text": "30", "isCorrect": true },
+      { "id": "c", "text": "31", "isCorrect": false },
+      { "id": "d", "text": "39", "isCorrect": false }
+    ],
+    "explanation": "When counting, 30 comes right after 29.",
+    "hint": "Count forward one more from 29."
+  },
+  {
+    "id": "dq_g1_002",
+    "grade": "grade1",
+    "topic": "place-value",
+    "difficulty": "easy",
+    "questionText": "How many tens are in the number 47?",
+    "options": [
+      { "id": "a", "text": "7", "isCorrect": false },
+      { "id": "b", "text": "4", "isCorrect": true },
+      { "id": "c", "text": "47", "isCorrect": false },
+      { "id": "d", "text": "11", "isCorrect": false }
+    ],
+    "explanation": "47 has 4 tens and 7 ones. The tens digit is 4.",
+    "hint": "Look at the digit in the tens place (the left digit for a two-digit number)."
+  },
+  {
+    "id": "dq_g1_003",
+    "grade": "grade1",
+    "topic": "addition",
+    "difficulty": "easy",
+    "questionText": "What is 13 + 6?",
+    "options": [
+      { "id": "a", "text": "17", "isCorrect": false },
+      { "id": "b", "text": "19", "isCorrect": true },
+      { "id": "c", "text": "21", "isCorrect": false },
+      { "id": "d", "text": "16", "isCorrect": false }
+    ],
+    "explanation": "13 + 6 = 19. Add 6 ones to 3 ones to get 9 ones, tens stay at 1.",
+    "hint": "Count on 6 from 13."
+  },
+  {
+    "id": "dq_g1_004",
+    "grade": "grade1",
+    "topic": "subtraction",
+    "difficulty": "easy",
+    "questionText": "What is 18 − 5?",
+    "options": [
+      { "id": "a", "text": "11", "isCorrect": false },
+      { "id": "b", "text": "13", "isCorrect": true },
+      { "id": "c", "text": "23", "isCorrect": false },
+      { "id": "d", "text": "14", "isCorrect": false }
+    ],
+    "explanation": "18 − 5 = 13. Take away 5 ones from 8 ones to get 3 ones.",
+    "hint": "Count back 5 from 18."
+  },
+  {
+    "id": "dq_g1_005",
+    "grade": "grade1",
+    "topic": "shapes",
+    "difficulty": "easy",
+    "questionText": "How many sides does a triangle have?",
+    "options": [
+      { "id": "a", "text": "2", "isCorrect": false },
+      { "id": "b", "text": "4", "isCorrect": false },
+      { "id": "c", "text": "3", "isCorrect": true },
+      { "id": "d", "text": "5", "isCorrect": false }
+    ],
+    "explanation": "A triangle always has exactly 3 sides and 3 corners.",
+    "hint": "Think of the prefix 'tri-' which means three."
+  },
+  {
+    "id": "dq_g1_006",
+    "grade": "grade1",
+    "topic": "place-value",
+    "difficulty": "medium",
+    "questionText": "What is the value of the digit 5 in the number 52?",
+    "options": [
+      { "id": "a", "text": "5", "isCorrect": false },
+      { "id": "b", "text": "50", "isCorrect": true },
+      { "id": "c", "text": "500", "isCorrect": false },
+      { "id": "d", "text": "2", "isCorrect": false }
+    ],
+    "explanation": "In 52, the 5 is in the tens place so its value is 5 × 10 = 50.",
+    "hint": "Multiply the digit by its place value (tens = ×10)."
+  },
+  {
+    "id": "dq_g1_007",
+    "grade": "grade1",
+    "topic": "counting",
+    "difficulty": "easy",
+    "questionText": "What is 10 more than 36?",
+    "options": [
+      { "id": "a", "text": "26", "isCorrect": false },
+      { "id": "b", "text": "37", "isCorrect": false },
+      { "id": "c", "text": "46", "isCorrect": true },
+      { "id": "d", "text": "136", "isCorrect": false }
+    ],
+    "explanation": "Adding 10 increases the tens digit by 1: 36 → 46.",
+    "hint": "Adding 10 only changes the tens digit."
+  },
+  {
+    "id": "dq_g1_008",
+    "grade": "grade1",
+    "topic": "comparison",
+    "difficulty": "easy",
+    "questionText": "Which number is greater: 43 or 34?",
+    "options": [
+      { "id": "a", "text": "34", "isCorrect": false },
+      { "id": "b", "text": "43", "isCorrect": true },
+      { "id": "c", "text": "They are equal", "isCorrect": false },
+      { "id": "d", "text": "Cannot tell", "isCorrect": false }
+    ],
+    "explanation": "43 has 4 tens, while 34 has only 3 tens. More tens means a bigger number.",
+    "hint": "Compare the tens digits first."
+  },
+  {
+    "id": "dq_g1_009",
+    "grade": "grade1",
+    "topic": "addition",
+    "difficulty": "medium",
+    "questionText": "What is 27 + 18?",
+    "options": [
+      { "id": "a", "text": "35", "isCorrect": false },
+      { "id": "b", "text": "44", "isCorrect": false },
+      { "id": "c", "text": "45", "isCorrect": true },
+      { "id": "d", "text": "55", "isCorrect": false }
+    ],
+    "explanation": "27 + 18: Add ones → 7+8=15 (write 5, carry 1). Add tens → 2+1+1=4. Answer: 45.",
+    "hint": "Add the ones first. If you get 10 or more, carry 1 to the tens."
+  },
+  {
+    "id": "dq_g1_010",
+    "grade": "grade1",
+    "topic": "patterns",
+    "difficulty": "medium",
+    "questionText": "What comes next: 5, 10, 15, 20, ___?",
+    "options": [
+      { "id": "a", "text": "21", "isCorrect": false },
+      { "id": "b", "text": "24", "isCorrect": false },
+      { "id": "c", "text": "25", "isCorrect": true },
+      { "id": "d", "text": "30", "isCorrect": false }
+    ],
+    "explanation": "The pattern counts by 5s. After 20 comes 25.",
+    "hint": "What is being added each time?"
+  },
+  {
+    "id": "dq_g2_001",
+    "grade": "grade2",
+    "topic": "addition",
+    "difficulty": "easy",
+    "questionText": "What is 56 + 37?",
+    "options": [
+      { "id": "a", "text": "83", "isCorrect": false },
+      { "id": "b", "text": "93", "isCorrect": true },
+      { "id": "c", "text": "89", "isCorrect": false },
+      { "id": "d", "text": "103", "isCorrect": false }
+    ],
+    "explanation": "56+37: ones→6+7=13 (write 3, carry 1). Tens→5+3+1=9. Answer: 93.",
+    "hint": "Add ones first, then tens. Don't forget to carry if needed."
+  },
+  {
+    "id": "dq_g2_002",
+    "grade": "grade2",
+    "topic": "subtraction",
+    "difficulty": "medium",
+    "questionText": "What is 84 − 47?",
+    "options": [
+      { "id": "a", "text": "37", "isCorrect": true },
+      { "id": "b", "text": "47", "isCorrect": false },
+      { "id": "c", "text": "43", "isCorrect": false },
+      { "id": "d", "text": "131", "isCorrect": false }
+    ],
+    "explanation": "84−47: borrow from tens → ones: 14−7=7. Tens: 7−4=3. Answer: 37.",
+    "hint": "You may need to regroup (borrow) from the tens column."
+  },
+  {
+    "id": "dq_g2_003",
+    "grade": "grade2",
+    "topic": "multiplication",
+    "difficulty": "easy",
+    "questionText": "What is 4 × 3?",
+    "options": [
+      { "id": "a", "text": "7", "isCorrect": false },
+      { "id": "b", "text": "10", "isCorrect": false },
+      { "id": "c", "text": "12", "isCorrect": true },
+      { "id": "d", "text": "14", "isCorrect": false }
+    ],
+    "explanation": "4 groups of 3 = 3+3+3+3 = 12.",
+    "hint": "Think of 4 groups of 3 objects each."
+  },
+  {
+    "id": "dq_g2_004",
+    "grade": "grade2",
+    "topic": "place-value",
+    "difficulty": "medium",
+    "questionText": "What is 300 + 60 + 7?",
+    "options": [
+      { "id": "a", "text": "376", "isCorrect": false },
+      { "id": "b", "text": "367", "isCorrect": true },
+      { "id": "c", "text": "307", "isCorrect": false },
+      { "id": "d", "text": "3067", "isCorrect": false }
+    ],
+    "explanation": "Hundreds=3, Tens=6, Ones=7 → 367.",
+    "hint": "Write each value in its correct place: hundreds, tens, ones."
+  },
+  {
+    "id": "dq_g2_005",
+    "grade": "grade2",
+    "topic": "measurement",
+    "difficulty": "easy",
+    "questionText": "How many centimetres are in 1 metre?",
+    "options": [
+      { "id": "a", "text": "10", "isCorrect": false },
+      { "id": "b", "text": "100", "isCorrect": true },
+      { "id": "c", "text": "1000", "isCorrect": false },
+      { "id": "d", "text": "50", "isCorrect": false }
+    ],
+    "explanation": "1 metre = 100 centimetres. The prefix 'centi' means 100.",
+    "hint": "The prefix 'centi' means hundredth."
+  },
+  {
+    "id": "dq_g2_006",
+    "grade": "grade2",
+    "topic": "multiplication",
+    "difficulty": "medium",
+    "questionText": "What is 7 × 5?",
+    "options": [
+      { "id": "a", "text": "30", "isCorrect": false },
+      { "id": "b", "text": "35", "isCorrect": true },
+      { "id": "c", "text": "40", "isCorrect": false },
+      { "id": "d", "text": "12", "isCorrect": false }
+    ],
+    "explanation": "7×5 = 5+5+5+5+5+5+5 = 35.",
+    "hint": "Count by 5s, seven times."
+  },
+  {
+    "id": "dq_g2_007",
+    "grade": "grade2",
+    "topic": "fractions",
+    "difficulty": "easy",
+    "questionText": "Which fraction shows one half?",
+    "options": [
+      { "id": "a", "text": "1/4", "isCorrect": false },
+      { "id": "b", "text": "2/3", "isCorrect": false },
+      { "id": "c", "text": "1/2", "isCorrect": true },
+      { "id": "d", "text": "3/4", "isCorrect": false }
+    ],
+    "explanation": "One half means 1 out of 2 equal parts, written as 1/2.",
+    "hint": "Half means split into 2 equal pieces."
+  },
+  {
+    "id": "dq_g2_008",
+    "grade": "grade2",
+    "topic": "patterns",
+    "difficulty": "medium",
+    "questionText": "What is the missing number: 24, 32, 40, ___, 56?",
+    "options": [
+      { "id": "a", "text": "44", "isCorrect": false },
+      { "id": "b", "text": "48", "isCorrect": true },
+      { "id": "c", "text": "50", "isCorrect": false },
+      { "id": "d", "text": "42", "isCorrect": false }
+    ],
+    "explanation": "The pattern adds 8 each time: 24→32→40→48→56.",
+    "hint": "Find the difference between consecutive numbers."
+  },
+  {
+    "id": "dq_g3_001",
+    "grade": "grade3",
+    "topic": "multiplication",
+    "difficulty": "medium",
+    "questionText": "What is 6 × 8?",
+    "options": [
+      { "id": "a", "text": "42", "isCorrect": false },
+      { "id": "b", "text": "46", "isCorrect": false },
+      { "id": "c", "text": "48", "isCorrect": true },
+      { "id": "d", "text": "54", "isCorrect": false }
+    ],
+    "explanation": "6×8=48. You can think of 6×8 as 6×4×2 = 24×2 = 48.",
+    "hint": "Try 6×4 first, then double the result."
+  },
+  {
+    "id": "dq_g3_002",
+    "grade": "grade3",
+    "topic": "division",
+    "difficulty": "medium",
+    "questionText": "What is 56 ÷ 7?",
+    "options": [
+      { "id": "a", "text": "6", "isCorrect": false },
+      { "id": "b", "text": "7", "isCorrect": false },
+      { "id": "c", "text": "8", "isCorrect": true },
+      { "id": "d", "text": "9", "isCorrect": false }
+    ],
+    "explanation": "56 ÷ 7 = 8, because 7 × 8 = 56.",
+    "hint": "Which number times 7 equals 56?"
+  },
+  {
+    "id": "dq_g3_003",
+    "grade": "grade3",
+    "topic": "fractions",
+    "difficulty": "medium",
+    "questionText": "Which fraction is equivalent to 2/4?",
+    "options": [
+      { "id": "a", "text": "1/4", "isCorrect": false },
+      { "id": "b", "text": "1/2", "isCorrect": true },
+      { "id": "c", "text": "3/4", "isCorrect": false },
+      { "id": "d", "text": "2/8", "isCorrect": false }
+    ],
+    "explanation": "2/4 = 1/2. Divide both numerator and denominator by 2.",
+    "hint": "Can you simplify by dividing top and bottom by the same number?"
+  },
+  {
+    "id": "dq_g3_004",
+    "grade": "grade3",
+    "topic": "geometry",
+    "difficulty": "easy",
+    "questionText": "How many faces does a cube have?",
+    "options": [
+      { "id": "a", "text": "4", "isCorrect": false },
+      { "id": "b", "text": "8", "isCorrect": false },
+      { "id": "c", "text": "6", "isCorrect": true },
+      { "id": "d", "text": "5", "isCorrect": false }
+    ],
+    "explanation": "A cube has 6 square faces: top, bottom, front, back, left, right.",
+    "hint": "Think of a dice — how many sides does it have?"
+  },
+  {
+    "id": "dq_g3_005",
+    "grade": "grade3",
+    "topic": "time",
+    "difficulty": "medium",
+    "questionText": "How many minutes are in 2 hours?",
+    "options": [
+      { "id": "a", "text": "60", "isCorrect": false },
+      { "id": "b", "text": "100", "isCorrect": false },
+      { "id": "c", "text": "120", "isCorrect": true },
+      { "id": "d", "text": "200", "isCorrect": false }
+    ],
+    "explanation": "1 hour = 60 minutes. 2 hours = 2 × 60 = 120 minutes.",
+    "hint": "Multiply the number of hours by 60."
+  },
+  {
+    "id": "dq_g3_006",
+    "grade": "grade3",
+    "topic": "multiplication",
+    "difficulty": "hard",
+    "questionText": "What is 12 × 9?",
+    "options": [
+      { "id": "a", "text": "98", "isCorrect": false },
+      { "id": "b", "text": "108", "isCorrect": true },
+      { "id": "c", "text": "99", "isCorrect": false },
+      { "id": "d", "text": "118", "isCorrect": false }
+    ],
+    "explanation": "12×9 = 12×10 − 12 = 120 − 12 = 108.",
+    "hint": "Try multiplying by 10 first, then subtract 12."
+  },
+  {
+    "id": "dq_g3_007",
+    "grade": "grade3",
+    "topic": "fractions",
+    "difficulty": "hard",
+    "questionText": "What is 3/5 + 1/5?",
+    "options": [
+      { "id": "a", "text": "4/10", "isCorrect": false },
+      { "id": "b", "text": "4/5", "isCorrect": true },
+      { "id": "c", "text": "3/25", "isCorrect": false },
+      { "id": "d", "text": "5/5", "isCorrect": false }
+    ],
+    "explanation": "When denominators are the same, just add the numerators: 3+1=4, denominator stays 5 → 4/5.",
+    "hint": "Same denominators? Just add the top numbers."
+  },
+  {
+    "id": "dq_g3_008",
+    "grade": "grade3",
+    "topic": "area",
+    "difficulty": "medium",
+    "questionText": "What is the area of a rectangle that is 5 cm long and 3 cm wide?",
+    "options": [
+      { "id": "a", "text": "8 cm²", "isCorrect": false },
+      { "id": "b", "text": "16 cm²", "isCorrect": false },
+      { "id": "c", "text": "15 cm²", "isCorrect": true },
+      { "id": "d", "text": "20 cm²", "isCorrect": false }
+    ],
+    "explanation": "Area = length × width = 5 × 3 = 15 cm².",
+    "hint": "Area of a rectangle = length × width."
+  },
+  {
+    "id": "dq_g4_001",
+    "grade": "grade4",
+    "topic": "multiplication",
+    "difficulty": "medium",
+    "questionText": "What is 23 × 4?",
+    "options": [
+      { "id": "a", "text": "82", "isCorrect": false },
+      { "id": "b", "text": "92", "isCorrect": true },
+      { "id": "c", "text": "84", "isCorrect": false },
+      { "id": "d", "text": "96", "isCorrect": false }
+    ],
+    "explanation": "23×4: ones→3×4=12 (write 2, carry 1). Tens→2×4+1=9. Answer: 92.",
+    "hint": "Multiply ones first, then tens, and add any carry."
+  },
+  {
+    "id": "dq_g4_002",
+    "grade": "grade4",
+    "topic": "division",
+    "difficulty": "medium",
+    "questionText": "What is 144 ÷ 12?",
+    "options": [
+      { "id": "a", "text": "10", "isCorrect": false },
+      { "id": "b", "text": "11", "isCorrect": false },
+      { "id": "c", "text": "12", "isCorrect": true },
+      { "id": "d", "text": "14", "isCorrect": false }
+    ],
+    "explanation": "144 ÷ 12 = 12, because 12 × 12 = 144.",
+    "hint": "12 × ? = 144"
+  },
+  {
+    "id": "dq_g4_003",
+    "grade": "grade4",
+    "topic": "decimals",
+    "difficulty": "medium",
+    "questionText": "What is 3.7 + 1.4?",
+    "options": [
+      { "id": "a", "text": "4.11", "isCorrect": false },
+      { "id": "b", "text": "4.1", "isCorrect": false },
+      { "id": "c", "text": "5.1", "isCorrect": true },
+      { "id": "d", "text": "5.11", "isCorrect": false }
+    ],
+    "explanation": "3.7+1.4: tenths→7+4=11 (write 1, carry 1). Ones→3+1+1=5. Answer: 5.1.",
+    "hint": "Line up the decimal points and add like regular numbers."
+  },
+  {
+    "id": "dq_g4_004",
+    "grade": "grade4",
+    "topic": "fractions",
+    "difficulty": "hard",
+    "questionText": "What is 3/4 of 20?",
+    "options": [
+      { "id": "a", "text": "12", "isCorrect": false },
+      { "id": "b", "text": "15", "isCorrect": true },
+      { "id": "c", "text": "16", "isCorrect": false },
+      { "id": "d", "text": "18", "isCorrect": false }
+    ],
+    "explanation": "3/4 of 20 = (20÷4)×3 = 5×3 = 15.",
+    "hint": "Divide by the denominator first, then multiply by the numerator."
+  },
+  {
+    "id": "dq_g4_005",
+    "grade": "grade4",
+    "topic": "geometry",
+    "difficulty": "medium",
+    "questionText": "What is the sum of angles in a triangle?",
+    "options": [
+      { "id": "a", "text": "90°", "isCorrect": false },
+      { "id": "b", "text": "270°", "isCorrect": false },
+      { "id": "c", "text": "180°", "isCorrect": true },
+      { "id": "d", "text": "360°", "isCorrect": false }
+    ],
+    "explanation": "The three interior angles of any triangle always add up to 180°.",
+    "hint": "A straight line is 180° — that's also the sum of a triangle's angles!"
+  },
+  {
+    "id": "dq_g4_006",
+    "grade": "grade4",
+    "topic": "factors",
+    "difficulty": "medium",
+    "questionText": "Which of these is a factor of 24?",
+    "options": [
+      { "id": "a", "text": "5", "isCorrect": false },
+      { "id": "b", "text": "7", "isCorrect": false },
+      { "id": "c", "text": "8", "isCorrect": true },
+      { "id": "d", "text": "9", "isCorrect": false }
+    ],
+    "explanation": "8 is a factor of 24 because 24 ÷ 8 = 3 (no remainder).",
+    "hint": "A factor divides the number exactly, with no remainder."
+  },
+  {
+    "id": "dq_g4_007",
+    "grade": "grade4",
+    "topic": "area-perimeter",
+    "difficulty": "hard",
+    "questionText": "A square has a side of 7 cm. What is its perimeter?",
+    "options": [
+      { "id": "a", "text": "14 cm", "isCorrect": false },
+      { "id": "b", "text": "49 cm", "isCorrect": false },
+      { "id": "c", "text": "21 cm", "isCorrect": false },
+      { "id": "d", "text": "28 cm", "isCorrect": true }
+    ],
+    "explanation": "Perimeter of a square = 4 × side = 4 × 7 = 28 cm.",
+    "hint": "A square has 4 equal sides. Perimeter = add all sides."
+  },
+  {
+    "id": "dq_g4_008",
+    "grade": "grade4",
+    "topic": "decimals",
+    "difficulty": "medium",
+    "questionText": "Which decimal is equal to 3/4?",
+    "options": [
+      { "id": "a", "text": "0.3", "isCorrect": false },
+      { "id": "b", "text": "0.34", "isCorrect": false },
+      { "id": "c", "text": "0.75", "isCorrect": true },
+      { "id": "d", "text": "0.43", "isCorrect": false }
+    ],
+    "explanation": "3 ÷ 4 = 0.75. Three-quarters is the same as 75 hundredths.",
+    "hint": "Divide the numerator by the denominator."
+  },
+  {
+    "id": "dq_g5_001",
+    "grade": "grade5",
+    "topic": "fractions",
+    "difficulty": "hard",
+    "questionText": "What is 2/3 × 3/4?",
+    "options": [
+      { "id": "a", "text": "5/7", "isCorrect": false },
+      { "id": "b", "text": "6/12", "isCorrect": false },
+      { "id": "c", "text": "1/2", "isCorrect": true },
+      { "id": "d", "text": "2/4", "isCorrect": false }
+    ],
+    "explanation": "Multiply numerators: 2×3=6. Multiply denominators: 3×4=12. 6/12 = 1/2.",
+    "hint": "Multiply numerators together, then denominators together, then simplify."
+  },
+  {
+    "id": "dq_g5_002",
+    "grade": "grade5",
+    "topic": "percentages",
+    "difficulty": "medium",
+    "questionText": "What is 20% of 80?",
+    "options": [
+      { "id": "a", "text": "8", "isCorrect": false },
+      { "id": "b", "text": "20", "isCorrect": false },
+      { "id": "c", "text": "16", "isCorrect": true },
+      { "id": "d", "text": "60", "isCorrect": false }
+    ],
+    "explanation": "20% = 20/100 = 1/5. 80 ÷ 5 = 16.",
+    "hint": "20% means 20 per 100. Divide by 100, then multiply by 20."
+  },
+  {
+    "id": "dq_g5_003",
+    "grade": "grade5",
+    "topic": "decimals",
+    "difficulty": "hard",
+    "questionText": "What is 2.5 × 1.4?",
+    "options": [
+      { "id": "a", "text": "2.10", "isCorrect": false },
+      { "id": "b", "text": "3.50", "isCorrect": true },
+      { "id": "c", "text": "3.90", "isCorrect": false },
+      { "id": "d", "text": "4.10", "isCorrect": false }
+    ],
+    "explanation": "2.5 × 1.4: ignore decimals → 25×14=350. Count 2 decimal places → 3.50.",
+    "hint": "Multiply as whole numbers, then place the decimal point."
+  },
+  {
+    "id": "dq_g5_004",
+    "grade": "grade5",
+    "topic": "algebra",
+    "difficulty": "medium",
+    "questionText": "If x + 7 = 15, what is x?",
+    "options": [
+      { "id": "a", "text": "6", "isCorrect": false },
+      { "id": "b", "text": "7", "isCorrect": false },
+      { "id": "c", "text": "8", "isCorrect": true },
+      { "id": "d", "text": "22", "isCorrect": false }
+    ],
+    "explanation": "x = 15 − 7 = 8. Subtract 7 from both sides of the equation.",
+    "hint": "To find x, do the opposite operation: subtract 7 from 15."
+  },
+  {
+    "id": "dq_g5_005",
+    "grade": "grade5",
+    "topic": "prime-numbers",
+    "difficulty": "medium",
+    "questionText": "Which of these numbers is prime?",
+    "options": [
+      { "id": "a", "text": "9", "isCorrect": false },
+      { "id": "b", "text": "15", "isCorrect": false },
+      { "id": "c", "text": "17", "isCorrect": true },
+      { "id": "d", "text": "21", "isCorrect": false }
+    ],
+    "explanation": "17 is prime — it has no factors other than 1 and itself. 9=3×3, 15=3×5, 21=3×7.",
+    "hint": "A prime number is only divisible by 1 and itself."
+  },
+  {
+    "id": "dq_g5_006",
+    "grade": "grade5",
+    "topic": "volume",
+    "difficulty": "hard",
+    "questionText": "What is the volume of a box 4 cm × 3 cm × 5 cm?",
+    "options": [
+      { "id": "a", "text": "12 cm³", "isCorrect": false },
+      { "id": "b", "text": "47 cm³", "isCorrect": false },
+      { "id": "c", "text": "60 cm³", "isCorrect": true },
+      { "id": "d", "text": "94 cm³", "isCorrect": false }
+    ],
+    "explanation": "Volume = length × width × height = 4 × 3 × 5 = 60 cm³.",
+    "hint": "Volume = length × width × height."
+  },
+  {
+    "id": "dq_g5_007",
+    "grade": "grade5",
+    "topic": "percentages",
+    "difficulty": "hard",
+    "questionText": "A shirt costs ₹400. It is on sale for 25% off. What is the sale price?",
+    "options": [
+      { "id": "a", "text": "₹100", "isCorrect": false },
+      { "id": "b", "text": "₹300", "isCorrect": true },
+      { "id": "c", "text": "₹350", "isCorrect": false },
+      { "id": "d", "text": "₹375", "isCorrect": false }
+    ],
+    "explanation": "25% of 400 = 100. Sale price = 400 − 100 = ₹300.",
+    "hint": "Find 25% of the price, then subtract it from the original."
+  },
+  {
+    "id": "dq_g5_008",
+    "grade": "grade5",
+    "topic": "ratio",
+    "difficulty": "hard",
+    "questionText": "A recipe uses 2 cups of flour for every 3 cups of sugar. How much flour is needed for 9 cups of sugar?",
+    "options": [
+      { "id": "a", "text": "4 cups", "isCorrect": false },
+      { "id": "b", "text": "5 cups", "isCorrect": false },
+      { "id": "c", "text": "6 cups", "isCorrect": true },
+      { "id": "d", "text": "7 cups", "isCorrect": false }
+    ],
+    "explanation": "Ratio is 2:3. For 9 sugar (3×3), flour = 2×3 = 6 cups.",
+    "hint": "How many times does 3 go into 9? Multiply flour by the same number."
+  },
+  {
+    "id": "dq_all_001",
+    "grade": "all",
+    "topic": "logic",
+    "difficulty": "medium",
+    "questionText": "A bag has 3 red, 2 blue and 5 green balls. What fraction of the balls are green?",
+    "options": [
+      { "id": "a", "text": "1/2", "isCorrect": true },
+      { "id": "b", "text": "1/3", "isCorrect": false },
+      { "id": "c", "text": "5/8", "isCorrect": false },
+      { "id": "d", "text": "2/5", "isCorrect": false }
+    ],
+    "explanation": "Total balls = 3+2+5=10. Green = 5. Fraction = 5/10 = 1/2.",
+    "hint": "Fraction = green balls ÷ total balls."
+  },
+  {
+    "id": "dq_all_002",
+    "grade": "all",
+    "topic": "logic",
+    "difficulty": "easy",
+    "questionText": "If you have ₹50 and spend ₹23, how much do you have left?",
+    "options": [
+      { "id": "a", "text": "₹17", "isCorrect": false },
+      { "id": "b", "text": "₹27", "isCorrect": true },
+      { "id": "c", "text": "₹37", "isCorrect": false },
+      { "id": "d", "text": "₹73", "isCorrect": false }
+    ],
+    "explanation": "₹50 − ₹23 = ₹27.",
+    "hint": "Subtract the amount spent from what you started with."
+  },
+  {
+    "id": "dq_all_003",
+    "grade": "all",
+    "topic": "logic",
+    "difficulty": "medium",
+    "questionText": "A clock shows 3:45. How many minutes until 4:00?",
+    "options": [
+      { "id": "a", "text": "10", "isCorrect": false },
+      { "id": "b", "text": "20", "isCorrect": false },
+      { "id": "c", "text": "15", "isCorrect": true },
+      { "id": "d", "text": "45", "isCorrect": false }
+    ],
+    "explanation": "From 3:45 to 4:00 is 60 − 45 = 15 minutes.",
+    "hint": "Count the minutes from 45 to 60."
+  },
+  {
+    "id": "dq_all_004",
+    "grade": "all",
+    "topic": "patterns",
+    "difficulty": "hard",
+    "questionText": "What is the next term: 1, 1, 2, 3, 5, 8, ___?",
+    "options": [
+      { "id": "a", "text": "10", "isCorrect": false },
+      { "id": "b", "text": "11", "isCorrect": false },
+      { "id": "c", "text": "13", "isCorrect": true },
+      { "id": "d", "text": "16", "isCorrect": false }
+    ],
+    "explanation": "Each term is the sum of the two before it: 5+8=13. This is the Fibonacci sequence!",
+    "hint": "Add the last two numbers to get the next one."
+  },
+  {
+    "id": "dq_all_005",
+    "grade": "all",
+    "topic": "logic",
+    "difficulty": "medium",
+    "questionText": "There are 24 students in a class. 1/4 are absent. How many are present?",
+    "options": [
+      { "id": "a", "text": "4", "isCorrect": false },
+      { "id": "b", "text": "6", "isCorrect": false },
+      { "id": "c", "text": "18", "isCorrect": true },
+      { "id": "d", "text": "20", "isCorrect": false }
+    ],
+    "explanation": "1/4 of 24 = 6 absent. Present = 24 − 6 = 18.",
+    "hint": "Find 1/4 of the class, then subtract from the total."
+  },
+  {
+    "id": "dq_all_006",
+    "grade": "all",
+    "topic": "number-sense",
+    "difficulty": "easy",
+    "questionText": "Round 847 to the nearest hundred.",
+    "options": [
+      { "id": "a", "text": "800", "isCorrect": true },
+      { "id": "b", "text": "850", "isCorrect": false },
+      { "id": "c", "text": "900", "isCorrect": false },
+      { "id": "d", "text": "840", "isCorrect": false }
+    ],
+    "explanation": "847 → the tens digit is 4 (less than 5), so round down to 800.",
+    "hint": "Look at the tens digit: less than 5 → round down; 5 or more → round up."
+  },
+  {
+    "id": "dq_all_007",
+    "grade": "all",
+    "topic": "probability",
+    "difficulty": "medium",
+    "questionText": "You flip a fair coin. What is the probability of getting heads?",
+    "options": [
+      { "id": "a", "text": "1/4", "isCorrect": false },
+      { "id": "b", "text": "1/3", "isCorrect": false },
+      { "id": "c", "text": "1/2", "isCorrect": true },
+      { "id": "d", "text": "2/3", "isCorrect": false }
+    ],
+    "explanation": "A coin has 2 sides. Heads is 1 of the 2 outcomes → probability = 1/2.",
+    "hint": "Probability = favourable outcomes ÷ total outcomes."
+  },
+  {
+    "id": "dq_all_008",
+    "grade": "all",
+    "topic": "speed",
+    "difficulty": "hard",
+    "questionText": "A train travels at 60 km/h. How far does it travel in 2.5 hours?",
+    "options": [
+      { "id": "a", "text": "100 km", "isCorrect": false },
+      { "id": "b", "text": "120 km", "isCorrect": false },
+      { "id": "c", "text": "150 km", "isCorrect": true },
+      { "id": "d", "text": "180 km", "isCorrect": false }
+    ],
+    "explanation": "Distance = speed × time = 60 × 2.5 = 150 km.",
+    "hint": "Distance = Speed × Time."
+  }
+]

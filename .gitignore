@@ -1,0 +1,33 @@
+node_modules/
+dist/
+.env
+.env.local
+# every other env variant (.env.production, .env.development.local, …);
+# only the committed templates are allowed through
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+*.sqlite
+*.db
+
+# next.js
+.next/
+out/
+build
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# database backups — archives contain full production data
+backups/
+*.ndjson.gz
+
+# frontend: build-time copy of apps/backend/src/data/grades/*/curriculum.json
+# (apps/frontend/scripts/sync-curriculum.mjs)
+apps/frontend/src/data/grades/

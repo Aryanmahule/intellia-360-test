@@ -1,0 +1,1425 @@
+/* Intellia360 — Student Leaderboard / Gamified Champions Arena */
+
+.student-leaderboard-container {
+    --sl-purple: #7c3aed;
+    --sl-purple-dark: #4c1d95;
+    --sl-purple-soft: #f3e8ff;
+    --sl-orange: #f97316;
+    --sl-orange-soft: #fff1e8;
+    --sl-blue: #2563eb;
+    --sl-navy: #111827;
+    --sl-muted: #64748b;
+    --sl-border: #e7e8ee;
+    --sl-bg: #f7f8fc;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 16px 12px 44px;
+    box-sizing: border-box;
+    color: var(--sl-navy);
+    background:
+        radial-gradient(circle at 94% 4%, rgba(124, 58, 237, .08), transparent 22%),
+        radial-gradient(circle at 4% 38%, rgba(249, 115, 22, .06), transparent 20%);
+}
+
+/* Header */
+.sl-header-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 210px;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(249, 115, 22, .25), transparent 20%),
+        linear-gradient(135deg, #18122e 0%, #30205d 55%, #21153f 100%);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 26px;
+    padding: 32px 34px;
+    box-shadow: 0 24px 60px rgba(45, 27, 91, .18);
+    display: flex;
+    align-items: center;
+}
+
+.sl-header-card::before,
+.sl-header-card::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sl-header-card::before {
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    top: -120px;
+    background: radial-gradient(circle, rgba(124, 58, 237, .42), transparent 68%);
+}
+
+.sl-header-card::after {
+    width: 220px;
+    height: 220px;
+    right: 130px;
+    bottom: -170px;
+    background: radial-gradient(circle, rgba(249, 115, 22, .18), transparent 68%);
+}
+
+.sl-header-left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sl-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sl-page-title {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -.045em;
+}
+
+.sl-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, .1);
+    color: #eadfff;
+    border: 1px solid rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+}
+
+.sl-page-subtitle {
+    max-width: 660px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* Current student */
+.sl-user-highlight-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 55%, #f97316 150%);
+    border-radius: 22px;
+    padding: 20px 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 18px 40px rgba(91, 33, 182, .2);
+    flex-wrap: wrap;
+}
+
+.sl-user-highlight-card::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: -80px;
+    top: -110px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, .16), transparent 65%);
+}
+
+.sl-user-highlight-left,
+.sl-user-stats-row {
+    position: relative;
+    z-index: 2;
+}
+
+.sl-user-highlight-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sl-user-rank-box {
+    width: 66px;
+    height: 66px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: inset 0 1px 10px rgba(255, 255, 255, .08);
+}
+
+.sl-rank-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    opacity: .7;
+    font-weight: 800;
+}
+
+.sl-rank-number {
+    font-size: 22px;
+    font-weight: 950;
+    line-height: 1.1;
+}
+
+.sl-user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sl-user-name-tag {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.sl-user-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 850;
+    color: #fff;
+}
+
+.sl-you-badge {
+    font-size: 8px;
+    font-weight: 900;
+    padding: 4px 7px;
+    border-radius: 7px;
+    background: #fff;
+    color: #6d28d9;
+    letter-spacing: .06em;
+}
+
+.sl-user-grade-sub {
+    font-size: 11px;
+    opacity: .78;
+}
+
+.sl-user-stats-row {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    flex-wrap: wrap;
+}
+
+.sl-user-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: right;
+}
+
+.sl-stat-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    opacity: .68;
+    font-weight: 800;
+}
+
+.sl-stat-val {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* Controls */
+.sl-control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--sl-border);
+    border-radius: 17px;
+    padding: 9px 12px;
+    box-shadow: 0 8px 22px rgba(17, 24, 39, .045);
+    flex-wrap: wrap;
+}
+
+.sl-tabs-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.sl-tab-btn {
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #64748b;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: .18s ease;
+}
+
+.sl-tab-btn:hover:not(.disabled) {
+    color: var(--sl-purple);
+    background: var(--sl-purple-soft);
+}
+
+.sl-tab-btn.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--sl-purple), #a855f7);
+    box-shadow: 0 8px 18px rgba(124, 58, 237, .2);
+}
+
+.sl-tab-btn.disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.sl-filter-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sl-grade-select {
+    padding: 9px 13px;
+    border-radius: 10px;
+    border: 1px solid #ddd9e8;
+    font-size: 11px;
+    font-weight: 800;
+    color: #312e81;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.sl-grade-select:focus {
+    border-color: var(--sl-purple);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, .1);
+}
+
+/* Champions arena */
+.sl-podium-section {
+    position: relative;
+    overflow: hidden;
+    padding: 22px;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(124, 58, 237, .1), transparent 34%),
+        linear-gradient(145deg, #fff, #f8f6ff);
+    border: 1px solid #e9e2f7;
+    box-shadow: 0 16px 38px rgba(17, 24, 39, .06);
+}
+
+.sl-podium-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.sl-section-kicker {
+    color: var(--sl-purple);
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+}
+
+.sl-podium-heading h2 {
+    margin: 4px 0 0;
+    font-size: 27px;
+    letter-spacing: -.035em;
+}
+
+.sl-podium-caption {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.sl-podium {
+    min-height: 335px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 18px;
+    padding: 16px 4% 0;
+    perspective: 900px;
+}
+
+.sl-podium-card {
+    position: relative;
+    width: min(250px, 31%);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 14px 0;
+    border-radius: 24px 24px 14px 14px;
+    background: linear-gradient(145deg, #fff, #f4efff);
+    border: 1px solid #e5dcf5;
+    box-shadow:
+        0 18px 35px rgba(76, 29, 149, .1),
+        inset 0 1px 0 #fff;
+    transform-style: preserve-3d;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.sl-podium-card:hover {
+    transform: translateY(-7px) rotateX(2deg);
+    box-shadow: 0 25px 45px rgba(76, 29, 149, .16);
+}
+
+.podium-first {
+    min-height: 305px;
+    background: linear-gradient(145deg, #fff9e8, #fff3d1);
+    border-color: #f6d878;
+}
+
+.podium-second {
+    min-height: 270px;
+}
+
+.podium-third {
+    min-height: 250px;
+}
+
+.sl-podium-glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 58, 237, .18), transparent 68%);
+    pointer-events: none;
+}
+
+.podium-first .sl-podium-glow {
+    background: radial-gradient(circle, rgba(249, 115, 22, .2), transparent 68%);
+}
+
+.sl-podium-rank {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    font-size: 10px;
+    font-weight: 950;
+    color: #a78bfa;
+    letter-spacing: .08em;
+}
+
+.podium-first .sl-podium-rank {
+    color: #d97706;
+}
+
+.sl-podium-avatar-wrap {
+    position: relative;
+    z-index: 2;
+    width: 86px;
+    height: 86px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 28px;
+    transform: rotate(-4deg);
+    background: linear-gradient(145deg, #fff, #c4b5fd, #7c3aed);
+    box-shadow:
+        8px 9px 0 #5b21b6,
+        14px 18px 24px rgba(91, 33, 182, .18);
+}
+
+.podium-first .sl-podium-avatar-wrap {
+    width: 98px;
+    height: 98px;
+    background: linear-gradient(145deg, #fff, #ffd98a, #f97316);
+    box-shadow:
+        8px 9px 0 #c2410c,
+        14px 18px 24px rgba(194, 65, 12, .18);
+}
+
+.sl-podium-avatar,
+.sl-podium-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 23px;
+    object-fit: cover;
+    background: #fff;
+}
+
+.sl-podium-avatar-fallback {
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 950;
+    background: linear-gradient(135deg, #a855f7, #6d28d9);
+}
+
+.podium-first .sl-podium-avatar-fallback {
+    background: linear-gradient(135deg, #fb923c, #ea580c);
+}
+
+.sl-podium-name {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    margin-top: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 900;
+    color: #1e1b4b;
+}
+
+.sl-podium-grade {
+    position: relative;
+    z-index: 2;
+    margin-top: 3px;
+    color: #7c3aed;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sl-podium-xp {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 9px;
+    color: #111827;
+    font-size: 17px;
+    font-weight: 950;
+}
+
+.sl-podium-xp span {
+    padding: 4px 6px;
+    border-radius: 6px;
+    color: #fff;
+    background: var(--sl-purple);
+    font-size: 7px;
+    letter-spacing: .08em;
+}
+
+.podium-first .sl-podium-xp span {
+    background: var(--sl-orange);
+}
+
+.sl-podium-base {
+    width: calc(100% + 28px);
+    min-height: 36px;
+    display: grid;
+    place-items: center;
+    margin-top: auto;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
+    color: #fff;
+    font-size: 8px;
+    font-weight: 950;
+    letter-spacing: .12em;
+}
+
+.podium-first .sl-podium-base {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+/* Table */
+.sl-table-panel {
+    background: #fff;
+    border: 1px solid var(--sl-border);
+    border-radius: 20px;
+    box-shadow: 0 14px 34px rgba(17, 24, 39, .055);
+    overflow: hidden;
+}
+
+.sl-table-header,
+.sl-row {
+    display: grid;
+    grid-template-columns: 82px 1fr 145px 120px 150px;
+    align-items: center;
+}
+
+.sl-table-header {
+    padding: 14px 22px;
+    background: #faf9fd;
+    border-bottom: 1px solid #eeeaf5;
+    font-size: 9px;
+    font-weight: 900;
+    color: #7c718e;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.sl-table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.sl-row {
+    padding: 15px 22px;
+    border-bottom: 1px solid #f0edf4;
+    transition: background .18s ease, transform .18s ease;
+}
+
+.sl-row:last-child {
+    border-bottom: none;
+}
+
+.sl-row:hover {
+    background: #faf8ff;
+}
+
+.sl-row.current-user {
+    position: relative;
+    background: linear-gradient(90deg, #f6f0ff, #fff);
+}
+
+.sl-row.current-user::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    border-radius: 0 5px 5px 0;
+    background: linear-gradient(180deg, #7c3aed, #f97316);
+}
+
+.sl-col-rank {
+    display: flex;
+    align-items: center;
+}
+
+.sl-rank-medal {
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    transform: rotate(-4deg);
+    box-shadow: 4px 5px 0 rgba(76, 29, 149, .12);
+}
+
+.sl-rank-medal.rank-1 {
+    background: linear-gradient(145deg, #fff5bd, #f59e0b);
+    color: #92400e;
+}
+
+.sl-rank-medal.rank-2 {
+    background: linear-gradient(145deg, #fff, #cbd5e1);
+    color: #475569;
+}
+
+.sl-rank-medal.rank-3 {
+    background: linear-gradient(145deg, #fff0df, #fb923c);
+    color: #9a3412;
+}
+
+.sl-rank-medal.rank-other {
+    background: #f4f2f7;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.sl-col-student {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.sl-avatar,
+.sl-avatar-fallback {
+    width: 43px;
+    height: 43px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sl-avatar {
+    box-shadow: 5px 6px 0 rgba(124, 58, 237, .12);
+}
+
+.sl-avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 5px 6px 0 rgba(76, 29, 149, .14);
+}
+
+.sl-student-names {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+.sl-student-name {
+    font-size: 15px;
+    font-weight: 850;
+    color: #1e1b4b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sl-you-tag {
+    font-size: 7px;
+    font-weight: 900;
+    padding: 3px 6px;
+    border-radius: 6px;
+    background: #7c3aed;
+    color: #fff;
+    letter-spacing: .06em;
+}
+
+.sl-col-grade {
+    font-size: 10px;
+    font-weight: 750;
+    color: #64748b;
+}
+
+.sl-col-streak {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 850;
+    color: #ea580c;
+}
+
+.sl-col-xp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 900;
+    color: #1e1b4b;
+    text-align: right;
+}
+
+.sl-xp-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 9px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #fff4df, #fff0e7);
+    color: #c2410c;
+    font-size: 9px;
+    font-weight: 900;
+    border: 1px solid #ffe0c5;
+}
+
+/* States */
+.sl-state-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px;
+    text-align: center;
+    gap: 12px;
+}
+
+.sl-state-icon {
+    font-size: 30px;
+}
+
+.sl-state-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 850;
+    color: #1e1b4b;
+}
+
+.sl-state-desc {
+    margin: 0;
+    font-size: 12px;
+    color: #64748b;
+    max-width: 440px;
+    line-height: 1.6;
+}
+
+.sl-retry-btn {
+    margin-top: 7px;
+    padding: 10px 17px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 850;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(124, 58, 237, .18);
+}
+
+.sl-loading-spinner {
+    width: 38px;
+    height: 38px;
+    border: 3px solid #e9e3f4;
+    border-top-color: #7c3aed;
+    border-right-color: #f97316;
+    border-radius: 50%;
+    animation: slSpin .7s linear infinite;
+}
+
+@keyframes slSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .sl-table-header,
+    .sl-row {
+        grid-template-columns: 60px 1fr 110px 105px;
+    }
+
+    .sl-table-header>div:nth-child(3),
+    .sl-col-grade {
+        display: none;
+    }
+
+    .sl-user-highlight-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sl-user-stats-row {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sl-user-stat-item {
+        text-align: left;
+    }
+
+    .sl-podium {
+        gap: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sl-podium-card {
+        width: 33%;
+    }
+}
+
+@media (max-width: 650px) {
+    .student-leaderboard-container {
+        padding: 8px 6px 32px;
+        gap: 14px;
+    }
+
+    .sl-header-card {
+        min-height: 175px;
+        padding: 26px 22px;
+        border-radius: 21px;
+    }
+
+    .sl-page-title {
+        font-size: 34px;
+    }
+
+    .sl-page-subtitle {
+        font-size: 12px;
+    }
+
+    .sl-user-highlight-card {
+        padding: 18px;
+    }
+
+    .sl-user-highlight-left {
+        width: 100%;
+    }
+
+    .sl-user-stats-row {
+        gap: 12px;
+    }
+
+    .sl-stat-val {
+        font-size: 13px;
+    }
+
+    .sl-control-bar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .sl-tabs-group {
+        width: 100%;
+    }
+
+    .sl-tab-btn {
+        flex: 1;
+        padding: 9px 7px;
+        font-size: 9px;
+    }
+
+    .sl-filter-right,
+    .sl-grade-select {
+        width: 100%;
+    }
+
+    .sl-podium-section {
+        padding: 16px 10px 12px;
+    }
+
+    .sl-podium-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .sl-podium {
+        min-height: 245px;
+        gap: 7px;
+    }
+
+    .sl-podium-card {
+        min-height: 190px;
+        padding: 12px 7px 0;
+        border-radius: 17px 17px 10px 10px;
+    }
+
+    .podium-first {
+        min-height: 220px;
+    }
+
+    .podium-second {
+        min-height: 202px;
+    }
+
+    .sl-podium-avatar-wrap,
+    .podium-first .sl-podium-avatar-wrap {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sl-podium-name {
+        margin-top: 12px;
+        font-size: 11px;
+    }
+
+    .sl-podium-grade {
+        font-size: 7px;
+    }
+
+    .sl-podium-xp {
+        font-size: 10px;
+    }
+
+    .sl-podium-base {
+        width: calc(100% + 14px);
+        min-height: 29px;
+        font-size: 6px;
+    }
+
+    .sl-table-header,
+    .sl-row {
+        grid-template-columns: 46px 1fr 86px;
+    }
+
+    .sl-table-header {
+        padding: 12px 12px;
+        font-size: 8px;
+    }
+
+    .sl-table-header>div:nth-child(4),
+    .sl-col-streak {
+        display: none;
+    }
+
+    .sl-row {
+        padding: 12px;
+    }
+
+    .sl-avatar,
+    .sl-avatar-fallback {
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+    }
+
+    .sl-col-student {
+        gap: 9px;
+    }
+
+    .sl-student-name {
+        font-size: 11px;
+    }
+
+    .sl-xp-pill {
+        padding: 5px 6px;
+        font-size: 7px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sl-loading-spinner {
+        animation: none;
+    }
+
+    .sl-podium-card {
+        transition: none;
+    }
+}
+
+
+/* ============================================================
+   INTELLIA360 — LEADERBOARD LAYOUT / OVERLAP FIX
+   Keeps the existing gamified design and fixes page-width,
+   flex/grid shrinking, header overflow, podium and table
+   responsiveness when used inside the Student shell.
+   ============================================================ */
+
+/* The leaderboard must be allowed to use the complete main area. */
+.student-leaderboard-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 20px 24px 48px;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+/* If the Student shell uses a constrained main-content wrapper,
+   let this particular page escape that narrow max-width. */
+.student-main-content:has(.student-leaderboard-container),
+.student-page-content:has(.student-leaderboard-container) {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+.student-main-content:has(.student-leaderboard-container)>*,
+.student-page-content:has(.student-leaderboard-container)>* {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Every major leaderboard block must shrink inside the viewport. */
+.student-leaderboard-container>*,
+.sl-header-card,
+.sl-user-highlight-card,
+.sl-control-bar,
+.sl-podium-section,
+.sl-table-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Header text must never push the card wider. */
+.sl-header-left,
+.sl-title-row,
+.sl-page-title,
+.sl-page-subtitle,
+.sl-user-highlight-left,
+.sl-user-details,
+.sl-user-stats-row {
+    min-width: 0;
+}
+
+.sl-page-title,
+.sl-page-subtitle,
+.sl-user-name,
+.sl-student-name {
+    overflow-wrap: anywhere;
+}
+
+/* Current-user card: prevent stats from colliding with the name area. */
+.sl-user-highlight-left {
+    flex: 1 1 360px;
+}
+
+.sl-user-stats-row {
+    flex: 0 1 auto;
+    justify-content: flex-end;
+}
+
+/* Controls must wrap instead of creating horizontal overflow. */
+.sl-tabs-group {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.sl-filter-right {
+    flex: 0 0 auto;
+}
+
+/* Podium gets predictable proportions. */
+.sl-podium {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sl-podium-card {
+    min-width: 0;
+    max-width: 250px;
+}
+
+/* Table is allowed to scroll internally rather than breaking the page. */
+.sl-table-panel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sl-table-header,
+.sl-row {
+    min-width: 680px;
+}
+
+/* Don't let the table become wider than its own scroll container. */
+.sl-table-body {
+    min-width: 0;
+}
+
+/* -------------------- Tablet -------------------- */
+@media (max-width: 1100px) {
+    .student-leaderboard-container {
+        padding: 18px 18px 40px;
+    }
+
+    .sl-header-card {
+        min-height: 190px;
+        padding: 28px;
+    }
+
+    .sl-user-highlight-card {
+        align-items: flex-start;
+    }
+
+    .sl-user-highlight-left {
+        flex: 1 1 100%;
+    }
+
+    .sl-user-stats-row {
+        width: 100%;
+        justify-content: space-between;
+        gap: 18px;
+    }
+
+    .sl-podium {
+        max-width: 760px;
+        gap: 12px;
+    }
+
+    .sl-podium-card {
+        width: 31%;
+    }
+}
+
+/* -------------------- Tablet / Large Mobile -------------------- */
+@media (max-width: 900px) {
+
+    .student-main-content:has(.student-leaderboard-container),
+    .student-page-content:has(.student-leaderboard-container) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .student-leaderboard-container {
+        padding: 16px 14px 36px;
+        gap: 16px;
+    }
+
+    .sl-title-row {
+        align-items: flex-start;
+    }
+
+    .sl-page-title {
+        font-size: clamp(30px, 6vw, 42px);
+    }
+
+    .sl-control-bar {
+        align-items: stretch;
+    }
+
+    .sl-tabs-group {
+        width: 100%;
+    }
+
+    .sl-filter-right {
+        width: 100%;
+    }
+
+    .sl-grade-select {
+        width: 100%;
+    }
+}
+
+/* -------------------- Mobile -------------------- */
+@media (max-width: 650px) {
+    .student-leaderboard-container {
+        padding: 10px 10px 30px;
+        gap: 12px;
+    }
+
+    .sl-header-card {
+        min-height: auto;
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .sl-page-title {
+        font-size: 31px;
+        line-height: 1.05;
+    }
+
+    .sl-page-subtitle {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .sl-user-highlight-card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .sl-user-highlight-left {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .sl-user-stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 8px;
+    }
+
+    .sl-user-stat-item {
+        min-width: 0;
+    }
+
+    .sl-stat-title,
+    .sl-stat-val {
+        overflow-wrap: anywhere;
+    }
+
+    .sl-stat-val {
+        font-size: 14px;
+    }
+
+    .sl-control-bar {
+        padding: 8px;
+    }
+
+    .sl-tabs-group {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .sl-tab-btn {
+        min-width: 0;
+        padding: 9px 5px;
+        white-space: normal;
+    }
+
+    .sl-podium-section {
+        padding: 15px 8px 10px;
+        border-radius: 19px;
+    }
+
+    .sl-podium {
+        min-height: 230px;
+        gap: 6px;
+        padding: 12px 0 0;
+        align-items: flex-end;
+    }
+
+    .sl-podium-card {
+        width: calc((100% - 12px) / 3);
+        min-width: 0;
+        max-width: none;
+        min-height: 180px;
+        padding: 10px 5px 0;
+    }
+
+    .podium-first {
+        min-height: 210px;
+    }
+
+    .podium-second {
+        min-height: 195px;
+    }
+
+    .podium-third {
+        min-height: 180px;
+    }
+
+    .sl-podium-avatar-wrap,
+    .podium-first .sl-podium-avatar-wrap {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sl-podium-name {
+        max-width: 92%;
+        font-size: 10px;
+    }
+
+    .sl-podium-xp {
+        font-size: 10px;
+    }
+
+    .sl-podium-base {
+        width: calc(100% + 10px);
+        min-height: 27px;
+    }
+
+    .sl-table-panel {
+        border-radius: 16px;
+    }
+
+    .sl-table-header,
+    .sl-row {
+        min-width: 520px;
+    }
+}
+
+/* -------------------- Small Mobile -------------------- */
+@media (max-width: 420px) {
+    .student-leaderboard-container {
+        padding: 8px 7px 24px;
+    }
+
+    .sl-header-card {
+        padding: 20px 15px;
+    }
+
+    .sl-page-title {
+        font-size: 28px;
+    }
+
+    .sl-badge-pill {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+
+    .sl-user-highlight-card {
+        padding: 14px;
+    }
+
+    .sl-user-highlight-left {
+        gap: 10px;
+    }
+
+    .sl-user-rank-box {
+        width: 56px;
+        height: 56px;
+    }
+
+    .sl-user-name {
+        font-size: 16px;
+    }
+
+    .sl-user-stats-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sl-stat-title {
+        font-size: 8px;
+    }
+
+    .sl-stat-val {
+        font-size: 12px;
+    }
+
+    .sl-podium-heading h2 {
+        font-size: 22px;
+    }
+
+    .sl-podium-caption {
+        font-size: 10px;
+    }
+
+    .sl-podium {
+        min-height: 205px;
+    }
+
+    .sl-podium-card {
+        min-height: 160px;
+    }
+
+    .podium-first {
+        min-height: 185px;
+    }
+
+    .podium-second {
+        min-height: 172px;
+    }
+
+    .podium-third {
+        min-height: 160px;
+    }
+
+    .sl-podium-avatar-wrap,
+    .podium-first .sl-podium-avatar-wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    .sl-podium-name {
+        font-size: 9px;
+    }
+
+    .sl-podium-grade {
+        font-size: 6px;
+    }
+
+    .sl-podium-xp {
+        font-size: 9px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .sl-podium-card {
+        transform: none !important;
+        transition: none !important;
+    }
+}

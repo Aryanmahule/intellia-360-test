@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cls_1",
+    "className": "Grade 2 Math - Sec A",
+    "grade": "Grade 2",
+    "studentCount": 22,
+    "averageScore": 90,
+    "completionRate": 94,
+    "atRiskCount": 1
+  },
+  {
+    "id": "cls_2",
+    "className": "Grade 2 Math - Sec B",
+    "grade": "Grade 2",
+    "studentCount": 20,
+    "averageScore": 85,
+    "completionRate": 89,
+    "atRiskCount": 2
+  }
+]

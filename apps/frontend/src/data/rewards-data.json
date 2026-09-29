@@ -1,0 +1,81 @@
+{
+  "missions": [
+    {
+      "id": "m_1",
+      "title": "Complete Today's Adventure",
+      "xpReward": 50,
+      "gemReward": 20,
+      "progress": 1,
+      "maxProgress": 1,
+      "isCompleted": true
+    },
+    {
+      "id": "m_2",
+      "title": "Score 100% in a Practice Challenge",
+      "xpReward": 100,
+      "gemReward": 50,
+      "progress": 2,
+      "maxProgress": 3,
+      "isCompleted": false
+    },
+    {
+      "id": "m_3",
+      "title": "Maintain a 14-Day Streak",
+      "xpReward": 200,
+      "gemReward": 100,
+      "progress": 12,
+      "maxProgress": 14,
+      "isCompleted": false
+    }
+  ],
+  "characters": [
+    {
+      "id": "c_1",
+      "name": "Panda Buddy",
+      "avatar": "/assets/avatars/characters/panda.png",
+      "isUnlocked": true
+    },
+    {
+      "id": "c_2",
+      "name": "Fox Explorer",
+      "avatar": "/assets/avatars/characters/fox.png",
+      "isUnlocked": true
+    },
+    {
+      "id": "c_3",
+      "name": "Bear Scholar",
+      "avatar": "/assets/avatars/characters/bear.png",
+      "isUnlocked": true
+    },
+    {
+      "id": "c_4",
+      "name": "Penguin Whiz",
+      "avatar": "/assets/avatars/characters/penguin.png",
+      "isUnlocked": true
+    },
+    {
+      "id": "c_5",
+      "name": "Bunny Hopper",
+      "avatar": "/assets/avatars/characters/rabbit.png",
+      "isUnlocked": true
+    }
+  ],
+  "badges": [
+    {
+      "id": "b_1",
+      "title": "Place Value Master",
+      "description": "Completed all Place Value exercises",
+      "icon": "trophy",
+      "isUnlocked": true,
+      "unlockedAt": "2026-07-28"
+    },
+    {
+      "id": "b_2",
+      "title": "Streak Champion",
+      "description": "Reached a 10-day active learning streak",
+      "icon": "fire",
+      "isUnlocked": true,
+      "unlockedAt": "2026-07-29"
+    }
+  ]
+}

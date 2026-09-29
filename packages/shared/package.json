@@ -1,0 +1,16 @@
+{
+  "name": "@intellia360/shared",
+  "version": "1.0.0",
+  "description": "Code and types used by both apps/frontend and apps/backend: role rules, lesson-module rules, streak badges and API response types.",
+  "private": true,
+  "license": "UNLICENSED",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,960 @@
+:root {
+  /* Brand Color Palette */
+  --color-primary: #ffffff;
+  --color-primary-hover: #171b24;
+  --color-primary-light: #748ba9;
+  --color-primary-glow: rgba(37, 99, 235, 0.25);
+
+  --color-secondary: #7c3aed;
+  /* Violet-700 */
+  --color-secondary-hover: #6d28d9;
+  --color-secondary-light: rgba(124, 58, 237, .10);
+  --color-secondary-glow: rgba(124, 58, 237, .25);
+
+  /* ── Sidebar dark surface ───────────────────────────────────────────────── */
+  --color-sidebar-bg: #1e1b4b;
+  /* Deep indigo */
+  --color-sidebar-hover: rgba(255, 255, 255, .07);
+  --color-sidebar-active: rgba(249, 115, 22, .18);
+  --color-sidebar-border: rgba(255, 255, 255, .06);
+  --color-sidebar-text: rgba(255, 255, 255, .75);
+  --color-sidebar-muted: rgba(255, 255, 255, .40);
+
+  /* ── Accent palette ─────────────────────────────────────────────────────── */
+  --color-accent-orange: #f97316;
+  --color-accent-orange-hover: #ea580c;
+  --color-accent-yellow: #f59e0b;
+  --color-accent-purple: #7c3aed;
+  --color-accent-purple-light: rgba(124, 58, 237, .10);
+  --color-accent-green: #10b981;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-pink: #ec4899;
+  --color-accent-blue: #3b82f6;
+
+  /* ── Neutrals ───────────────────────────────────────────────────────────── */
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8f9fc;
+  --color-surface-elevated: #ffffff;
+
+  /* ── Text ───────────────────────────────────────────────────────────────── */
+  --color-text-main: #352ea0;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* ── Borders ────────────────────────────────────────────────────────────── */
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* ── Status ─────────────────────────────────────────────────────────────── */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  --font-family-primary: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-rounded: "Outfit", var(--font-family-primary);
+
+  /* ── Radii ──────────────────────────────────────────────────────────────── */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ── Shadows ────────────────────────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, .07);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, .12);
+  --shadow-orange: 0 4px 14px rgba(249, 115, 22, .30);
+  --shadow-purple: 0 4px 14px rgba(124, 58, 237, .30);
+
+  /* ── Transitions ────────────────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-bounce: 400ms cubic-bezier(.34, 1.56, .64, 1);
+  --transition-spring: 500ms cubic-bezier(.175, .885, .32, 1.275);
+
+  /* ── Glow shadows (chatbot / hero accents) ──────────────────────────────── */
+  --shadow-glow-primary: 0 0 20px rgba(249, 115, 22, .35), 0 0 60px rgba(249, 115, 22, .10);
+  --shadow-glow-purple: 0 0 20px rgba(105, 23, 247, 0.596), 0 0 60px rgba(124, 58, 237, .10);
+  --shadow-glow-orange: 0 0 20px rgba(249, 115, 22, .35), 0 0 60px rgba(249, 115, 22, .10);
+
+  /* ── Chatbot header gradient tokens ────────────────────────────────────── */
+  --color-chatbot-header-start: #1e1b4b;
+  --color-chatbot-header-end: #7c3aed;
+}
+
+/* =========================================================
+   INTELLIA360 STUDENT SIDEBAR
+   Monochrome Black + White + Neutral Gray
+   Purple / Orange: COMPLETELY REMOVED
+   Responsive + Gamified + 3D depth
+   ========================================================= */
+
+:root {
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #111111;
+  --sidebar-text-soft: #5f6368;
+  --sidebar-text-muted: #8a8f98;
+  --sidebar-border: #e5e7eb;
+  --sidebar-hover: #f3f4f6;
+  --sidebar-soft: #f7f7f8;
+  --sidebar-active: #111111;
+  --sidebar-active-text: #ffffff;
+  --sidebar-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+  --sidebar-radius: 14px;
+  --sidebar-width: 282px;
+  --sidebar-collapsed-width: 76px;
+}
+
+/* =========================================================
+   MAIN SIDEBAR
+   ========================================================= */
+
+.student-sidebar-container {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 100;
+  width: var(--sidebar-width);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-right: 1px solid var(--sidebar-border);
+  box-shadow: var(--sidebar-shadow);
+  transition:
+    width 0.25s ease,
+    box-shadow 0.25s ease;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.student-sidebar-container.is-collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.student-sidebar-header {
+  min-height: 76px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--sidebar-border);
+  background: #ffffff;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-header {
+  justify-content: center;
+  padding-inline: 12px;
+}
+
+.student-sidebar-brand {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #111111;
+  text-decoration: none;
+  border: 1px solid #d9dce1;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow:
+    0 4px 0 #d9dce1,
+    0 8px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-sidebar-brand:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #c9cdd3,
+    0 12px 22px rgba(0, 0, 0, 0.1);
+}
+
+.student-sidebar-logo-mark {
+  display: grid;
+  place-items: center;
+  color: #111111;
+}
+
+.student-sidebar-logo-mark svg {
+  display: block;
+}
+
+.student-sidebar-menu-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #dfe2e6;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #111111;
+  background: #ffffff;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-sidebar-menu-btn:hover {
+  background: #f3f4f6;
+  border-color: #bfc3c9;
+  transform: translateY(-1px);
+}
+
+.student-sidebar-menu-btn span {
+  width: 15px;
+  height: 1.8px;
+  display: block;
+  border-radius: 99px;
+  background: currentColor;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.student-sidebar-nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 18px 12px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #cfd2d6 transparent;
+}
+
+.student-sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.student-sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.student-sidebar-nav::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 99px;
+}
+
+.student-sidebar-nav-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px 9px;
+  color: #8a8f98;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.student-sidebar-nav-heading i {
+  height: 1px;
+  flex: 1;
+  background: #eceef0;
+}
+
+.student-sidebar-nav-group {
+  display: grid;
+  gap: 5px;
+}
+
+.student-sidebar-nav-item {
+  position: relative;
+  min-height: 47px;
+  width: 100%;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: #171717;
+  background: transparent;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.student-sidebar-nav-item:hover {
+  color: #111111;
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+  transform: translateX(2px);
+}
+
+.student-sidebar-nav-item.active {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+  box-shadow:
+    0 3px 0 #000000,
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.student-sidebar-nav-item.active:hover {
+  color: #ffffff;
+  background: #222222;
+  border-color: #222222;
+  transform: translateX(2px) translateY(-1px);
+}
+
+.student-sidebar-nav-icon {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 21px;
+  color: currentColor;
+}
+
+.student-sidebar-nav-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.student-sidebar-nav-label {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-sidebar-badge {
+  flex-shrink: 0;
+  padding: 3px 6px;
+  border: 1px solid #111111;
+  border-radius: 6px;
+  color: #111111;
+  background: #ffffff;
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.student-sidebar-nav-item.active .student-sidebar-badge {
+  color: #111111;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   LEARNING JOURNEY
+   ========================================================= */
+
+.student-sidebar-section {
+  margin-top: 20px;
+}
+
+.student-sidebar-section-label {
+  padding: 0 10px 9px;
+  color: #8a8f98;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.13em;
+}
+
+.student-sidebar-expand-btn {
+  appearance: none;
+  text-align: left;
+}
+
+.student-sidebar-expand-btn.expanded {
+  background: #f7f7f8;
+  border-color: #e5e7eb;
+}
+
+.student-sidebar-chevron {
+  margin-left: auto;
+  width: 22px;
+  display: grid;
+  place-items: center;
+  color: currentColor;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* =========================================================
+   CHAPTER LIST
+   ========================================================= */
+
+/* Chapter rows sat 48px in from a 200px sidebar, which left chapter names
+ * only 76px. Trim the indent; the rule still reads as a nesting cue. */
+.student-sidebar-submenu {
+  position: relative;
+  margin: 7px 0 0 2px;
+  padding-left: 8px;
+  border-left: 1px solid #e1e4e8;
+}
+
+.student-sidebar-chapter {
+  margin-bottom: 5px;
+}
+
+.student-sidebar-chapter-btn {
+  width: 100%;
+  min-height: 52px;
+  padding: 8px 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #1a1a1a;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.student-sidebar-chapter-btn:hover {
+  background: #f5f5f6;
+  border-color: #e5e7eb;
+}
+
+.student-sidebar-chapter-arrow {
+  width: 14px;
+  flex: 0 0 14px;
+  color: #555a61;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+
+.student-sidebar-chapter-number {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d5d8dc;
+  border-radius: 8px;
+  color: #111111;
+  background: #ffffff;
+  box-shadow: 0 2px 0 #e1e3e6;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.student-sidebar-chapter-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Chapter names are cut off for the same reason lesson titles were: a single
+ * nowrap line inside a 200px sidebar. "Numbers and Counting" had 74px to work
+ * with. Wrap it instead, so the full name is always readable. */
+.student-sidebar-chapter-title {
+  overflow: hidden;
+  color: #171717;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.25;
+
+  /* No line clamp: chapter names are a small, fixed set authored per grade,
+   * so there is no runaway case to defend against — and a clamp here just
+   * reintroduces the truncation this rule exists to remove. */
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.student-sidebar-chapter-meta {
+  color: #8a8f98;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.student-sidebar-chapter.chapter-open .student-sidebar-chapter-number {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+  box-shadow: 0 2px 0 #000000;
+}
+
+/* =========================================================
+   TOPICS
+   ========================================================= */
+
+/* The indent stack consumed about 36px of a 260px sidebar before a single
+ * character was drawn. Tightened so the topic rows get that width back; the
+ * connector below moves with it, so the hierarchy still reads. */
+.student-sidebar-topic-list {
+  position: relative;
+  margin: 1px 0 5px 10px;
+  padding-left: 12px;
+  border-left: 1px dashed #d9dce0;
+}
+
+.student-sidebar-topic {
+  position: relative;
+  min-height: 38px;
+  padding: 7px 8px 7px 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  border-radius: 9px;
+  color: #555a61;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.student-sidebar-topic:hover {
+  color: #111111;
+  background: #f3f4f6;
+  transform: translateX(2px);
+}
+
+.student-sidebar-topic-line {
+  position: absolute;
+  left: -13px;
+  top: 50%;
+  width: 15px;
+  height: 1px;
+  background: #d9dce0;
+}
+
+.student-sidebar-topic-dot {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin-top: 1px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #cfd3d8;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #ffffff;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.student-sidebar-topic.completed .student-sidebar-topic-dot {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+}
+
+.student-sidebar-topic.completed .student-sidebar-topic-title {
+  color: #73777e;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.student-sidebar-topic.active {
+  color: #ffffff;
+  background: #111111;
+  box-shadow: 0 3px 0 #000000;
+}
+
+.student-sidebar-topic.active:hover {
+  color: #ffffff;
+  background: #222222;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-dot {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #111111;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-title {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Lesson titles run long — "Introduction to Multiplication and Division" needs
+ * about 237px, and the widest track this sidebar can offer is roughly 200px, so
+ * a single `nowrap` line could never fit them: every topic was ellipsised and
+ * the active row (which also carries the CURRENT pill) was cut to about 86px,
+ * roughly half the title. Wrap instead, clamped at three lines, which fits
+ * every title in this curriculum at the sidebar's 200px width (the longest,
+ * "Introduction to Multiplication and Division", needs four) while still
+ * bounding the row height. */
+.student-sidebar-topic-title {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  line-height: 1.35;
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+/* Only the active row carries this pill, and inline it left the title just 39px
+ * of a 200px sidebar — against 90px on every other row. Letting the active row
+ * wrap drops the pill onto its own line beneath the title, which then gets the
+ * same 90px as its neighbours. Scoped to `.active` so no other row changes. */
+.student-sidebar-topic.active {
+  flex-wrap: wrap;
+}
+
+.student-sidebar-topic.active .student-sidebar-topic-title {
+  flex: 1 1 calc(100% - 25px);
+}
+
+.student-sidebar-topic-current {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 3px;
+  margin-left: 25px;
+  padding: 3px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.student-sidebar-topic.locked {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.student-sidebar-topic.locked:hover {
+  color: #555a61;
+  background: transparent;
+  transform: none;
+}
+
+.student-sidebar-topic-lock {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  display: grid;
+  place-items: center;
+  color: #8a8f98;
+}
+
+.student-sidebar-chapter-empty,
+.student-sidebar-empty {
+  padding: 10px;
+  color: #969ba2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   FOOTER / CURRENT GRADE
+   ========================================================= */
+
+.student-sidebar-footer {
+  flex-shrink: 0;
+  padding: 12px;
+  border-top: 1px solid var(--sidebar-border);
+  background: #ffffff;
+}
+
+.student-sidebar-grade-card {
+  min-height: 64px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #dedfe2;
+  border-radius: 13px;
+  background: #f7f7f8;
+  box-shadow:
+    0 3px 0 #e1e2e4,
+    0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.student-sidebar-grade-icon {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d0d3d7;
+  border-radius: 10px;
+  color: #111111;
+  background: #ffffff;
+}
+
+.student-sidebar-grade-card>div {
+  min-width: 0;
+  flex: 1;
+}
+
+.student-sidebar-grade-card strong {
+  display: block;
+  overflow: hidden;
+  color: #111111;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 850;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-sidebar-grade-card span:not(.student-sidebar-grade-icon):not(.student-sidebar-grade-count) {
+  display: block;
+  margin-top: 3px;
+  color: #7c8188;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.student-sidebar-grade-count {
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   COLLAPSED MODE
+   ========================================================= */
+
+.student-sidebar-container.is-collapsed .student-sidebar-nav {
+  padding-inline: 10px;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-nav-item {
+  width: 54px;
+  min-height: 48px;
+  margin-inline: auto;
+  justify-content: center;
+  padding: 10px;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-nav-icon {
+  width: 22px;
+  height: 22px;
+  flex-basis: 22px;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-section {
+  margin-top: 10px;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-expand-btn {
+  background: #f7f7f8;
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-nav-item:hover {
+  transform: translateY(-1px);
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-nav-item.active {
+  transform: translateY(-1px);
+}
+
+.student-sidebar-container.is-collapsed .student-sidebar-footer {
+  display: none;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.student-sidebar-loading {
+  margin: 16px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #6b7280;
+  background: #f7f7f8;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================================================
+   OPTIONAL PAGE OFFSET
+   Use these ONLY if your layout does not already reserve
+   space for the fixed sidebar.
+   ========================================================= */
+
+.student-main-content,
+.student-page-content {
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.25s ease;
+}
+
+.student-sidebar-container.is-collapsed~.student-main-content,
+.student-sidebar-container.is-collapsed~.student-page-content {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+  }
+
+  .student-sidebar-nav {
+    padding: 15px 10px 18px;
+  }
+
+  .student-sidebar-nav-item {
+    min-height: 45px;
+    font-size: 14px;
+  }
+
+  .student-sidebar-chapter-title {
+    font-size: 12px;
+  }
+
+  .student-sidebar-topic {
+    font-size: 11.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .student-sidebar-container {
+    width: min(88vw, 310px);
+    transform: translateX(0);
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .student-sidebar-container.is-collapsed {
+    width: 0;
+    border-right: 0;
+    box-shadow: none;
+    transform: translateX(-100%);
+  }
+
+  .student-sidebar-container.is-collapsed .student-sidebar-header,
+  .student-sidebar-container.is-collapsed .student-sidebar-nav {
+    visibility: hidden;
+  }
+
+  .student-main-content,
+  .student-page-content,
+  .student-sidebar-container.is-collapsed~.student-main-content,
+  .student-sidebar-container.is-collapsed~.student-page-content {
+    margin-left: 0;
+  }
+
+  .student-sidebar-header {
+    min-height: 68px;
+  }
+
+  .student-sidebar-nav {
+    padding: 14px 12px 18px;
+  }
+
+  .student-sidebar-nav-item {
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  .student-sidebar-chapter-btn {
+    min-height: 50px;
+  }
+
+  .student-sidebar-topic {
+    min-height: 40px;
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .student-sidebar-container {
+    width: 92vw;
+  }
+
+  .student-sidebar-header {
+    padding-inline: 13px;
+  }
+
+  .student-sidebar-nav {
+    padding-inline: 10px;
+  }
+
+  .student-sidebar-nav-item {
+    padding-inline: 11px;
+  }
+
+  .student-sidebar-submenu {
+    margin-left: 5px;
+  }
+
+  .student-sidebar-topic-list {
+    margin-left: 15px;
+  }
+
+  .student-sidebar-footer {
+    padding: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .student-sidebar-container,
+  .student-sidebar-brand,
+  .student-sidebar-menu-btn,
+  .student-sidebar-nav-item,
+  .student-sidebar-topic {
+    transition: none !important;
+  }
+}

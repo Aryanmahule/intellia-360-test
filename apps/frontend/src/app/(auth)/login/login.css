@@ -1,0 +1,1165 @@
+/* =========================================================
+   INTELLIA360 AUTHENTICATION SYSTEM
+   Idea 2 + Concept 4: Clickable Mascot Fortune Easter Egg
+   ========================================================= */
+
+:root {
+    --blue: #2563eb;
+    --blue-dark: #172554;
+    --blue-light: #eff6ff;
+    --purple: #6d3df5;
+    --orange: #ff7a00;
+    --pink: #ec4899;
+    --green: #22c55e;
+    --text: #172554;
+    --muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+/* =========================================================
+   SHELL & OVERALL LAYOUT
+   ========================================================= */
+
+.auth-shell {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.06), transparent 30%),
+        radial-gradient(circle at 86% 82%, rgba(109, 61, 245, 0.06), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f8faff 50%, #f5f3ff 100%);
+    color: var(--text);
+    overflow-x: hidden;
+    padding: 30px 24px;
+}
+
+.auth-showcase-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(480px, 1.15fr) minmax(420px, 470px);
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+}
+
+/* =========================================================
+   LEFT: CLEAN WHITE MASCOT & COURSE SHOWCASE
+   ========================================================= */
+
+.showcase-visual-col {
+    position: relative;
+    min-height: 680px;
+    width: 100%;
+    border-radius: 28px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow:
+        0 24px 64px rgba(23, 37, 84, 0.06),
+        0 4px 20px rgba(109, 61, 245, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 34px 36px;
+    overflow: hidden;
+}
+
+/* Top live learner pill */
+.showcase-live-pill {
+    position: relative;
+    z-index: 3;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.live-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+/* Central Stage */
+.showcase-stage {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+}
+
+/* =========================================================
+   MASCOT STAGE & EASTER EGG INTERACTIONS
+   ========================================================= */
+
+.showcase-artwork-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.showcase-mascot-img {
+    width: min(380px, 86%);
+    max-height: 430px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 20px 32px rgba(23, 37, 84, 0.12));
+    user-select: none;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.showcase-artwork-shadow {
+    width: 240px;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(37, 99, 235, 0.16), transparent 70%);
+    border-radius: 50%;
+    margin-top: -10px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* =========================================================
+   EASTER EGG: "CLICK ME FOR WISDOM" BADGE
+   ========================================================= */
+
+.mascot-easter-egg-badge {
+    position: absolute;
+    bottom: 24px;
+    z-index: 12;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: #ffffff;
+    border: 1.5px solid #dbeafe;
+    border-radius: 20px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.14);
+    animation: easterEggBadgeGlow 2.4s ease-in-out infinite alternate;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mascot-easter-egg-badge:hover {
+    transform: scale(1.06);
+    background: #eff6ff;
+    border-color: var(--blue);
+}
+
+@keyframes easterEggBadgeGlow {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+    }
+
+    100% {
+        box-shadow: 0 6px 20px rgba(109, 61, 245, 0.24);
+    }
+}
+
+/* =========================================================
+   EASTER EGG: JOYFUL HIGH-JUMP & SPIN
+   ========================================================= */
+
+.mascot-joyful-jump .showcase-mascot-img {
+    animation: joyfulHighJump 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mascot-joyful-jump .showcase-artwork-shadow {
+    animation: shadowSquash 0.85s ease-out;
+}
+
+@keyframes joyfulHighJump {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    20% {
+        /* Crouch / Anticipation */
+        transform: translateY(8px) scale(1.08, 0.92);
+    }
+
+    50% {
+        /* Peak High Jump + Joyful Spin Tilt */
+        transform: translateY(-36px) rotate(-12deg) scale(1.1, 1.1);
+        filter: drop-shadow(0 32px 46px rgba(109, 61, 245, 0.35));
+    }
+
+    75% {
+        transform: translateY(-12px) rotate(6deg) scale(1.04, 1.04);
+    }
+
+    100% {
+        /* Soft landing */
+        transform: translateY(0) rotate(0deg) scale(1, 1);
+    }
+}
+
+@keyframes shadowSquash {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(0.65);
+        opacity: 0.25;
+    }
+}
+
+/* =========================================================
+   EASTER EGG: FLOATING +10 MOTIVATION REWARD POINT
+   ========================================================= */
+
+.floating-motivation-badge {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 850;
+    box-shadow: 0 10px 24px rgba(34, 197, 94, 0.35);
+    pointer-events: none;
+    animation: motivationFloatUp 1.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes motivationFloatUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 15px) scale(0.7);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translate(-50%, -15px) scale(1.08);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -75px) scale(0.85);
+    }
+}
+
+/* =========================================================
+   ACTIVITY STATES (REACTIONS)
+   ========================================================= */
+
+.activity-idle .showcase-mascot-img {
+    transform: translateY(0);
+}
+
+.activity-focus-email .showcase-mascot-img {
+    transform: translateY(-4px) translateX(12px) rotate(-2.5deg) scale(1.02);
+    filter: drop-shadow(0 24px 38px rgba(37, 99, 235, 0.18));
+}
+
+.activity-hiding-password .showcase-mascot-img {
+    transform: translateY(6px) translateX(-10px) rotate(4deg) scale(0.98);
+    filter: drop-shadow(0 14px 24px rgba(23, 37, 84, 0.1));
+}
+
+.activity-peeking .showcase-mascot-img {
+    transform: translateY(-12px) rotate(-2deg) scale(1.04);
+}
+
+.activity-launching .showcase-mascot-img {
+    transform: translateY(-16px) scale(1.04);
+    filter: drop-shadow(0 28px 46px rgba(109, 61, 245, 0.3));
+}
+
+.activity-error-shake .showcase-mascot-img {
+    animation: mascotErrorShake 0.45s ease-in-out 2;
+}
+
+@keyframes mascotErrorShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px) rotate(-3deg);
+    }
+
+    75% {
+        transform: translateX(10px) rotate(3deg);
+    }
+}
+
+/* =========================================================
+   DYNAMIC MASCOT SPEECH BUBBLE
+   ========================================================= */
+
+.mascot-speech-bubble {
+    position: absolute;
+    top: -46px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow:
+        0 12px 28px rgba(23, 37, 84, 0.1),
+        0 2px 6px rgba(109, 61, 245, 0.05);
+    color: var(--blue-dark);
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+    animation: bubblePopIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+.speech-icon {
+    font-size: 16px;
+}
+
+.speech-arrow {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+}
+
+@keyframes bubblePopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* =========================================================
+   COURSE & STUDENT CARDS (LIGHT MODE & STABLE)
+   ========================================================= */
+
+.glass-card {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow:
+        0 16px 36px rgba(23, 37, 84, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.02);
+    color: var(--text);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 20px 42px rgba(23, 37, 84, 0.12);
+}
+
+.card-course {
+    top: 14px;
+    left: -8px;
+    max-width: 290px;
+}
+
+.card-student {
+    bottom: 18px;
+    right: -8px;
+    max-width: 320px;
+}
+
+.glass-card-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.icon-purple {
+    background: var(--blue-light);
+    border: 1px solid #dbeafe;
+}
+
+.icon-gold {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+}
+
+.glass-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.glass-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.glass-badge {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--blue);
+}
+
+.badge-success {
+    color: #15803d;
+}
+
+.glass-rating {
+    font-size: 11px;
+    font-weight: 850;
+    color: #d97706;
+}
+
+.glass-check {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.glass-card-title {
+    margin: 2px 0 0;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+}
+
+.glass-card-meta {
+    margin: 0;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 550;
+}
+
+/* Showcase Quote Footer */
+.showcase-footer-quote {
+    position: relative;
+    z-index: 3;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.quote-text {
+    margin: 0;
+    font-size: 13px;
+    color: #475569;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+/* =========================================================
+   RIGHT: PROFESSIONAL LOGIN CARD
+   ========================================================= */
+
+.auth-card-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    width: 100%;
+    padding: 40px 42px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    box-shadow:
+        0 24px 64px rgba(23, 37, 84, 0.07),
+        0 4px 20px rgba(109, 61, 245, 0.03);
+}
+
+/* =========================================================
+   BRAND LOGO & HEADER
+   ========================================================= */
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.auth-brand-logo {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
+}
+
+.auth-brand-text {
+    font-size: 16px;
+    font-weight: 850;
+    color: var(--blue-dark);
+    letter-spacing: -0.4px;
+}
+
+.brand-accent {
+    color: var(--purple);
+}
+
+.auth-header {
+    margin-bottom: 26px;
+}
+
+.auth-card-title {
+    margin: 0;
+    font-size: clamp(28px, 2.5vw, 34px);
+    font-weight: 900;
+    color: var(--blue-dark);
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+}
+
+.auth-card-subtitle {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+/* =========================================================
+   FORM & FIELDS
+   ========================================================= */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.auth-field-label {
+    font-size: 12px;
+    font-weight: 750;
+    color: #334155;
+    letter-spacing: 0.2px;
+}
+
+.auth-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 13px;
+    transition: transform 0.2s ease;
+}
+
+.auth-input-icon {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    pointer-events: none;
+    z-index: 2;
+    transition: color 0.2s ease;
+}
+
+.auth-input-wrap.is-active .auth-input-icon {
+    color: var(--blue);
+}
+
+.auth-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px 0 45px;
+    background: #f8fafc;
+    border: 1.5px solid var(--border);
+    border-radius: 13px;
+    color: var(--blue-dark);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-input.has-right-btn {
+    padding-right: 48px;
+}
+
+.auth-input::placeholder {
+    color: #94a3b8;
+}
+
+.auth-input:focus {
+    background: var(--white);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.auth-password-toggle {
+    position: absolute;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auth-password-toggle:hover {
+    background: var(--blue-light);
+    color: var(--blue);
+}
+
+/* =========================================================
+   OPTIONS: REMEMBER ME & FORGOT PASSWORD
+   ========================================================= */
+
+.auth-options-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: -2px;
+}
+
+.auth-checkbox-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.auth-checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+    border: 1.5px solid #cbd5e1;
+    background: var(--white);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.auth-checkbox-wrap input:checked+.custom-checkbox {
+    background: var(--blue);
+    border-color: var(--blue);
+    box-shadow: inset 0 0 0 3px var(--white);
+}
+
+.auth-forgot-link {
+    font-size: 12px;
+    font-weight: 750;
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.auth-forgot-link:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+/* =========================================================
+   PRIMARY BUTTON (HOMEPAGE BLUE-PURPLE GRADIENT)
+   ========================================================= */
+
+.auth-submit-btn {
+    position: relative;
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
+    overflow: hidden;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.auth-submit-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,
+            transparent 15%,
+            rgba(255, 255, 255, 0.22) 48%,
+            transparent 75%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled)::before {
+    transform: translateX(100%);
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(109, 61, 245, 0.28);
+}
+
+.auth-submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.auth-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.login-loader {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: loginSpin 0.65s linear infinite;
+}
+
+@keyframes loginSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0;
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* =========================================================
+   SOCIAL LOGIN (3 IN ONE ROW ON DESKTOP)
+   ========================================================= */
+
+.auth-social-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.google-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google-btn-slot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-status-text {
+    margin: 4px 0 0;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.auth-social-btn {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 10px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 750;
+    font-family: inherit;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-social-btn:hover:not(:disabled) {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(23, 37, 84, 0.06);
+}
+
+.auth-social-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.social-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.apple-icon {
+    color: #0f172a;
+}
+
+/* =========================================================
+   FOOTER & BOTTOM STATUS
+   ========================================================= */
+
+.auth-footer-switch {
+    margin: 6px 0 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.auth-create-link {
+    color: var(--blue);
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: color 0.2s ease;
+}
+
+.auth-create-link:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+.auth-bottom-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 18px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.secure-pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.14);
+}
+
+/* =========================================================
+   ALERTS: ERROR & UNVERIFIED
+   ========================================================= */
+
+.auth-error-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 11px;
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.error-symbol {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #ef4444;
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.auth-unverified {
+    display: flex;
+    gap: 11px;
+    padding: 13px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+}
+
+.auth-unverified-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #f59e0b;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.auth-unverified-content strong {
+    color: #92400e;
+    font-size: 12px;
+    display: block;
+}
+
+.auth-unverified-content p {
+    margin: 3px 0 6px;
+    color: #78350f;
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.auth-unverified-content a {
+    color: #d97706;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.auth-unverified-content a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN: TABLET & MOBILE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .auth-showcase-container {
+        grid-template-columns: 1fr 430px;
+        gap: 24px;
+    }
+
+    .card-course {
+        left: 4px;
+        top: 10px;
+    }
+
+    .card-student {
+        right: 4px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 960px) {
+    .auth-shell {
+        padding: 24px 16px;
+        align-items: flex-start;
+    }
+
+    .auth-showcase-container {
+        grid-template-columns: 1fr;
+        max-width: 490px;
+        gap: 18px;
+    }
+
+    .showcase-visual-col {
+        min-height: auto;
+        padding: 24px 20px;
+        border-radius: 22px;
+    }
+
+    .showcase-stage {
+        height: auto;
+        min-height: 240px;
+        padding: 16px 0;
+    }
+
+    .showcase-mascot-img {
+        max-width: 180px;
+        max-height: 200px;
+    }
+
+    .mascot-speech-bubble {
+        top: -36px;
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .glass-card {
+        position: static;
+        margin: 8px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .showcase-artwork-wrap {
+        margin: 10px 0;
+    }
+
+    .showcase-footer-quote {
+        display: none;
+    }
+
+    .auth-card-col {
+        width: 100%;
+    }
+
+    .auth-card {
+        padding: 30px 24px;
+        border-radius: 22px;
+    }
+}
+
+@media (max-width: 540px) {
+    .auth-card-title {
+        font-size: 26px;
+    }
+
+    .auth-social-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .auth-social-btn {
+        min-height: 48px;
+    }
+
+    .auth-input {
+        height: 50px;
+    }
+
+    .auth-submit-btn {
+        min-height: 50px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .showcase-mascot-img,
+    .showcase-artwork-shadow,
+    .auth-submit-btn::before,
+    .mascot-joyful-jump .showcase-mascot-img {
+        animation: none !important;
+        transition: none !important;
+    }
+}

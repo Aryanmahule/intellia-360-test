@@ -1,0 +1,90 @@
+name: Database backup
+
+# Automated, scheduled backups.
+#
+# GitHub Actions is used as the scheduler so backups do NOT depend on the
+# application host being healthy — the runner is a separate machine, and the
+# archive is uploaded to off-site object storage plus retained as a workflow
+# artifact. A backup that only exists on the server it came from does not
+# survive the failures backups exist for.
+#
+# Required repository secrets:
+#   DATABASE_URL                  MongoDB connection string (read access is enough)
+#   BACKUP_S3_BUCKET              Off-site bucket name
+#   BACKUP_S3_ACCESS_KEY_ID       Write-only key for that bucket
+#   BACKUP_S3_SECRET_ACCESS_KEY
+# Optional:
+#   BACKUP_S3_REGION              default "auto"
+#   BACKUP_S3_ENDPOINT            default "s3.<region>.amazonaws.com"
+#   BACKUP_S3_PREFIX              default "intellia360"
+
+on:
+  schedule:
+    # 02:15 UTC daily — after the quiet period for IST traffic.
+    - cron: "15 2 * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why this manual backup is being taken"
+        required: false
+        default: "manual run"
+
+concurrency:
+  # Never let two backups write to the same off-site prefix at once.
+  group: database-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    # The backup scripts and prisma/ belong to the API in apps/backend.
+    defaults:
+      run:
+        working-directory: apps/backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        working-directory: .
+        run: npm ci
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Run backup
+        run: node scripts/backup.mjs --trigger scheduled --out backups --keep 14
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BACKUP_S3_BUCKET: ${{ secrets.BACKUP_S3_BUCKET }}
+          BACKUP_S3_ACCESS_KEY_ID: ${{ secrets.BACKUP_S3_ACCESS_KEY_ID }}
+          BACKUP_S3_SECRET_ACCESS_KEY: ${{ secrets.BACKUP_S3_SECRET_ACCESS_KEY }}
+          BACKUP_S3_REGION: ${{ secrets.BACKUP_S3_REGION }}
+          BACKUP_S3_ENDPOINT: ${{ secrets.BACKUP_S3_ENDPOINT }}
+          BACKUP_S3_PREFIX: ${{ secrets.BACKUP_S3_PREFIX }}
+
+      # A second, independent copy with its own retention clock. If the bucket
+      # is ever compromised or misconfigured, this is the fallback.
+      - name: Retain archive as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: intellia360-backup-${{ github.run_id }}
+          path: apps/backend/backups/*.ndjson.gz
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Nightly maintenance
+        # Runs only after a successful backup, so anything pruned here is
+        # already captured in tonight's archive.
+        run: node scripts/db-maintenance.mjs
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

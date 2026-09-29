@@ -1,0 +1,56 @@
+{
+  "agent": {
+    "metrics_collection_interval": 60,
+    "run_as_user": "root"
+  },
+  "metrics": {
+    "namespace": "Intellia360",
+    "append_dimensions": {
+      "InstanceId": "${aws:InstanceId}"
+    },
+    "metrics_collected": {
+      "mem": {
+        "measurement": ["mem_used_percent"]
+      },
+      "disk": {
+        "measurement": ["used_percent"],
+        "resources": ["/"]
+      },
+      "swap": {
+        "measurement": ["swap_used_percent"]
+      }
+    }
+  },
+  "logs": {
+    "logs_collected": {
+      "files": {
+        "collect_list": [
+          {
+            "file_path": "/home/intellia/.pm2/logs/intellia360-api-out.log",
+            "log_group_name": "/intellia360/app",
+            "log_stream_name": "{instance_id}/stdout",
+            "retention_in_days": 30
+          },
+          {
+            "file_path": "/home/intellia/.pm2/logs/intellia360-api-error.log",
+            "log_group_name": "/intellia360/app",
+            "log_stream_name": "{instance_id}/stderr",
+            "retention_in_days": 30
+          },
+          {
+            "file_path": "/var/log/nginx/intellia360.access.log",
+            "log_group_name": "/intellia360/nginx",
+            "log_stream_name": "{instance_id}/access",
+            "retention_in_days": 14
+          },
+          {
+            "file_path": "/var/log/nginx/intellia360.error.log",
+            "log_group_name": "/intellia360/nginx",
+            "log_stream_name": "{instance_id}/error",
+            "retention_in_days": 30
+          }
+        ]
+      }
+    }
+  }
+}
